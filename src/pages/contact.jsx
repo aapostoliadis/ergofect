@@ -1,11 +1,8 @@
 import Head from "next/head";
 import ContactHeroSection from "@/components/contact/ContactHeroSection";
 import ContactFormSection from "@/components/contact/ContactFormSection";
-import ContactInfoSection from "@/components/contact/ContactInfoSection";
-import OfficesSection from "@/components/contact/OfficesSection";
 import ContactFaqSection from "@/components/contact/ContactFaqSection";
 import SocialSection from "@/components/contact/SocialSection";
-import MapSection from "@/components/contact/MapSection";
 
 export default function Contact() {
   return (
@@ -21,11 +18,8 @@ export default function Contact() {
       </Head>
       <ContactHeroSection />
       <ContactFormSection />
-      <ContactInfoSection />
-      <OfficesSection />
       <ContactFaqSection />
       <SocialSection />
-      <MapSection />
     </>
   );
 }

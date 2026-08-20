@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "How much does a typical automation project cost?",
-    answer: "Projects range from $5k for simple workflow automations to $100k+ for enterprise-wide transformations. We'll provide a detailed quote after the initial audit.",
+    answer: "Projects range from $5k for workflow automations to $100k+ for enterprise-wide transformations. We'll provide a detailed quote after the initial audit.",
   },
   {
     question: "Do I need to commit before the audit?",
