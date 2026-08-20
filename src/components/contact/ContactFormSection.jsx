@@ -42,10 +42,10 @@ export default function ContactFormSection() {
                 </div>
                 <div>
                   <p className="font-bold uppercase tracking-widest text-xs md:text-sm">
-                    John Doe
+                    Akis Apostoliadis
                   </p>
                   <p className="font-mono text-[10px] md:text-xs opacity-50 uppercase">
-                    Founder &amp; CEO - Reviews Every Audit
+                    Founder - Reviews Every Audit
                   </p>
                 </div>
               </div>

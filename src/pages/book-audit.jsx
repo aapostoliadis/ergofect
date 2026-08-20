@@ -138,10 +138,10 @@ export default function BookAudit() {
                   </div>
                   <div>
                     <p className="font-bold uppercase tracking-widest text-xs md:text-sm">
-                      John Doe
+                      Akis Apostoliadis
                     </p>
                     <p className="font-mono text-[10px] md:text-xs opacity-50 uppercase">
-                      Founder &amp; CEO
+                      Founder
                     </p>
                   </div>
                 </div>

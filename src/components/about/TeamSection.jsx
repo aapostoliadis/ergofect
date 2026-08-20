@@ -2,10 +2,10 @@ import FadeIn from "@/components/FadeIn";
 
 const team = [
   {
-    name: "John Doe",
-    role: "Founder & CEO",
+    name: "Akis Apostoliadis",
+    role: "Founder",
     seed: "Felix",
-    desc: "Former ops lead at a Fortune 500. Built Ergsum to solve the problem he saw every day.",
+    desc: "Certified AI Consultant and veteran product designer. Built Ergsum to eliminate operational bottlenecks.",
   },
 ];
 
