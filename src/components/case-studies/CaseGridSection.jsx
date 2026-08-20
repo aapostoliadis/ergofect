@@ -49,6 +49,14 @@ const cases = [
     statLabel: "More Qualified Leads",
     color: "from-teal-900/40 to-black/80",
   },
+  {
+    company: "Warehold",
+    industry: "Warehousing",
+    headline: "450 Active Projects Rebuilt On One System, Ground Up",
+    stat: "28",
+    statLabel: "Background Automations",
+    color: "from-indigo-900/40 to-black/80",
+  },
 ];
 
 export default function CaseGridSection() {

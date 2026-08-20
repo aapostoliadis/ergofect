@@ -3,33 +3,33 @@ import FadeIn from "@/components/FadeIn";
 const reasons = [
   {
     number: "01",
-    title: "Parallel, Not Sequential",
-    desc: "We run discovery, design, and initial development in overlapping sprints — not waterfall.",
+    title: "We Never Skip The Map",
+    desc: "Automating before you've mapped the workflow is the single most common way these projects fail. We map first, every time — no exceptions.",
   },
   {
     number: "02",
-    title: "Pre-Built Modules",
-    desc: "80% of our automations use battle-tested modules. We customize the remaining 20% for your specific needs.",
+    title: "Nothing Gets Automated Mid-Migration",
+    desc: "Automating a process while its data model is still moving just automates the mess. We hold off until the core system is stable.",
   },
   {
     number: "03",
-    title: "Your Team Stays Involved",
-    desc: "No handoff surprises. Your operators are part of testing from Day 1, ensuring adoption on launch.",
+    title: "We Model For 2x, Not 50x",
+    desc: "Designing for a hypothetical future scale burns weeks on fields you'll never use. We build for where you're actually headed.",
   },
   {
     number: "04",
-    title: "Zero-Downtime Migration",
-    desc: "We run new automations in parallel with existing workflows. Switchover happens only when accuracy is proven.",
+    title: "One Home For Every Fact",
+    desc: "The same client sitting in two disconnected tools is how data quietly drifts out of sync. Every fact gets exactly one canonical source.",
   },
   {
     number: "05",
-    title: "Iterative Optimization",
-    desc: "Post-launch isn't the end. Every automation gets weekly optimization sprints for 90 days.",
+    title: "No Big-Bang Migrations",
+    desc: "We migrate department by department, old tool running read-only in parallel, until accuracy is proven — not a single risky cutover weekend.",
   },
   {
     number: "06",
-    title: "Full Documentation",
-    desc: "Every system we build comes with complete documentation and runbooks for your team.",
+    title: "Routing, Not One Model For Everything",
+    desc: "Every request gets routed to the cheapest model that can handle it, escalating to a frontier model only when it's actually needed.",
   },
 ];
 
@@ -44,15 +44,15 @@ export default function WhyItWorksSection() {
                 [ WHY IT WORKS ]
               </p>
               <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
-                Speed Without Sacrifice.
+                How These Projects Usually Fail.
               </h2>
             </FadeIn>
           </div>
           <div className="lg:col-span-2 flex items-end">
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-2xl">
-                Fast doesn&apos;t mean sloppy. Here&apos;s how we deliver
-                enterprise-grade automation in startup-speed timelines.
+                Across hundreds of builds, projects don&apos;t fail on effort
+                — they fail on sequence. Here&apos;s what we do differently.
               </p>
             </FadeIn>
           </div>

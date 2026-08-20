@@ -3,26 +3,26 @@ import FadeIn from "@/components/FadeIn";
 const steps = [
   {
     week: "Week 1",
-    title: "Process Audit",
-    desc: "We map your workflows, identify automation opportunities, and calculate potential ROI for each one.",
+    title: "Map & Consolidate",
+    desc: "We walk every workflow with the people who run it, mark the handoffs and duplicate entries, then audit your tool stack — absorb, keep, or kill.",
     highlight: false,
   },
   {
     week: "Week 2-3",
-    title: "Solution Design",
-    desc: "Custom AI architecture tailored to your company's existing systems, tools, and team capabilities.",
+    title: "Data Model",
+    desc: "One schema, one source of truth. Every entity — clients, projects, invoices — gets a single canonical home instead of three disconnected tools.",
     highlight: false,
   },
   {
     week: "Week 4-5",
-    title: "Build & Test",
-    desc: "Rapid development, seamless integration, and rigorous testing in parallel with your live environment.",
+    title: "Build & Migrate",
+    desc: "We rebuild the core system department by department, migrate historical data, and run old and new in parallel until accuracy is proven. No automation yet — that's deliberate.",
     highlight: true,
   },
   {
-    week: "Week 6",
-    title: "Deploy & Support",
-    desc: "Go live with zero downtime. Full team training, documentation, and ongoing optimization included.",
+    week: "Week 6+",
+    title: "Agents & Automation",
+    desc: "Once the data model holds, we layer on AI agents and background automation — routed across model tiers to keep cost down without losing accuracy.",
     highlight: false,
   },
 ];
@@ -42,8 +42,9 @@ export default function TimelineSection() {
           </FadeIn>
           <FadeIn delay={100} className="flex items-end">
             <p className="text-xl md:text-2xl font-medium max-w-md">
-              Every project follows our proven 4-phase framework. No guesswork,
-              no surprises — just predictable, fast results.
+              Every project follows the same disciplined sequence: map, then
+              model, then build, then automate. Skipping the order is the
+              single biggest reason automation projects fail — so we don't.
             </p>
           </FadeIn>
         </div>
