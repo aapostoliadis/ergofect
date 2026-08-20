@@ -22,34 +22,50 @@ export default function TeamSection() {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 max-w-md gap-4 md:gap-6">
-          {team.map((member, i) => (
-            <FadeIn
-              key={i}
-              delay={i * 100}
-              className="border border-white/10 p-6 md:p-8 group hover:border-cobalt-light/30 transition-colors"
-            >
-              <div className="flex items-center gap-4 mb-4 md:mb-6">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden bg-gray-700 shrink-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`/images/avatars/${member.seed.toLowerCase()}.webp`}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
+          <div className="max-w-md w-full">
+            {team.map((member, i) => (
+              <FadeIn
+                key={i}
+                delay={i * 100}
+                className="border border-white/10 p-6 md:p-8 group hover:border-cobalt-light/30 transition-colors"
+              >
+                <div className="flex items-center gap-4 mb-4 md:mb-6">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden bg-gray-700 shrink-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`/images/avatars/${member.seed.toLowerCase()}.webp`}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold uppercase tracking-widest text-sm">
+                      {member.name}
+                    </p>
+                    <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
+                      {member.role}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-bold uppercase tracking-widest text-sm">
-                    {member.name}
-                  </p>
-                  <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
-                    {member.role}
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm opacity-60 leading-relaxed">{member.desc}</p>
-            </FadeIn>
-          ))}
+                <p className="text-sm opacity-60 leading-relaxed">{member.desc}</p>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={200}>
+            <p className="text-base md:text-lg opacity-70 leading-relaxed">
+              Akis is a seasoned AI Engineer/Consultant and product designer
+              with 26 years of experience, specializing in AI/ML, fintech,
+              healthtech, dashboard design, SaaS, and eCommerce. As a
+              Certified AI Consultant (CAIC) from the USW AI Institute, he
+              helps organizations and professionals navigate AI
+              transformation and implementation strategies. His expertise
+              spans from small businesses to enterprise systems, with
+              clients including Harvard, Kraft Heinz, Sony Pictures, WeWork,
+              Pfizer, and Colgate-Palmolive, among others.
+            </p>
+          </FadeIn>
         </div>
       </div>
     </section>
