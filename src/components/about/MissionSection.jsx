@@ -10,7 +10,7 @@ export default function MissionSection() {
               <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-8 md:mb-12 text-cobalt-light">
                 [ OUR MISSION ]
               </p>
-              <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none">
+              <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none">
                 Automation Should Be{" "}
                 <span className="text-cobalt-light">Accessible</span>, Not
                 Exclusive.
@@ -30,7 +30,7 @@ export default function MissionSection() {
                 <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest opacity-50 mb-4">
                   [ OUR VISION ]
                 </p>
-                <p className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] leading-tight">
+                <p className="text-2xl md:text-3xl font-semibold tracking-[0em] leading-tight">
                   A world where no team wastes time on work a machine could
                   handle better.
                 </p>

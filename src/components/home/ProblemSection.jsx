@@ -7,7 +7,7 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
           <div>
             <FadeIn>
-              <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-6 md:mb-8">
+              <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-6 md:mb-8">
                 Your team is drowning in work that{" "}
                 <span className="text-red-600 line-through decoration-4">
                   shouldn&apos;t exist

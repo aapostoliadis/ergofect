@@ -112,7 +112,7 @@ export default function BookAudit() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
             <div>
               <FadeIn delay={100}>
-                <h1 className="text-5xl md:text-[7vw] lg:text-[5vw] leading-[0.9] font-semibold tracking-[-0.04em]">
+                <h1 className="text-5xl md:text-[7vw] lg:text-[5vw] leading-[0.9] font-semibold tracking-[0em]">
                   Discover What You Could{" "}
                   <span className="text-cobalt-light">Automate</span>.
                 </h1>
@@ -162,7 +162,7 @@ export default function BookAudit() {
                     {step.number}
                   </p>
                   <div>
-                    <h3 className="text-base md:text-lg font-bold tracking-[-0.04em] mb-1">
+                    <h3 className="text-base md:text-lg font-bold tracking-[0em] mb-1">
                       {step.title}
                     </h3>
                     <p className="text-sm opacity-60">{step.desc}</p>
@@ -180,7 +180,7 @@ export default function BookAudit() {
           <FadeIn>
             {submitted ? (
               <div className="text-center py-12">
-                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-4">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-4">
                   Thanks, {fullName.trim().split(" ")[0]}.
                 </h2>
                 <p className="text-graphite max-w-lg mx-auto">
@@ -213,7 +213,7 @@ export default function BookAudit() {
 
               {/* Step 1: Your Info */}
               <div className={formStep === 0 ? "block" : "hidden"}>
-                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-8">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-8">
                   Tell Us About You.
                 </h2>
                 <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
@@ -311,7 +311,7 @@ export default function BookAudit() {
 
               {/* Step 2: Your Needs */}
               <div className={formStep === 1 ? "block" : "hidden"}>
-                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-8">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-8">
                   What Do You Need?
                 </h2>
                 <div className="space-y-8 font-mono text-[10px] md:text-sm uppercase">
@@ -391,7 +391,7 @@ export default function BookAudit() {
 
               {/* Step 3: Details */}
               <div className={formStep === 2 ? "block" : "hidden"}>
-                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-8">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-8">
                   Almost Done.
                 </h2>
                 <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">

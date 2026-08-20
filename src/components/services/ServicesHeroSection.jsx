@@ -12,7 +12,7 @@ export default function ServicesHeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
           <div>
             <FadeIn delay={100}>
-              <h1 className="text-5xl md:text-[8vw] lg:text-[5.5vw] leading-[0.9] font-semibold tracking-[-0.04em]">
+              <h1 className="text-5xl md:text-[8vw] lg:text-[5.5vw] leading-[0.9] font-semibold tracking-[0em]">
                 AI-Powered Solutions For{" "}
                 <span className="text-cobalt-light">Every</span> Operation.
               </h1>

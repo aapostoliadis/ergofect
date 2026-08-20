@@ -76,7 +76,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
           <div>
             <FadeIn>
-              <h2 className="text-5xl md:text-8xl font-semibold tracking-[-0.04em] leading-none mb-6 md:mb-8">
+              <h2 className="text-5xl md:text-8xl font-semibold tracking-[0em] leading-none mb-6 md:mb-8">
                 Ready to Automate{" "}
                 <span className="text-cobalt-light">Your Biggest Bottleneck?</span>
               </h2>
@@ -110,7 +110,7 @@ export default function ContactSection() {
             <FadeIn delay={200}>
               {submitted ? (
                 <div className="py-12 text-center lg:text-left">
-                  <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-4">
+                  <h3 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-4">
                     Thanks, {fullName.trim().split(" ")[0]}.
                   </h3>
                   <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm max-w-md">

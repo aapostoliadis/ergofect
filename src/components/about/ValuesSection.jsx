@@ -49,7 +49,7 @@ export default function ValuesSection() {
               <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
                 [ WHAT WE STAND FOR ]
               </p>
-              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none">
                 Our Core Values.
               </h2>
             </FadeIn>
@@ -74,7 +74,7 @@ export default function ValuesSection() {
               <p className="bg-ink text-bone group-hover:bg-cobalt-light group-hover:text-ink inline-block px-2 py-1 font-mono text-xs font-bold mb-4 transition-colors duration-500">
                 {val.number}
               </p>
-              <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.04em] mb-3">
+              <h3 className="text-xl md:text-2xl font-semibold tracking-[0em] mb-3">
                 {val.title}
               </h3>
               <p className="text-sm opacity-60 group-hover:opacity-80 leading-relaxed transition-opacity">

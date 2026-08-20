@@ -29,7 +29,7 @@ export default function OfficesSection() {
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 opacity-60">
             [ OUR OFFICES ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none mb-12 md:mb-16">
             Global Presence.
           </h2>
         </FadeIn>
@@ -44,7 +44,7 @@ export default function OfficesSection() {
               <p className="text-bone bg-ink group-hover:bg-cobalt group-hover:text-bone inline-block px-2 py-1 font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.14em] mb-4 transition-colors duration-500">
                 {office.type}
               </p>
-              <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-4">
+              <h3 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-4">
                 {office.city}
               </h3>
               <p className="text-sm opacity-60 leading-relaxed whitespace-pre-line mb-4">

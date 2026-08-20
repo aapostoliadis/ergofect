@@ -45,7 +45,7 @@ export default function ServicesSection() {
                 </h3>
               </div>
               <div className="lg:col-span-8">
-                <h4 className="text-3xl md:text-5xl font-semibold tracking-[-0.04em] mb-4 group-hover:text-cobalt-light transition-colors">
+                <h4 className="text-3xl md:text-5xl font-semibold tracking-[0em] mb-4 group-hover:text-cobalt-light transition-colors">
                   {service.headline}
                 </h4>
                 <p className="font-mono text-[10px] md:text-sm uppercase opacity-50 flex gap-2 md:gap-4 flex-wrap">

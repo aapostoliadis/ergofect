@@ -42,7 +42,7 @@ export default function FaqSection() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <FadeIn>
-              <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-4 md:mb-6">
+              <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-4 md:mb-6">
                 Frequently <br /> Asked Questions
               </h2>
               <p className="opacity-60 text-sm md:text-base">

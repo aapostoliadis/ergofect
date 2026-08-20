@@ -17,7 +17,7 @@ export default function ContactFormSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
           <div>
             <FadeIn>
-              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-6 md:mb-8">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none mb-6 md:mb-8">
                 Request Your Free{" "}
                 <span className="bg-ink text-bone px-2 inline-block">
                   Audit

@@ -41,10 +41,10 @@ export default function ServiceDetail({ service }) {
             </div>
             <div className="lg:col-span-10">
               <FadeIn delay={200}>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.04em] leading-none mb-6">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[0em] leading-none mb-6">
                   {service.title}
                 </h1>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-[-0.04em] text-cobalt-light mb-6">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-[0em] text-cobalt-light mb-6">
                   {service.headline}
                 </h2>
                 <p className="text-base md:text-lg opacity-80 leading-relaxed max-w-3xl">
@@ -73,7 +73,7 @@ export default function ServiceDetail({ service }) {
             {/* Features */}
             <div>
               <FadeIn>
-                <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-8">
+                <h3 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-8">
                   What We Deliver
                 </h3>
                 <div className="space-y-4">
@@ -92,7 +92,7 @@ export default function ServiceDetail({ service }) {
             {/* Benefits */}
             <div>
               <FadeIn delay={200}>
-                <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-8">
+                <h3 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-8">
                   Key Benefits
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -114,7 +114,7 @@ export default function ServiceDetail({ service }) {
       <section className="bg-ink text-bone py-16 md:py-24">
         <div className="container">
           <FadeIn>
-            <h3 className="text-3xl md:text-4xl font-semibold tracking-[-0.04em] mb-12">
+            <h3 className="text-3xl md:text-4xl font-semibold tracking-[0em] mb-12">
               Implementation Process
             </h3>
           </FadeIn>
@@ -125,7 +125,7 @@ export default function ServiceDetail({ service }) {
                   <p className="text-cobalt-light font-mono text-xs uppercase mb-2">
                     {phase.duration}
                   </p>
-                  <h4 className="text-lg md:text-xl font-semibold tracking-[-0.04em] mb-4">
+                  <h4 className="text-lg md:text-xl font-semibold tracking-[0em] mb-4">
                     {phase.phase}
                   </h4>
                   <ul className="space-y-2">
@@ -147,7 +147,7 @@ export default function ServiceDetail({ service }) {
       <section className="bg-bone text-ink py-16 md:py-24">
         <div className="container">
           <FadeIn>
-            <h3 className="text-3xl md:text-4xl font-semibold tracking-[-0.04em] mb-12">
+            <h3 className="text-3xl md:text-4xl font-semibold tracking-[0em] mb-12">
               Success Story
             </h3>
           </FadeIn>
@@ -161,7 +161,7 @@ export default function ServiceDetail({ service }) {
                       <p className="font-mono text-xs uppercase opacity-50 mb-2">
                         {service.caseStudy.industry}
                       </p>
-                      <h4 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-2">
+                      <h4 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-2">
                         {service.caseStudy.company}
                       </h4>
                       <div className="flex gap-4 text-sm opacity-60">
@@ -206,7 +206,7 @@ export default function ServiceDetail({ service }) {
                   <div className="space-y-6">
                     {service.caseStudy.results.map((result, i) => (
                       <div key={i}>
-                        <p className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] text-cobalt-light">
+                        <p className="text-2xl md:text-3xl font-semibold tracking-[0em] text-cobalt-light">
                           {result.metric}
                         </p>
                         <p className="text-sm font-medium uppercase tracking-wider mb-1">
@@ -261,7 +261,7 @@ export default function ServiceDetail({ service }) {
         <div className="container">
           <FadeIn>
             <div className="text-center max-w-4xl mx-auto">
-              <h3 className="text-3xl md:text-4xl font-semibold tracking-[-0.04em] mb-6">
+              <h3 className="text-3xl md:text-4xl font-semibold tracking-[0em] mb-6">
                 Ready to Transform Your Operations?
               </h3>
               <p className="text-base md:text-lg opacity-80 mb-10">

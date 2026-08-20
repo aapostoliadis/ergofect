@@ -29,7 +29,7 @@ export default function ServiceDetailSection() {
               <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
                 [ DEEP DIVE ]
               </p>
-              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none">
                 Customer Support{" "}
                 <span className="text-cobalt-light">Reimagined</span>.
               </h2>
@@ -55,7 +55,7 @@ export default function ServiceDetailSection() {
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-cobalt-light rounded-full mt-2 shrink-0"></div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.04em] mb-3">
+                  <h3 className="text-xl md:text-2xl font-semibold tracking-[0em] mb-3">
                     {feat.title}
                   </h3>
                   <p className="text-sm opacity-60 leading-relaxed">

@@ -84,7 +84,7 @@ export default function ServiceListSection() {
                 </div>
               </div>
               <div className="lg:col-span-8">
-                <h4 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-3 group-hover:text-cobalt-light transition-colors duration-500">
+                <h4 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-3 group-hover:text-cobalt-light transition-colors duration-500">
                   {service.headline}
                 </h4>
                 <p className="text-sm opacity-60 group-hover:opacity-80 mb-4 max-w-2xl leading-relaxed transition-opacity">

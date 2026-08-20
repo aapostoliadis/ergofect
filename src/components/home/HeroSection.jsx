@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row gap-12 items-end">
           <div className="w-full lg:w-2/3">
             <FadeIn delay={100}>
-              <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[-0.04em]">
+              <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[0em]">
                 Automate Smarter.
                 <br />
                 <span className="text-bone bg-ink px-2 md:px-4 inline-block mt-2">

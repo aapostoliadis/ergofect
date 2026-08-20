@@ -10,7 +10,7 @@ export default function ProcessCTASection() {
             <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
               [ START YOUR PROJECT ]
             </p>
-            <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-6">
+            <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-6">
               Ready To Automate?
             </h2>
             <p className="text-sm md:text-base opacity-60 leading-relaxed mb-10 md:mb-14 max-w-xl mx-auto">

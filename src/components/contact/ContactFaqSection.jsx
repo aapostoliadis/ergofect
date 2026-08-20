@@ -40,7 +40,7 @@ export default function ContactFaqSection() {
               <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 text-cobalt-light">
                 [ FAQ ]
               </p>
-              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none">
                 Common Questions.
               </h2>
             </FadeIn>

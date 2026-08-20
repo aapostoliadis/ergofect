@@ -37,7 +37,7 @@ export default function ProcessSection() {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-20">
           <FadeIn>
-            <h2 className="text-5xl md:text-7xl font-semibold tracking-[-0.04em] leading-none">
+            <h2 className="text-5xl md:text-7xl font-semibold tracking-[0em] leading-none">
               Lightning-Fast <br /> Deployment.
             </h2>
           </FadeIn>

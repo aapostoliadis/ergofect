@@ -35,7 +35,7 @@ export default function ToolsSection() {
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ INTEGRATIONS ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-6 max-w-4xl">
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-6 max-w-4xl">
             We Plug Into Your{" "}
             <span className="text-cobalt-light">Existing</span> Stack.
           </h2>

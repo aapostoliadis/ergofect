@@ -14,7 +14,7 @@ export default function AboutCTASection() {
               <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
                 [ LET&apos;S TALK ]
               </p>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.04em] leading-none mb-6">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[0em] leading-none mb-6">
                 Ready To Work With Us?
               </h2>
               <p className="text-sm md:text-base opacity-60 max-w-lg leading-relaxed mb-10 md:mb-14">

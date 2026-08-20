@@ -8,7 +8,7 @@ export default function MapSection() {
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 md:mb-6 text-cobalt-light">
             [ HEADQUARTERS ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none mb-12 md:mb-16">
             Find Us.
           </h2>
         </FadeIn>

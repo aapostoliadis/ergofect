@@ -130,7 +130,7 @@ export default function TermsPage() {
             <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 text-cobalt-light">
               [ LEGAL / TERMS ]
             </p>
-            <h1 className="text-5xl md:text-8xl font-semibold tracking-[-0.04em] leading-none mb-6 max-w-5xl">
+            <h1 className="text-5xl md:text-8xl font-semibold tracking-[0em] leading-none mb-6 max-w-5xl">
               Terms of Service
             </h1>
             <p className="text-sm md:text-lg opacity-70 leading-relaxed max-w-2xl">
@@ -150,7 +150,7 @@ export default function TermsPage() {
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-2">
                   {label}
                 </p>
-                <p className="text-lg md:text-xl font-semibold tracking-[-0.04em]">
+                <p className="text-lg md:text-xl font-semibold tracking-[0em]">
                   {value}
                 </p>
               </FadeIn>
@@ -197,7 +197,7 @@ export default function TermsPage() {
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-40 mb-3">
                     Section {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-5">
+                  <h2 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-5">
                     {section.title}
                   </h2>
                   <div className="space-y-4">
@@ -217,7 +217,7 @@ export default function TermsPage() {
                 <p className="font-mono text-[10px] md:text-xs uppercase text-cobalt-light mb-4">
                   [ Questions? ]
                 </p>
-                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-4">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[0em] mb-4">
                   Contact Ergsum Legal
                 </h2>
                 <p className="text-sm md:text-base opacity-70 leading-relaxed mb-6 max-w-2xl">

@@ -41,7 +41,7 @@ export default function ContactInfoSection() {
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 md:mb-6 text-cobalt-light">
             [ CONTACT DETAILS ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16 max-w-3xl">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none mb-12 md:mb-16 max-w-3xl">
             Or Reach Us <span className="text-cobalt-light">Directly</span>.
           </h2>
         </FadeIn>

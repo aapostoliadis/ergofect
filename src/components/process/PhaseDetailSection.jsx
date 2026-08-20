@@ -67,7 +67,7 @@ export default function PhaseDetailSection() {
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ PHASE BY PHASE ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-16 md:mb-20 max-w-4xl">
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-16 md:mb-20 max-w-4xl">
             Every Step, <span className="text-cobalt-light">Explained</span>.
           </h2>
         </FadeIn>
@@ -80,7 +80,7 @@ export default function PhaseDetailSection() {
                   <p className="text-cobalt-light bg-cobalt-light/10 inline-block px-2 py-1 font-mono text-xs font-bold mb-4">
                     Phase {phase.number}
                   </p>
-                  <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-2">
+                  <h3 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-2">
                     {phase.title}
                   </h3>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 flex items-center gap-2">

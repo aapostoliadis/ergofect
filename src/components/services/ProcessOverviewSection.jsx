@@ -36,7 +36,7 @@ export default function ProcessOverviewSection() {
             <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
               [ HOW IT WORKS ]
             </p>
-            <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none">
+            <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none">
               Lightning-Fast <br /> Deployment.
             </h2>
           </FadeIn>

@@ -152,7 +152,7 @@ export default function RoiCalculatorSection() {
 
                 <div className="grid grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
                   <div>
-                    <p className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] text-cobalt-light">
+                    <p className="text-2xl md:text-3xl font-semibold tracking-[0em] text-cobalt-light">
                       {Math.round(results.annualHoursRecovered).toLocaleString("en-US")}
                     </p>
                     <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
@@ -160,7 +160,7 @@ export default function RoiCalculatorSection() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] text-cobalt-light">
+                    <p className="text-2xl md:text-3xl font-semibold tracking-[0em] text-cobalt-light">
                       {money(results.grossAnnualReturn)}
                     </p>
                     <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
@@ -190,7 +190,7 @@ export default function RoiCalculatorSection() {
 
                 <div className="border-t border-bone/10 pt-6 flex items-end justify-between">
                   <div>
-                    <p className="text-3xl md:text-4xl font-semibold tracking-[-0.04em]">
+                    <p className="text-3xl md:text-4xl font-semibold tracking-[0em]">
                       {money(results.netAnnualReturn)}
                     </p>
                     <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
@@ -198,7 +198,7 @@ export default function RoiCalculatorSection() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xl md:text-2xl font-semibold tracking-[-0.04em]">
+                    <p className="text-xl md:text-2xl font-semibold tracking-[0em]">
                       {results.paybackMonths
                         ? `${results.paybackMonths.toFixed(1)} mo`
                         : "-"}
