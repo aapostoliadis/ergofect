@@ -37,11 +37,56 @@ export default function BookAudit() {
   const [selectedServices, setSelectedServices] = useState([]);
   const [selectedSpend, setSelectedSpend] = useState("");
   const [selectedTeamSize, setSelectedTeamSize] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [workEmail, setWorkEmail] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [bottleneck, setBottleneck] = useState("");
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   function toggleService(svc) {
     setSelectedServices((prev) =>
       prev.includes(svc) ? prev.filter((s) => s !== svc) : [...prev, svc]
     );
+  }
+
+  function validateStep(step) {
+    const stepErrors = {};
+    if (step === 0) {
+      if (!fullName.trim()) stepErrors.fullName = "Please enter your full name.";
+      if (!workEmail.trim()) {
+        stepErrors.workEmail = "Please enter your work email.";
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail.trim())) {
+        stepErrors.workEmail = "Please enter a valid email address.";
+      }
+      if (!companyName.trim()) stepErrors.companyName = "Please enter your company name.";
+    }
+    if (step === 2) {
+      if (!bottleneck.trim()) stepErrors.bottleneck = "Please describe your biggest bottleneck.";
+    }
+    return stepErrors;
+  }
+
+  function goToStep(targetStep) {
+    if (targetStep > formStep) {
+      const stepErrors = validateStep(formStep);
+      if (Object.keys(stepErrors).length > 0) {
+        setErrors(stepErrors);
+        return;
+      }
+    }
+    setErrors({});
+    setFormStep(targetStep);
+  }
+
+  function handleSubmit() {
+    const stepErrors = validateStep(2);
+    if (Object.keys(stepErrors).length > 0) {
+      setErrors(stepErrors);
+      return;
+    }
+    setErrors({});
+    setSubmitted(true);
   }
 
   return (
@@ -133,6 +178,17 @@ export default function BookAudit() {
       <section className="bg-bone py-16 md:py-24">
         <div className="container max-w-4xl">
           <FadeIn>
+            {submitted ? (
+              <div className="text-center py-12">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-4">
+                  Thanks, {fullName.trim().split(" ")[0]}.
+                </h2>
+                <p className="text-graphite max-w-lg mx-auto">
+                  We&apos;ve received your audit request and will be in touch at{" "}
+                  {workEmail} within 24 hours.
+                </p>
+              </div>
+            ) : (
             <form className="space-y-10 md:space-y-12">
               {/* Step Indicator */}
               <div className="flex items-center gap-2 font-mono text-[10px] md:text-xs uppercase">
@@ -140,7 +196,7 @@ export default function BookAudit() {
                   <button
                     key={i}
                     type="button"
-                    onClick={() => setFormStep(i)}
+                    onClick={() => goToStep(i)}
                     className={`flex items-center gap-2 px-3 py-2 border transition-colors ${
                       formStep === i
                         ? "border-ink bg-ink text-bone"
@@ -166,19 +222,35 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Full Name *</label>
                       <input
                         type="text"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none ${
+                          errors.fullName ? "border-negative" : "border-black/20"
+                        }`}
                         placeholder="Jane Doe"
                         required
+                        aria-invalid={Boolean(errors.fullName)}
                       />
+                      {errors.fullName && (
+                        <p className="mt-2 normal-case tracking-normal text-negative">{errors.fullName}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block mb-2 opacity-50">Work Email *</label>
                       <input
                         type="email"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
+                        value={workEmail}
+                        onChange={(e) => setWorkEmail(e.target.value)}
+                        className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none ${
+                          errors.workEmail ? "border-negative" : "border-black/20"
+                        }`}
                         placeholder="jane@company.com"
                         required
+                        aria-invalid={Boolean(errors.workEmail)}
                       />
+                      {errors.workEmail && (
+                        <p className="mt-2 normal-case tracking-normal text-negative">{errors.workEmail}</p>
+                      )}
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -186,10 +258,18 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Company Name *</label>
                       <input
                         type="text"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
+                        value={companyName}
+                        onChange={(e) => setCompanyName(e.target.value)}
+                        className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none ${
+                          errors.companyName ? "border-negative" : "border-black/20"
+                        }`}
                         placeholder="Your Company"
                         required
+                        aria-invalid={Boolean(errors.companyName)}
                       />
+                      {errors.companyName && (
+                        <p className="mt-2 normal-case tracking-normal text-negative">{errors.companyName}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block mb-2 opacity-50">Your Role</label>
@@ -222,7 +302,7 @@ export default function BookAudit() {
                 </div>
                 <button
                   type="button"
-                  onClick={() => setFormStep(1)}
+                  onClick={() => goToStep(1)}
                   className="mt-10 bg-ink text-bone py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
                 >
                   Continue →
@@ -294,14 +374,14 @@ export default function BookAudit() {
                 <div className="flex gap-4 mt-10">
                   <button
                     type="button"
-                    onClick={() => setFormStep(0)}
+                    onClick={() => goToStep(0)}
                     className="border border-black/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-black/5 transition-colors font-mono"
                   >
                     ← Back
                   </button>
                   <button
                     type="button"
-                    onClick={() => setFormStep(2)}
+                    onClick={() => goToStep(2)}
                     className="bg-ink text-bone py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
                   >
                     Continue →
@@ -321,10 +401,18 @@ export default function BookAudit() {
                     </label>
                     <textarea
                       rows={5}
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
+                      value={bottleneck}
+                      onChange={(e) => setBottleneck(e.target.value)}
+                      className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none ${
+                        errors.bottleneck ? "border-negative" : "border-black/20"
+                      }`}
                       placeholder="e.g., Our support team spends 4 hours daily on repetitive ticket responses..."
                       required
+                      aria-invalid={Boolean(errors.bottleneck)}
                     />
+                    {errors.bottleneck && (
+                      <p className="mt-2 normal-case tracking-normal text-negative">{errors.bottleneck}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block mb-2 opacity-50">
@@ -350,13 +438,14 @@ export default function BookAudit() {
                 <div className="flex gap-4 mt-10">
                   <button
                     type="button"
-                    onClick={() => setFormStep(1)}
+                    onClick={() => goToStep(1)}
                     className="border border-black/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-black/5 transition-colors font-mono"
                   >
                     ← Back
                   </button>
                   <button
                     type="button"
+                    onClick={handleSubmit}
                     className="bg-cobalt text-bone py-3 md:py-4 px-8 md:px-12 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-ink transition-colors"
                   >
                     Submit Audit Request
@@ -364,6 +453,7 @@ export default function BookAudit() {
                 </div>
               </div>
             </form>
+            )}
           </FadeIn>
         </div>
       </section>
