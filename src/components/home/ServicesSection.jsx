@@ -8,16 +8,34 @@ const services = [
     delay: 100,
   },
   {
-    title: "Customer Support",
+    title: "Customer Support Automation",
     headline: "Handle inquiries 24/7 with human-like accuracy.",
     tags: ["Chatbots w/ Escalation", "Auto-Email Replies", "Ticket Routing"],
     delay: 200,
   },
   {
-    title: "Data Processing",
+    title: "Data Processing & Analytics",
     headline: "Transform raw data into insights automatically.",
     tags: ["Report Generation", "Data Cleansing", "Predictive Analytics"],
     delay: 300,
+  },
+  {
+    title: "Document Intelligence",
+    headline: "Extract, classify, and process documents at scale.",
+    tags: ["OCR Processing", "Contract Analysis", "Invoice Matching"],
+    delay: 400,
+  },
+  {
+    title: "Sales & Marketing Automation",
+    headline: "Accelerate pipeline without growing your team.",
+    tags: ["Lead Scoring", "Email Sequences", "A/B Testing"],
+    delay: 500,
+  },
+  {
+    title: "Custom AI Solutions",
+    headline: "Bespoke systems for unique operational challenges.",
+    tags: ["Computer Vision", "NLP Models", "Custom APIs"],
+    delay: 600,
   },
 ];
 
