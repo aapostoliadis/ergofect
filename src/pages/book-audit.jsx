@@ -47,10 +47,10 @@ export default function BookAudit() {
   return (
     <>
       <Head>
-        <title>Book Free Audit - KAIRO® | AI Automation Audit</title>
+        <title>Book Free Audit - Ergsum® | AI Automation Audit</title>
         <meta
           name="description"
-          content="Request a free automation audit from KAIRO. We'll map your workflows and show you exactly where AI can save you time and money."
+          content="Request a free automation audit from Ergsum. We'll map your workflows and show you exactly where AI can save you time and money."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -338,7 +338,7 @@ export default function BookAudit() {
                   </div>
                   <div>
                     <label className="block mb-2 opacity-50">
-                      How Did You Hear About KAIRO?
+                      How Did You Hear About Ergsum?
                     </label>
                     <input
                       type="text"

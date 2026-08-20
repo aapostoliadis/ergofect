@@ -13,15 +13,15 @@ const sections = [
     id: "acceptance",
     title: "Acceptance of Terms",
     body: [
-      "By accessing the KAIRO website, submitting a form, booking an audit, reviewing a proposal, or engaging our services, you agree to these Terms of Service.",
-      "If you are using KAIRO on behalf of a company or organization, you confirm that you have authority to accept these Terms on that entity's behalf.",
+      "By accessing the Ergsum website, submitting a form, booking an audit, reviewing a proposal, or engaging our services, you agree to these Terms of Service.",
+      "If you are using Ergsum on behalf of a company or organization, you confirm that you have authority to accept these Terms on that entity's behalf.",
     ],
   },
   {
     id: "services",
     title: "Services and Scope",
     body: [
-      "KAIRO provides AI automation strategy, workflow audits, solution design, development, integration, deployment, and optimization services.",
+      "Ergsum provides AI automation strategy, workflow audits, solution design, development, integration, deployment, and optimization services.",
       "Specific deliverables, timelines, milestones, fees, access requirements, and acceptance criteria are defined in a written proposal, statement of work, or service agreement.",
       "Any free audit, diagnostic, estimate, or recommendation is provided for evaluation purposes and does not guarantee a specific commercial outcome unless separately agreed in writing.",
     ],
@@ -31,7 +31,7 @@ const sections = [
     title: "Client Responsibilities",
     body: [
       "You are responsible for providing accurate business information, timely feedback, system access, data samples, stakeholder availability, and internal approvals required for delivery.",
-      "You must ensure that any data, credentials, materials, or third-party systems shared with KAIRO may lawfully be used for the project.",
+      "You must ensure that any data, credentials, materials, or third-party systems shared with Ergsum may lawfully be used for the project.",
       "Project timelines may shift if access, feedback, data, approvals, or dependencies are delayed.",
     ],
   },
@@ -41,7 +41,7 @@ const sections = [
     body: [
       "Fees, billing schedules, payment due dates, accepted payment methods, refund rules, and late payment terms are stated in the applicable proposal or agreement.",
       "Unless otherwise stated, fees are exclusive of taxes, duties, bank charges, platform fees, and third-party subscription costs.",
-      "KAIRO may pause work, access, support, or delivery if invoices remain unpaid after the agreed payment period.",
+      "Ergsum may pause work, access, support, or delivery if invoices remain unpaid after the agreed payment period.",
     ],
   },
   {
@@ -50,15 +50,15 @@ const sections = [
     body: [
       "Each party retains ownership of intellectual property, tools, templates, frameworks, processes, models, documentation, and know-how it owned before the project.",
       "Project-specific deliverables may be assigned or licensed to you according to the applicable agreement after full payment is received.",
-      "KAIRO may reuse general knowledge, non-confidential methods, reusable components, automation patterns, and technical expertise developed during service delivery.",
+      "Ergsum may reuse general knowledge, non-confidential methods, reusable components, automation patterns, and technical expertise developed during service delivery.",
     ],
   },
   {
     id: "data",
     title: "Data, Access, and Security",
     body: [
-      "You may provide business data, system access, documents, credentials, API keys, or workflow information so KAIRO can perform the services.",
-      "KAIRO uses reasonable administrative, technical, and organizational safeguards to protect client materials, but no internet-connected service can be guaranteed completely secure.",
+      "You may provide business data, system access, documents, credentials, API keys, or workflow information so Ergsum can perform the services.",
+      "Ergsum uses reasonable administrative, technical, and organizational safeguards to protect client materials, but no internet-connected service can be guaranteed completely secure.",
       "You should not send unnecessary sensitive data unless it is required for the project and covered by an appropriate agreement.",
     ],
   },
@@ -76,14 +76,14 @@ const sections = [
     body: [
       "Projects may involve third-party tools such as CRMs, help desks, analytics platforms, cloud providers, AI providers, automation platforms, or communication tools.",
       "Your use of third-party tools remains subject to those providers' own terms, pricing, availability, security practices, and data policies.",
-      "KAIRO is not responsible for downtime, pricing changes, data loss, feature changes, or service limitations caused by third-party platforms.",
+      "Ergsum is not responsible for downtime, pricing changes, data loss, feature changes, or service limitations caused by third-party platforms.",
     ],
   },
   {
     id: "warranties",
     title: "Warranties and Disclaimers",
     body: [
-      "KAIRO will provide services in a professional and commercially reasonable manner.",
+      "Ergsum will provide services in a professional and commercially reasonable manner.",
       "Except as expressly stated in a written agreement, services, recommendations, audits, prototypes, integrations, and materials are provided without warranties of merchantability, fitness for a particular purpose, uninterrupted operation, or guaranteed business results.",
     ],
   },
@@ -91,8 +91,8 @@ const sections = [
     id: "liability",
     title: "Limitation of Liability",
     body: [
-      "To the maximum extent permitted by law, KAIRO is not liable for indirect, incidental, special, consequential, punitive, or lost-profit damages.",
-      "KAIRO's total liability for claims related to the services is limited to the amount paid by you for the specific services giving rise to the claim during the three months before the claim.",
+      "To the maximum extent permitted by law, Ergsum is not liable for indirect, incidental, special, consequential, punitive, or lost-profit damages.",
+      "Ergsum's total liability for claims related to the services is limited to the amount paid by you for the specific services giving rise to the claim during the three months before the claim.",
     ],
   },
   {
@@ -117,10 +117,10 @@ export default function TermsPage() {
   return (
     <>
       <Head>
-        <title>Terms of Service - KAIRO®</title>
+        <title>Terms of Service - Ergsum®</title>
         <meta
           name="description"
-          content="KAIRO Terms of Service for AI automation audits, consulting, implementation, and managed optimization services."
+          content="Ergsum Terms of Service for AI automation audits, consulting, implementation, and managed optimization services."
         />
       </Head>
 
@@ -134,7 +134,7 @@ export default function TermsPage() {
               Terms of Service
             </h1>
             <p className="text-sm md:text-lg opacity-70 leading-relaxed max-w-2xl">
-              These terms explain how KAIRO works with clients, handles project scope,
+              These terms explain how Ergsum works with clients, handles project scope,
               protects confidential information, and defines responsibilities for AI
               automation services.
             </p>
@@ -218,7 +218,7 @@ export default function TermsPage() {
                   [ Questions? ]
                 </p>
                 <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">
-                  Contact KAIRO Legal
+                  Contact Ergsum Legal
                 </h2>
                 <p className="text-sm md:text-base opacity-70 leading-relaxed mb-6 max-w-2xl">
                   If you have questions about these Terms or need contract-specific
@@ -226,7 +226,7 @@ export default function TermsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="mailto:hello@kairo.ai"
+                    href="mailto:hello@ergsum.ai"
                     className="bg-[#D6FF00] text-black py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white transition-colors"
                   >
                     Email Legal Team

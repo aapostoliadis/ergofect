@@ -3,25 +3,25 @@ import FadeIn from "@/components/FadeIn";
 const socials = [
   {
     name: "LinkedIn",
-    handle: "@kairo-ai",
+    handle: "@ergsum-ai",
     href: "#",
     desc: "Company updates, case studies, and team insights.",
   },
   {
     name: "Twitter / X",
-    handle: "@kairo_ai",
+    handle: "@ergsum_ai",
     href: "#",
     desc: "Hot takes on AI automation and behind-the-scenes content.",
   },
   {
     name: "GitHub",
-    handle: "@kairo-ai",
+    handle: "@ergsum-ai",
     href: "#",
     desc: "Open-source tools and automation templates.",
   },
   {
     name: "YouTube",
-    handle: "@KairoAI",
+    handle: "@ErgsumAI",
     href: "#",
     desc: "Tutorials, demos, and automation deep-dives.",
   },

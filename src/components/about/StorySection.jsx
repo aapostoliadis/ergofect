@@ -46,7 +46,7 @@ export default function StorySection() {
           <div className="lg:col-span-2">
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-2xl">
-                KAIRO didn&apos;t start in a lab. It started in the trenches —
+                Ergsum didn&apos;t start in a lab. It started in the trenches —
                 watching talented people burn out on tasks that should have been
                 automated years ago.
               </p>

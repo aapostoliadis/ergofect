@@ -11,10 +11,10 @@ export default function CaseStudies() {
   return (
     <>
       <Head>
-        <title>Case Studies - KAIRO® | AI Automation Results</title>
+        <title>Case Studies - Ergsum® | AI Automation Results</title>
         <meta
           name="description"
-          content="See how KAIRO helped real companies automate operations, cut costs, and scale without adding headcount."
+          content="See how Ergsum helped real companies automate operations, cut costs, and scale without adding headcount."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

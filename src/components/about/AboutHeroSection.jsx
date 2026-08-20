@@ -6,7 +6,7 @@ export default function AboutHeroSection() {
       <div className="container relative">
         <FadeIn>
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 opacity-60">
-            [ ABOUT KAIRO® ]
+            [ ABOUT ERGSUM® ]
           </p>
         </FadeIn>
 
@@ -25,7 +25,7 @@ export default function AboutHeroSection() {
           <div className="flex flex-col justify-end">
             <FadeIn delay={200}>
               <p className="text-lg md:text-2xl font-medium max-w-lg">
-                Founded in 2022, KAIRO is an AI automation studio that helps
+                Founded in 2022, Ergsum is an AI automation studio that helps
                 scaling companies eliminate operational bottlenecks — without
                 adding headcount.
               </p>

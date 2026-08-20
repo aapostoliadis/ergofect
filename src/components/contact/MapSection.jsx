@@ -21,7 +21,7 @@ export default function MapSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="KAIRO HQ Location"
+              title="Ergsum HQ Location"
             ></iframe>
             <div className="absolute inset-0 bg-[#D6FF00] mix-blend-overlay opacity-5 pointer-events-none"></div>
           </div>

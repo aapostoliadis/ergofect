@@ -127,7 +127,7 @@ export default function Navbar() {
         <div className="container flex justify-between items-center">
           <div className="flex items-center w-1/2 md:w-1/3">
             <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter uppercase relative z-50">
-              KAIRO®
+              Ergsum®
             </Link>
           </div>
           <div className="hidden md:flex flex-col items-center justify-center text-[10px] tracking-widest uppercase font-mono opacity-70 w-1/3 text-center">
@@ -184,10 +184,10 @@ export default function Navbar() {
             <div className="mb-8">
               <p className="opacity-50 mb-2">[ CONTACT US ]</p>
               <a
-                href="mailto:hello@kairo.ai"
+                href="mailto:hello@ergsum.ai"
                 className="bg-[#D6FF00] text-black px-2 py-1 text-xl font-bold inline-block hover:bg-black hover:text-[#D6FF00] transition-colors"
               >
-                HELLO@KAIRO.AI
+                HELLO@ERGSUM.AI
               </a>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

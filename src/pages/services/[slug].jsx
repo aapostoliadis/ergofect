@@ -14,7 +14,7 @@ export default function ServiceDetail({ service }) {
   return (
     <>
       <Head>
-        <title>{service.title} - KAIRO® | AI Automation Services</title>
+        <title>{service.title} - Ergsum® | AI Automation Services</title>
         <meta
           name="description"
           content={service.desc}

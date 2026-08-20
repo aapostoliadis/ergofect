@@ -5,7 +5,7 @@ const team = [
     name: "John Doe",
     role: "Founder & CEO",
     seed: "Felix",
-    desc: "Former ops lead at a Fortune 500. Built KAIRO to solve the problem he saw every day.",
+    desc: "Former ops lead at a Fortune 500. Built Ergsum to solve the problem he saw every day.",
   },
   {
     name: "Sarah Chen",

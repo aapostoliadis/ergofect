@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 const highlights = [
   ["Effective Date", "April 28, 2026"],
   ["Data Sold", "Never"],
-  ["Privacy Contact", "hello@kairo.ai"],
+  ["Privacy Contact", "hello@ergsum.ai"],
 ];
 
 const rights = [
@@ -22,7 +22,7 @@ const sections = [
     id: "overview",
     title: "Privacy Overview",
     body: [
-      "This Privacy Policy explains how KAIRO collects, uses, shares, stores, and protects information when you visit our website, request an audit, contact us, or engage our AI automation services.",
+      "This Privacy Policy explains how Ergsum collects, uses, shares, stores, and protects information when you visit our website, request an audit, contact us, or engage our AI automation services.",
       "We design our data practices around operational necessity, security, transparency, and respect for client confidentiality.",
     ],
   },
@@ -104,7 +104,7 @@ const sections = [
     id: "international",
     title: "International Transfers",
     body: [
-      "KAIRO and its service providers may process information in countries other than your own. Where required, we use appropriate safeguards for cross-border transfers.",
+      "Ergsum and its service providers may process information in countries other than your own. Where required, we use appropriate safeguards for cross-border transfers.",
       "By using our website or services, you understand that information may be processed where we or our vendors operate.",
     ],
   },
@@ -122,10 +122,10 @@ export default function PrivacyPage() {
   return (
     <>
       <Head>
-        <title>Privacy Policy - KAIRO®</title>
+        <title>Privacy Policy - Ergsum®</title>
         <meta
           name="description"
-          content="KAIRO Privacy Policy explaining data collection, AI data handling, security, retention, cookies, and privacy rights."
+          content="Ergsum Privacy Policy explaining data collection, AI data handling, security, retention, cookies, and privacy rights."
         />
       </Head>
 
@@ -259,7 +259,7 @@ export default function PrivacyPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="mailto:hello@kairo.ai"
+                    href="mailto:hello@ergsum.ai"
                     className="bg-[#D6FF00] text-black py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white transition-colors"
                   >
                     Submit Privacy Request

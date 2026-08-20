@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 md:pt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12">
           <Link href="/">
             <h1 className="text-[25vw] md:text-[8vw] lg:text-[12vw] xl:text-[15vw] font-black uppercase tracking-tighter leading-none opacity-20 hover:opacity-40 transition-opacity">
-              KAIRO®
+              Ergsum®
             </h1>
           </Link>
 
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col text-center sm:text-left justify-center sm:flex-row sm:justify-between items-start sm:items-center font-mono text-[8px] md:text-[10px] uppercase opacity-40 mt-8 gap-2">
-          <p className="w-full sm:w-auto">© 2026 KAIRO AI, Inc. All Rights Reserved.</p>
+          <p className="w-full sm:w-auto">© 2026 Ergsum AI, Inc. All Rights Reserved.</p>
           <p className="w-full sm:w-auto">Designed for Scale.</p>
         </div>
       </div>

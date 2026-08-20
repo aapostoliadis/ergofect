@@ -11,10 +11,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us - KAIRO® | AI Automation Specialists</title>
+        <title>About Us - Ergsum® | AI Automation Specialists</title>
         <meta
           name="description"
-          content="Learn about KAIRO — the AI automation studio helping scaling companies eliminate operational bottlenecks without adding headcount."
+          content="Learn about Ergsum — the AI automation studio helping scaling companies eliminate operational bottlenecks without adding headcount."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

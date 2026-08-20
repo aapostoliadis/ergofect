@@ -2,7 +2,7 @@ import FadeIn from "@/components/FadeIn";
 
 const testimonials = [
   {
-    quote: "KAIRO didn't just automate our support — they fundamentally changed how we think about operations. The ROI was visible within the first month.",
+    quote: "Ergsum didn't just automate our support — they fundamentally changed how we think about operations. The ROI was visible within the first month.",
     name: "James Mitchell",
     role: "CEO, Boltshift",
     seed: "James",
@@ -14,7 +14,7 @@ const testimonials = [
     seed: "Rachel",
   },
   {
-    quote: "The team at KAIRO understood our logistics challenges better than vendors who'd been in the space for decades. Truly impressive.",
+    quote: "The team at Ergsum understood our logistics challenges better than vendors who'd been in the space for decades. Truly impressive.",
     name: "Carlos Mendez",
     role: "VP Operations, Umbrella",
     seed: "Carlos",

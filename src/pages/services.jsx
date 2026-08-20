@@ -11,10 +11,10 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Services - KAIRO® | AI Automation Solutions</title>
+        <title>Services - Ergsum® | AI Automation Solutions</title>
         <meta
           name="description"
-          content="Explore KAIRO's AI automation services — from customer support and data processing to custom AI solutions built for your operations."
+          content="Explore Ergsum's AI automation services — from customer support and data processing to custom AI solutions built for your operations."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
