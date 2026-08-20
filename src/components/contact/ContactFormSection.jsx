@@ -1,16 +1,75 @@
+import { useState } from "react";
 import FadeIn from "@/components/FadeIn";
 
 const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
 const serviceOptions = [
   "Customer Support Automation",
-  "Data Processing",
+  "Data Processing & Analytics",
   "Workflow Automation",
   "Document Intelligence",
-  "Sales & Marketing",
+  "Sales & Marketing Automation",
   "Custom AI Solution",
 ];
+const teamSizeOptions = ["1-10", "11-50", "51-200", "201-500", "500+"];
 
 export default function ContactFormSection() {
+  const [formStep, setFormStep] = useState(0);
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedSpend, setSelectedSpend] = useState("");
+  const [selectedTeamSize, setSelectedTeamSize] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [workEmail, setWorkEmail] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [role, setRole] = useState("");
+  const [bottleneck, setBottleneck] = useState("");
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  function toggleService(svc) {
+    setSelectedServices((prev) =>
+      prev.includes(svc) ? prev.filter((s) => s !== svc) : [...prev, svc]
+    );
+  }
+
+  function validateStep(step) {
+    const stepErrors = {};
+    if (step === 0) {
+      if (!fullName.trim()) stepErrors.fullName = "Please enter your full name.";
+      if (!workEmail.trim()) {
+        stepErrors.workEmail = "Please enter your work email.";
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail.trim())) {
+        stepErrors.workEmail = "Please enter a valid email address.";
+      }
+      if (!companyName.trim()) stepErrors.companyName = "Please enter your company name.";
+    }
+    if (step === 2) {
+      if (!bottleneck.trim()) stepErrors.bottleneck = "Please describe your biggest bottleneck.";
+    }
+    return stepErrors;
+  }
+
+  function goToStep(targetStep) {
+    if (targetStep > formStep) {
+      const stepErrors = validateStep(formStep);
+      if (Object.keys(stepErrors).length > 0) {
+        setErrors(stepErrors);
+        return;
+      }
+    }
+    setErrors({});
+    setFormStep(targetStep);
+  }
+
+  function handleSubmit() {
+    const stepErrors = validateStep(2);
+    if (Object.keys(stepErrors).length > 0) {
+      setErrors(stepErrors);
+      return;
+    }
+    setErrors({});
+    setSubmitted(true);
+  }
+
   return (
     <section className="bg-bone py-20 md:py-32 border-b border-black/10">
       <div className="container">
@@ -54,99 +113,255 @@ export default function ContactFormSection() {
 
           <div>
             <FadeIn delay={200}>
-              <form className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  <div>
-                    <label className="block mb-2 opacity-50">Name</label>
-                    <input
-                      type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
-                      placeholder="Jane Doe"
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 opacity-50">Email</label>
-                    <input
-                      type="email"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
-                      placeholder="jane@company.com"
-                    />
-                  </div>
+              {submitted ? (
+                <div className="py-12 text-center lg:text-left">
+                  <h3 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-4">
+                    Thanks, {fullName.trim().split(" ")[0]}.
+                  </h3>
+                  <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm max-w-md">
+                    We&apos;ve received your audit request and will be in touch
+                    at {workEmail} within 24 hours.
+                  </p>
+                </div>
+              ) : (
+              <form className="space-y-8 md:space-y-10">
+                {/* Step Indicator */}
+                <div className="flex items-center gap-2 font-mono text-[9px] md:text-xs uppercase">
+                  {["Your Info", "Your Needs", "Details"].map((label, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => goToStep(i)}
+                      className={`flex items-center gap-2 px-2 md:px-3 py-2 border transition-colors ${
+                        formStep === i
+                          ? "border-ink bg-ink text-bone"
+                          : formStep > i
+                          ? "border-black/40 bg-black/5"
+                          : "border-black/20"
+                      }`}
+                    >
+                      <span className="font-bold">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="hidden sm:inline">{label}</span>
+                    </button>
+                  ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  <div>
-                    <label className="block mb-2 opacity-50">Company</label>
-                    <input
-                      type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
-                      placeholder="Your Company Name"
-                    />
+                {/* Step 1: Your Info */}
+                <div className={formStep === 0 ? "block" : "hidden"}>
+                  <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                      <div>
+                        <label className="block mb-2 opacity-50">Full Name</label>
+                        <input
+                          type="text"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt transition-colors rounded-none ${
+                            errors.fullName ? "border-negative" : "border-black/20"
+                          }`}
+                          placeholder="Jane Doe"
+                          required
+                          aria-invalid={Boolean(errors.fullName)}
+                        />
+                        {errors.fullName && (
+                          <p className="mt-2 normal-case tracking-normal text-negative">{errors.fullName}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block mb-2 opacity-50">Work Email</label>
+                        <input
+                          type="email"
+                          value={workEmail}
+                          onChange={(e) => setWorkEmail(e.target.value)}
+                          className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt transition-colors rounded-none ${
+                            errors.workEmail ? "border-negative" : "border-black/20"
+                          }`}
+                          placeholder="jane@company.com"
+                          required
+                          aria-invalid={Boolean(errors.workEmail)}
+                        />
+                        {errors.workEmail && (
+                          <p className="mt-2 normal-case tracking-normal text-negative">{errors.workEmail}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                      <div>
+                        <label className="block mb-2 opacity-50">Company Name</label>
+                        <input
+                          type="text"
+                          value={companyName}
+                          onChange={(e) => setCompanyName(e.target.value)}
+                          className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt transition-colors rounded-none ${
+                            errors.companyName ? "border-negative" : "border-black/20"
+                          }`}
+                          placeholder="Your Company"
+                          required
+                          aria-invalid={Boolean(errors.companyName)}
+                        />
+                        {errors.companyName && (
+                          <p className="mt-2 normal-case tracking-normal text-negative">{errors.companyName}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block mb-2 opacity-50">Your Role</label>
+                        <input
+                          type="text"
+                          value={role}
+                          onChange={(e) => setRole(e.target.value)}
+                          className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt transition-colors rounded-none"
+                          placeholder="CEO, CTO, VP Ops..."
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block mb-4 opacity-50">Team Size</label>
+                      <div className="flex flex-wrap gap-3">
+                        {teamSizeOptions.map((size) => (
+                          <button
+                            key={size}
+                            type="button"
+                            onClick={() => setSelectedTeamSize(size)}
+                            className={`border px-3 md:px-4 py-2 transition-colors ${
+                              selectedTeamSize === size
+                                ? "border-ink bg-ink text-bone"
+                                : "border-black/20 hover:border-ink"
+                            }`}
+                          >
+                            {size}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <label className="block mb-2 opacity-50">Role</label>
-                    <input
-                      type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
-                      placeholder="Your Role"
-                    />
-                  </div>
+                  <button
+                    type="button"
+                    onClick={() => goToStep(1)}
+                    className="mt-8 md:mt-10 bg-ink text-bone py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
+                  >
+                    Continue →
+                  </button>
                 </div>
 
-                <div>
-                  <label className="block mb-4 opacity-50">
-                    Service Interested In
-                  </label>
-                  <div className="flex flex-wrap gap-2 md:gap-3">
-                    {serviceOptions.map((opt) => (
-                      <label
-                        key={opt}
-                        className="flex items-center gap-2 cursor-pointer border border-black/20 px-3 py-2 hover:border-black transition-colors"
-                      >
-                        <input type="checkbox" className="hidden" />
-                        <span className="w-3 h-3 border border-black/40 block shrink-0"></span>
-                        {opt}
+                {/* Step 2: Your Needs */}
+                <div className={formStep === 1 ? "block" : "hidden"}>
+                  <div className="space-y-8 font-mono text-[10px] md:text-sm uppercase">
+                    <div>
+                      <label className="block mb-4 opacity-50">
+                        Services Interested In (Select All That Apply)
                       </label>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block mb-4 opacity-50">
-                    Monthly Operational Spend
-                  </label>
-                  <div className="flex flex-wrap gap-3 md:gap-4">
-                    {spendOptions.map((opt) => (
-                      <label
-                        key={opt}
-                        className="flex items-center gap-2 cursor-pointer border border-black/20 px-3 md:px-4 py-2 hover:border-black transition-colors"
-                      >
-                        <input type="radio" name="spend" className="hidden" />
-                        <span className="w-3 h-3 border border-black/40 rounded-full block shrink-0"></span>
-                        {opt}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {serviceOptions.map((svc) => (
+                          <button
+                            key={svc}
+                            type="button"
+                            onClick={() => toggleService(svc)}
+                            className={`border px-3 md:px-4 py-3 text-left flex items-center gap-3 transition-colors ${
+                              selectedServices.includes(svc)
+                                ? "border-ink bg-ink text-bone"
+                                : "border-black/20 hover:border-ink"
+                            }`}
+                          >
+                            <span
+                              className={`w-3 h-3 border shrink-0 flex items-center justify-center ${
+                                selectedServices.includes(svc)
+                                  ? "border-bone bg-bone"
+                                  : "border-black/40"
+                              }`}
+                            >
+                              {selectedServices.includes(svc) && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                              )}
+                            </span>
+                            {svc}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block mb-4 opacity-50">
+                        Monthly Operational Spend
                       </label>
-                    ))}
+                      <div className="flex flex-wrap gap-3">
+                        {spendOptions.map((opt) => (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => setSelectedSpend(opt)}
+                            className={`border px-3 md:px-4 py-2 transition-colors ${
+                              selectedSpend === opt
+                                ? "border-ink bg-ink text-bone"
+                                : "border-black/20 hover:border-ink"
+                            }`}
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 mt-8 md:mt-10">
+                    <button
+                      type="button"
+                      onClick={() => goToStep(0)}
+                      className="border border-black/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-black/5 transition-colors font-mono"
+                    >
+                      ← Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => goToStep(2)}
+                      className="bg-ink text-bone py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
+                    >
+                      Continue →
+                    </button>
                   </div>
                 </div>
 
-                <div>
-                  <label className="block mb-2 opacity-50">
-                    Tell Us About Your Challenge
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
-                    placeholder="Describe the workflows you'd like to automate..."
-                  />
+                {/* Step 3: Details */}
+                <div className={formStep === 2 ? "block" : "hidden"}>
+                  <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
+                    <div>
+                      <label className="block mb-2 opacity-50">
+                        Describe Your Biggest Operational Bottleneck
+                      </label>
+                      <textarea
+                        rows={4}
+                        value={bottleneck}
+                        onChange={(e) => setBottleneck(e.target.value)}
+                        className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt transition-colors rounded-none resize-none ${
+                          errors.bottleneck ? "border-negative" : "border-black/20"
+                        }`}
+                        placeholder="e.g., Our support team spends 4 hours daily on repetitive ticket responses..."
+                        required
+                        aria-invalid={Boolean(errors.bottleneck)}
+                      />
+                      {errors.bottleneck && (
+                        <p className="mt-2 normal-case tracking-normal text-negative">{errors.bottleneck}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex gap-4 mt-8 md:mt-10">
+                    <button
+                      type="button"
+                      onClick={() => goToStep(1)}
+                      className="border border-black/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-black/5 transition-colors font-mono"
+                    >
+                      ← Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleSubmit}
+                      className="bg-ink text-bone py-3 md:py-4 px-8 md:px-12 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
+                    >
+                      Submit Audit Request
+                    </button>
+                  </div>
                 </div>
-
-                <button
-                  type="button"
-                  className="bg-ink text-bone w-full py-4 font-bold text-base md:text-lg hover:bg-cobalt transition-colors"
-                >
-                  Request Free Audit
-                </button>
               </form>
+              )}
             </FadeIn>
           </div>
         </div>
