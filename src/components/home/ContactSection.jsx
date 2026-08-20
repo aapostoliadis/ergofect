@@ -1,33 +1,73 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import FadeIn from "@/components/FadeIn";
 
 const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
+const serviceOptions = [
+  "Customer Support Automation",
+  "Data Processing & Analytics",
+  "Workflow Automation",
+  "Document Intelligence",
+  "Sales & Marketing Automation",
+  "Custom AI Solution",
+];
+const teamSizeOptions = ["1-10", "11-50", "51-200", "201-500", "500+"];
 
 export default function ContactSection() {
-  const router = useRouter();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [spend, setSpend] = useState("");
+  const [formStep, setFormStep] = useState(0);
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedSpend, setSelectedSpend] = useState("");
+  const [selectedTeamSize, setSelectedTeamSize] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [workEmail, setWorkEmail] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [role, setRole] = useState("");
+  const [bottleneck, setBottleneck] = useState("");
   const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  function toggleService(svc) {
+    setSelectedServices((prev) =>
+      prev.includes(svc) ? prev.filter((s) => s !== svc) : [...prev, svc]
+    );
+  }
+
+  function validateStep(step) {
+    const stepErrors = {};
+    if (step === 0) {
+      if (!fullName.trim()) stepErrors.fullName = "Please enter your full name.";
+      if (!workEmail.trim()) {
+        stepErrors.workEmail = "Please enter your work email.";
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail.trim())) {
+        stepErrors.workEmail = "Please enter a valid email address.";
+      }
+      if (!companyName.trim()) stepErrors.companyName = "Please enter your company name.";
+    }
+    if (step === 2) {
+      if (!bottleneck.trim()) stepErrors.bottleneck = "Please describe your biggest bottleneck.";
+    }
+    return stepErrors;
+  }
+
+  function goToStep(targetStep) {
+    if (targetStep > formStep) {
+      const stepErrors = validateStep(formStep);
+      if (Object.keys(stepErrors).length > 0) {
+        setErrors(stepErrors);
+        return;
+      }
+    }
+    setErrors({});
+    setFormStep(targetStep);
+  }
 
   function handleSubmit() {
-    const nextErrors = {};
-    if (!name.trim()) nextErrors.name = "Please enter your name.";
-    if (!email.trim()) {
-      nextErrors.email = "Please enter your email.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      nextErrors.email = "Please enter a valid email address.";
-    }
-    if (!company.trim()) nextErrors.company = "Please enter your company name.";
-
-    if (Object.keys(nextErrors).length > 0) {
-      setErrors(nextErrors);
+    const stepErrors = validateStep(2);
+    if (Object.keys(stepErrors).length > 0) {
+      setErrors(stepErrors);
       return;
     }
     setErrors({});
-    router.push("/book-audit");
+    setSubmitted(true);
   }
 
   return (
@@ -68,91 +108,255 @@ export default function ContactSection() {
 
           <div>
             <FadeIn delay={200}>
-              <form className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  <div>
-                    <label className="block mb-2 opacity-50">Name</label>
-                    <input
-                      type="text"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
-                        errors.name ? "border-negative" : "border-bone/20"
-                      }`}
-                      placeholder="Jane Doe"
-                      required
-                      aria-invalid={Boolean(errors.name)}
-                    />
-                    {errors.name && (
-                      <p className="mt-2 normal-case tracking-normal text-negative">{errors.name}</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className="block mb-2 opacity-50">Email</label>
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
-                        errors.email ? "border-negative" : "border-bone/20"
-                      }`}
-                      placeholder="jane@company.com"
-                      required
-                      aria-invalid={Boolean(errors.email)}
-                    />
-                    {errors.email && (
-                      <p className="mt-2 normal-case tracking-normal text-negative">{errors.email}</p>
-                    )}
-                  </div>
+              {submitted ? (
+                <div className="py-12 text-center lg:text-left">
+                  <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-4">
+                    Thanks, {fullName.trim().split(" ")[0]}.
+                  </h3>
+                  <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm max-w-md">
+                    We&apos;ve received your audit request and will be in touch
+                    at {workEmail} within 24 hours.
+                  </p>
                 </div>
-                <div>
-                  <label className="block mb-2 opacity-50">Company</label>
-                  <input
-                    type="text"
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                    className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
-                      errors.company ? "border-negative" : "border-bone/20"
-                    }`}
-                    placeholder="Your Company Name"
-                    required
-                    aria-invalid={Boolean(errors.company)}
-                  />
-                  {errors.company && (
-                    <p className="mt-2 normal-case tracking-normal text-negative">{errors.company}</p>
-                  )}
+              ) : (
+              <form className="space-y-8 md:space-y-10">
+                {/* Step Indicator */}
+                <div className="flex items-center gap-2 font-mono text-[9px] md:text-xs uppercase">
+                  {["Your Info", "Your Needs", "Details"].map((label, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => goToStep(i)}
+                      className={`flex items-center gap-2 px-2 md:px-3 py-2 border transition-colors ${
+                        formStep === i
+                          ? "border-cobalt-light bg-cobalt-light text-ink"
+                          : formStep > i
+                          ? "border-bone/20 bg-bone/5"
+                          : "border-bone/10"
+                      }`}
+                    >
+                      <span className="font-bold">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="hidden sm:inline">{label}</span>
+                    </button>
+                  ))}
                 </div>
 
-                <div>
-                  <label className="block mb-4 opacity-50">
-                    Monthly Operational Spend
-                  </label>
-                  <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
-                    {spendOptions.map((opt) => (
-                      <button
-                        key={opt}
-                        type="button"
-                        onClick={() => setSpend(opt)}
-                        className={`flex items-center gap-2 border px-3 md:px-4 py-2 transition-colors w-full sm:w-auto ${
-                          spend === opt
-                            ? "border-cobalt-light bg-cobalt-light text-ink"
-                            : "border-bone/20 hover:border-cobalt-light"
+                {/* Step 1: Your Info */}
+                <div className={formStep === 0 ? "block" : "hidden"}>
+                  <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                      <div>
+                        <label className="block mb-2 opacity-50">Full Name</label>
+                        <input
+                          type="text"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
+                            errors.fullName ? "border-negative" : "border-bone/20"
+                          }`}
+                          placeholder="Jane Doe"
+                          required
+                          aria-invalid={Boolean(errors.fullName)}
+                        />
+                        {errors.fullName && (
+                          <p className="mt-2 normal-case tracking-normal text-negative">{errors.fullName}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block mb-2 opacity-50">Work Email</label>
+                        <input
+                          type="email"
+                          value={workEmail}
+                          onChange={(e) => setWorkEmail(e.target.value)}
+                          className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
+                            errors.workEmail ? "border-negative" : "border-bone/20"
+                          }`}
+                          placeholder="jane@company.com"
+                          required
+                          aria-invalid={Boolean(errors.workEmail)}
+                        />
+                        {errors.workEmail && (
+                          <p className="mt-2 normal-case tracking-normal text-negative">{errors.workEmail}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                      <div>
+                        <label className="block mb-2 opacity-50">Company Name</label>
+                        <input
+                          type="text"
+                          value={companyName}
+                          onChange={(e) => setCompanyName(e.target.value)}
+                          className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
+                            errors.companyName ? "border-negative" : "border-bone/20"
+                          }`}
+                          placeholder="Your Company"
+                          required
+                          aria-invalid={Boolean(errors.companyName)}
+                        />
+                        {errors.companyName && (
+                          <p className="mt-2 normal-case tracking-normal text-negative">{errors.companyName}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block mb-2 opacity-50">Your Role</label>
+                        <input
+                          type="text"
+                          value={role}
+                          onChange={(e) => setRole(e.target.value)}
+                          className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
+                          placeholder="CEO, CTO, VP Ops..."
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block mb-4 opacity-50">Team Size</label>
+                      <div className="flex flex-wrap gap-3">
+                        {teamSizeOptions.map((size) => (
+                          <button
+                            key={size}
+                            type="button"
+                            onClick={() => setSelectedTeamSize(size)}
+                            className={`border px-3 md:px-4 py-2 transition-colors ${
+                              selectedTeamSize === size
+                                ? "border-cobalt-light bg-cobalt-light text-ink"
+                                : "border-bone/20 hover:border-cobalt-light"
+                            }`}
+                          >
+                            {size}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => goToStep(1)}
+                    className="mt-8 md:mt-10 bg-cobalt-light text-ink py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-bone transition-colors"
+                  >
+                    Continue →
+                  </button>
+                </div>
+
+                {/* Step 2: Your Needs */}
+                <div className={formStep === 1 ? "block" : "hidden"}>
+                  <div className="space-y-8 font-mono text-[10px] md:text-sm uppercase">
+                    <div>
+                      <label className="block mb-4 opacity-50">
+                        Services Interested In (Select All That Apply)
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {serviceOptions.map((svc) => (
+                          <button
+                            key={svc}
+                            type="button"
+                            onClick={() => toggleService(svc)}
+                            className={`border px-3 md:px-4 py-3 text-left flex items-center gap-3 transition-colors ${
+                              selectedServices.includes(svc)
+                                ? "border-cobalt-light bg-cobalt-light text-ink"
+                                : "border-bone/20 hover:border-cobalt-light"
+                            }`}
+                          >
+                            <span
+                              className={`w-3 h-3 border shrink-0 flex items-center justify-center ${
+                                selectedServices.includes(svc)
+                                  ? "border-ink bg-ink"
+                                  : "border-bone/40"
+                              }`}
+                            >
+                              {selectedServices.includes(svc) && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                              )}
+                            </span>
+                            {svc}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block mb-4 opacity-50">
+                        Monthly Operational Spend
+                      </label>
+                      <div className="flex flex-wrap gap-3">
+                        {spendOptions.map((opt) => (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => setSelectedSpend(opt)}
+                            className={`border px-3 md:px-4 py-2 transition-colors ${
+                              selectedSpend === opt
+                                ? "border-cobalt-light bg-cobalt-light text-ink"
+                                : "border-bone/20 hover:border-cobalt-light"
+                            }`}
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 mt-8 md:mt-10">
+                    <button
+                      type="button"
+                      onClick={() => goToStep(0)}
+                      className="border border-bone/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-bone/5 transition-colors font-mono"
+                    >
+                      ← Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => goToStep(2)}
+                      className="bg-cobalt-light text-ink py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-bone transition-colors"
+                    >
+                      Continue →
+                    </button>
+                  </div>
+                </div>
+
+                {/* Step 3: Details */}
+                <div className={formStep === 2 ? "block" : "hidden"}>
+                  <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
+                    <div>
+                      <label className="block mb-2 opacity-50">
+                        Describe Your Biggest Operational Bottleneck
+                      </label>
+                      <textarea
+                        rows={4}
+                        value={bottleneck}
+                        onChange={(e) => setBottleneck(e.target.value)}
+                        className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none resize-none ${
+                          errors.bottleneck ? "border-negative" : "border-bone/20"
                         }`}
-                      >
-                        {opt}
-                      </button>
-                    ))}
+                        placeholder="e.g., Our support team spends 4 hours daily on repetitive ticket responses..."
+                        required
+                        aria-invalid={Boolean(errors.bottleneck)}
+                      />
+                      {errors.bottleneck && (
+                        <p className="mt-2 normal-case tracking-normal text-negative">{errors.bottleneck}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex gap-4 mt-8 md:mt-10">
+                    <button
+                      type="button"
+                      onClick={() => goToStep(1)}
+                      className="border border-bone/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-bone/5 transition-colors font-mono"
+                    >
+                      ← Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleSubmit}
+                      className="bg-cobalt-light text-ink py-3 md:py-4 px-8 md:px-12 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-bone transition-colors"
+                    >
+                      Submit Audit Request
+                    </button>
                   </div>
                 </div>
-
-                <button
-                  type="button"
-                  onClick={handleSubmit}
-                  className="bg-cobalt-light text-ink w-full py-4 font-bold text-base md:text-lg hover:bg-bone transition-colors mt-6 md:mt-8 block text-center"
-                >
-                  Request Free Audit
-                </button>
               </form>
+              )}
             </FadeIn>
           </div>
         </div>
