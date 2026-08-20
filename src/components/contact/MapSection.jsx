@@ -2,13 +2,13 @@ import FadeIn from "@/components/FadeIn";
 
 export default function MapSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32">
+    <section className="bg-ink text-bone py-20 md:py-32">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 md:mb-6 text-cobalt-light">
             [ HEADQUARTERS ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16">
             Find Us.
           </h2>
         </FadeIn>
@@ -23,7 +23,7 @@ export default function MapSection() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Ergsum HQ Location"
             ></iframe>
-            <div className="absolute inset-0 bg-[#D6FF00] mix-blend-overlay opacity-5 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-cobalt mix-blend-overlay opacity-5 pointer-events-none"></div>
           </div>
         </FadeIn>
 
@@ -41,7 +41,7 @@ export default function MapSection() {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-widest border-b border-white/30 pb-1 hover:border-[#D6FF00] hover:text-[#D6FF00] transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-widest border-b border-white/30 pb-1 hover:border-cobalt-light hover:text-cobalt-light transition-colors"
             >
               Get Directions
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

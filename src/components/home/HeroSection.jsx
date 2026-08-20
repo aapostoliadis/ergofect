@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="pt-32 pb-16 md:pt-32 md:pb-20 min-h-[90vh] md:min-h-screen flex flex-col justify-center border-b border-black/10"
+      className="pt-32 pb-16 md:pt-32 md:pb-20 min-h-[90vh] md:min-h-screen flex flex-col justify-center border-b border-ink/10"
     >
       <div className="container relative">
         <FadeIn>
@@ -17,9 +17,9 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row gap-12 items-end">
           <div className="w-full lg:w-2/3">
             <FadeIn delay={100}>
-              <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-black uppercase tracking-tighter">
+              <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[-0.04em]">
                 Scale Operations <br /> Without Hiring <br />
-                <span className="text-[#D6FF00] bg-black px-2 md:px-4 inline-block mt-2">
+                <span className="text-bone bg-ink px-2 md:px-4 inline-block mt-2">
                   [100]
                 </span>{" "}
                 People.
@@ -34,7 +34,7 @@ export default function HeroSection() {
             <FadeIn delay={300} className="mt-8 md:mt-12">
               <a
                 href="#how"
-                className="flex items-center gap-4 text-xs md:text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-2 w-fit hover:pr-4 transition-all group"
+                className="flex items-center gap-4 text-xs md:text-sm font-bold uppercase tracking-widest border-b-2 border-ink pb-2 w-fit hover:pr-4 transition-all group"
               >
                 See How It Works
                 <svg
@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           <div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
             <FadeIn direction="right" delay={400}>
-              <div className="bg-black aspect-video md:aspect-[4/5] p-6 flex flex-col justify-between text-white relative overflow-hidden group">
+              <div className="bg-ink aspect-video md:aspect-[4/5] p-6 flex flex-col justify-between text-bone relative overflow-hidden group">
                 {/* Background Video */}
                 <video
                   className="absolute inset-0 w-full h-full object-cover opacity-60"
@@ -68,8 +68,8 @@ export default function HeroSection() {
                   playsInline
                   autoPlay
                 />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 bg-[#D6FF00] mix-blend-overlay opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <div className="absolute inset-0 bg-ink/40"></div>
+                <div className="absolute inset-0 bg-cobalt mix-blend-overlay opacity-20 group-hover:opacity-40 transition-opacity"></div>
 
                 <div className="relative z-10 flex justify-between items-start">
                   <p className="font-mono text-[8px] md:text-[10px] uppercase w-2/3 md:w-1/2">
@@ -90,7 +90,7 @@ export default function HeroSection() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-[#D6FF00]"
+                      className="text-cobalt-light"
                     >
                       <path d="M5 12h14" />
                       <path d="m12 5 7 7-7 7" />

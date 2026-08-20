@@ -9,36 +9,36 @@ const metrics = [
 
 export default function ResultsSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32 border-t border-white/10">
+    <section className="bg-ink text-bone py-20 md:py-32 border-t border-bone/10">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ MEASURABLE IMPACT ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-16 md:mb-20 max-w-4xl">
-            Before vs. <span className="text-[#D6FF00]">After</span> Automation.
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-16 md:mb-20 max-w-4xl">
+            Before vs. <span className="text-cobalt-light">After</span> Automation.
           </h2>
         </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {metrics.map((item, i) => (
-            <FadeIn key={i} delay={item.delay} className="border border-white/10 p-6 md:p-8">
+            <FadeIn key={i} delay={item.delay} className="border border-bone/10 p-6 md:p-8">
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-6">
                 {item.label}
               </p>
               <div className="flex items-center gap-4 mb-2">
                 <div className="flex-1">
                   <p className="font-mono text-[10px] uppercase opacity-40 mb-1">Before</p>
-                  <p className="text-2xl md:text-3xl font-black opacity-40 line-through decoration-red-500/60 decoration-2">
+                  <p className="text-2xl md:text-3xl font-semibold opacity-40 line-through decoration-red-500/60 decoration-2">
                     {item.before}
                   </p>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#D6FF00] shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cobalt-light shrink-0">
                   <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
                 </svg>
                 <div className="flex-1 text-right">
-                  <p className="font-mono text-[10px] uppercase text-[#D6FF00] mb-1">After</p>
-                  <p className="text-2xl md:text-3xl font-black text-[#D6FF00]">
+                  <p className="font-mono text-[10px] uppercase text-cobalt-light mb-1">After</p>
+                  <p className="text-2xl md:text-3xl font-semibold text-cobalt-light">
                     {item.after}
                   </p>
                 </div>
@@ -48,10 +48,10 @@ export default function ResultsSection() {
         </div>
 
         <FadeIn delay={500} className="mt-16 md:mt-20">
-          <div className="border border-white/10 p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div className="border border-bone/10 p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
-              <p className="text-3xl md:text-5xl font-black mb-2">
-                $1.8M <span className="text-[#D6FF00]">Saved</span>
+              <p className="text-3xl md:text-5xl font-semibold mb-2">
+                $1.8M <span className="text-cobalt-light">Saved</span>
               </p>
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
                 Total Annual Savings for Boltshift After Full Deployment
@@ -59,7 +59,7 @@ export default function ResultsSection() {
             </div>
             <div className="font-mono text-[10px] md:text-xs uppercase opacity-50 text-right">
               <p>ROI Achieved in</p>
-              <p className="text-2xl md:text-3xl font-black text-[#F3F3EF] mt-1">6 Weeks</p>
+              <p className="text-2xl md:text-3xl font-semibold text-bone mt-1">6 Weeks</p>
             </div>
           </div>
         </FadeIn>

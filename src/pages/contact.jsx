@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us - Ergsum® | Get Your Free Automation Audit</title>
+        <title>Contact Us - Ergsum. | Get Your Free Automation Audit</title>
         <meta
           name="description"
           content="Get in touch with Ergsum. Request a free automation audit and discover how AI can transform your operations."

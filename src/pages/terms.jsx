@@ -117,20 +117,20 @@ export default function TermsPage() {
   return (
     <>
       <Head>
-        <title>Terms of Service - Ergsum®</title>
+        <title>Terms of Service - Ergsum.</title>
         <meta
           name="description"
           content="Ergsum Terms of Service for AI automation audits, consulting, implementation, and managed optimization services."
         />
       </Head>
 
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-[#111111] text-[#F3F3EF]">
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-ink text-bone">
         <div className="container">
           <FadeIn>
-            <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 text-[#D6FF00]">
+            <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 text-cobalt-light">
               [ LEGAL / TERMS ]
             </p>
-            <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6 max-w-5xl">
+            <h1 className="text-5xl md:text-8xl font-semibold tracking-[-0.04em] leading-none mb-6 max-w-5xl">
               Terms of Service
             </h1>
             <p className="text-sm md:text-lg opacity-70 leading-relaxed max-w-2xl">
@@ -150,7 +150,7 @@ export default function TermsPage() {
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-2">
                   {label}
                 </p>
-                <p className="text-lg md:text-xl font-black uppercase tracking-tighter">
+                <p className="text-lg md:text-xl font-semibold tracking-[-0.04em]">
                   {value}
                 </p>
               </FadeIn>
@@ -159,7 +159,7 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <section className="bg-[#F3F3EF] text-[#111111] py-16 md:py-24">
+      <section className="bg-bone text-ink py-16 md:py-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
             <aside className="lg:col-span-4 lg:block">
@@ -173,7 +173,7 @@ export default function TermsPage() {
                       <a
                         key={section.id}
                         href={`#${section.id}`}
-                        className="flex gap-3 text-xs md:text-sm uppercase font-bold tracking-wider hover:text-[#D6FF00] transition-colors"
+                        className="flex gap-3 text-xs md:text-sm uppercase font-bold tracking-wider hover:text-cobalt transition-colors"
                       >
                         <span className="font-mono opacity-40">
                           {String(index + 1).padStart(2, "0")}
@@ -192,12 +192,12 @@ export default function TermsPage() {
                   key={section.id}
                   delay={index * 50}
                   id={section.id}
-                  className="border border-black/10 p-6 md:p-8 bg-[#F3F3EF] scroll-mt-28"
+                  className="border border-black/10 p-6 md:p-8 bg-bone scroll-mt-28"
                 >
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-40 mb-3">
                     Section {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-5">
+                  <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-5">
                     {section.title}
                   </h2>
                   <div className="space-y-4">
@@ -213,11 +213,11 @@ export default function TermsPage() {
                 </FadeIn>
               ))}
 
-              <FadeIn className="bg-black text-[#F3F3EF] p-6 md:p-8">
-                <p className="font-mono text-[10px] md:text-xs uppercase text-[#D6FF00] mb-4">
+              <FadeIn className="bg-ink text-bone p-6 md:p-8">
+                <p className="font-mono text-[10px] md:text-xs uppercase text-cobalt-light mb-4">
                   [ Questions? ]
                 </p>
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-4">
                   Contact Ergsum Legal
                 </h2>
                 <p className="text-sm md:text-base opacity-70 leading-relaxed mb-6 max-w-2xl">
@@ -227,13 +227,13 @@ export default function TermsPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="mailto:hello@ergsum.ai"
-                    className="bg-[#D6FF00] text-black py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white transition-colors"
+                    className="bg-cobalt text-bone py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
                   >
                     Email Legal Team
                   </a>
                   <Link
                     href="/privacy"
-                    className="border border-white/20 py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-black transition-colors"
+                    className="border border-white/20 py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
                   >
                     View Privacy Policy
                   </Link>

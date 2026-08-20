@@ -13,15 +13,15 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32 border-t border-white/10">
+    <section className="bg-ink text-bone py-20 md:py-32 border-t border-bone/10">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ INDUSTRIES ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12 md:mb-16 max-w-3xl">
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16 max-w-3xl">
             We Serve Companies{" "}
-            <span className="text-[#D6FF00]">Across</span> Sectors.
+            <span className="text-cobalt-light">Across</span> Sectors.
           </h2>
         </FadeIn>
 
@@ -30,23 +30,23 @@ export default function IndustriesSection() {
             <FadeIn
               key={i}
               delay={item.delay}
-              className="border-t border-white/10 py-4 md:py-6 flex justify-between items-center group hover:bg-[#1a1a1a] transition-colors md:px-4 md:-mx-4 cursor-pointer"
+              className="border-t border-bone/10 py-4 md:py-6 flex justify-between items-center group hover:bg-[#1a1a1a] transition-colors md:px-4 md:-mx-4 cursor-pointer"
             >
               <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-2 h-2 bg-[#D6FF00] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <h3 className="text-lg md:text-2xl font-bold uppercase tracking-tighter group-hover:text-[#D6FF00] transition-colors">
+                <div className="w-2 h-2 bg-cobalt-light rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <h3 className="text-lg md:text-2xl font-bold uppercase tracking-tighter group-hover:text-cobalt-light transition-colors">
                   {item.name}
                 </h3>
               </div>
               <div className="text-right">
-                <p className="text-xl md:text-2xl font-black">{item.stat}</p>
+                <p className="text-xl md:text-2xl font-semibold">{item.stat}</p>
                 <p className="font-mono text-[8px] md:text-[10px] uppercase opacity-40">
                   {item.statLabel}
                 </p>
               </div>
             </FadeIn>
           ))}
-          <div className="border-t border-white/10"></div>
+          <div className="border-t border-bone/10"></div>
         </div>
       </div>
     </section>

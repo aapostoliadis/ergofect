@@ -32,15 +32,15 @@ export default function ContactFaqSection() {
   }
 
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32 border-t border-white/10">
+    <section className="bg-ink text-bone py-20 md:py-32 border-t border-white/10">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
           <div>
             <FadeIn>
-              <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 text-[#D6FF00]">
+              <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 text-cobalt-light">
                 [ FAQ ]
               </p>
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
                 Common Questions.
               </h2>
             </FadeIn>
@@ -54,7 +54,7 @@ export default function ContactFaqSection() {
                     onClick={() => toggle(i)}
                     className="w-full py-5 md:py-6 flex justify-between items-center text-left group"
                   >
-                    <h3 className="text-sm md:text-base font-bold uppercase tracking-wider pr-4 group-hover:text-[#D6FF00] transition-colors">
+                    <h3 className="text-sm md:text-base font-bold uppercase tracking-wider pr-4 group-hover:text-cobalt-light transition-colors">
                       {faq.question}
                     </h3>
                     <svg
@@ -68,7 +68,7 @@ export default function ContactFaqSection() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       className={`shrink-0 transition-transform duration-300 ${
-                        openIndex === i ? "rotate-45 text-[#D6FF00]" : ""
+                        openIndex === i ? "rotate-45 text-cobalt-light" : ""
                       }`}
                     >
                       <path d="M12 5v14" />

@@ -6,6 +6,20 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
+.prose-link {
+  color: #1e3a8a;
+  border-bottom: 1px solid rgba(30, 58, 138, 0.35);
+}
+
+.prose-link:hover {
+  color: #111110;
+  border-bottom-color: rgba(17, 17, 16, 0.5);
+}
+
 html.lenis,
 html.lenis body {
   height: auto;

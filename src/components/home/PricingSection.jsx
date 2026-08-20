@@ -12,7 +12,7 @@ const CheckIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-[#D6FF00] shrink-0"
+    className="text-cobalt-light shrink-0"
   >
     <path d="M20 6 9 17l-5-5" />
   </svg>
@@ -96,7 +96,7 @@ function AnimatedPrice({ value, popular }) {
   }, [value]);
 
   return (
-    <span className={`text-4xl md:text-5xl font-black transition-colors duration-300 ${popular ? "text-[#D6FF00]" : ""}`}>
+    <span className={`text-4xl md:text-5xl font-semibold tracking-[-0.04em] transition-colors duration-300 ${popular ? "text-cobalt-light" : ""}`}>
       ${display.toLocaleString()}
     </span>
   );
@@ -106,10 +106,10 @@ export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32 border-t border-white/10">
+    <section className="bg-ink text-bone py-20 md:py-32 border-t border-bone/10">
       <div className="container text-center">
         <FadeIn>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-8 md:mb-12">
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] mb-8 md:mb-12">
             Flexible Pricing <br /> For Any Scale.
           </h2>
         </FadeIn>
@@ -120,17 +120,17 @@ export default function PricingSection() {
               Monthly
             </span>
             <div
-              className="w-16 h-8 bg-white/10 rounded-full p-1 cursor-pointer"
+              className="w-16 h-8 bg-bone/10 rounded-full p-1 cursor-pointer"
               onClick={() => setIsAnnual(!isAnnual)}
             >
               <div
-                className={`w-6 h-6 bg-[#D6FF00] rounded-full transition-transform duration-300 ease-in-out ${
+                className={`w-6 h-6 bg-cobalt-light rounded-full transition-transform duration-300 ease-in-out ${
                   isAnnual ? "translate-x-8" : "translate-x-0"
                 }`}
               />
             </div>
             <span className={`transition-opacity duration-300 ${isAnnual ? "opacity-100" : "opacity-50"}`}>
-              Annual <span className="text-[#D6FF00] ml-2 font-bold">Save 20%</span>
+              Annual <span className="text-cobalt-light ml-2 font-bold">Save 20%</span>
             </span>
           </div>
         </FadeIn>
@@ -142,12 +142,12 @@ export default function PricingSection() {
               delay={tier.delay}
               className={`p-6 md:p-8 flex flex-col ${
                 tier.popular
-                  ? "bg-[#1a1a1a] border border-[#D6FF00] relative transform md:-translate-y-4 shadow-2xl shadow-[#D6FF00]/5 mt-4 md:mt-0"
-                  : "border border-white/10 hover:border-white/30 transition-colors mt-4 md:mt-0"
+                  ? "bg-bone/5 border border-cobalt-light relative transform md:-translate-y-4 shadow-2xl shadow-cobalt-light/5 mt-4 md:mt-0"
+                  : "border border-bone/10 hover:border-bone/30 transition-colors mt-4 md:mt-0"
               }`}
             >
               {tier.popular && (
-                <div className="absolute top-0 right-0 bg-[#D6FF00] text-black text-[10px] md:text-xs font-bold px-3 py-1 uppercase tracking-widest">
+                <div className="absolute top-0 right-0 bg-cobalt text-bone text-[10px] md:text-xs font-bold px-3 py-1 uppercase tracking-widest">
                   Popular
                 </div>
               )}
@@ -172,8 +172,8 @@ export default function PricingSection() {
               <button
                 className={`w-full py-3 md:py-4 uppercase font-bold text-xs md:text-sm transition-colors ${
                   tier.popular
-                    ? "bg-[#D6FF00] text-black hover:bg-white"
-                    : "border border-white/20 hover:bg-white hover:text-black"
+                    ? "bg-cobalt-light text-ink hover:bg-bone"
+                    : "border border-bone/20 hover:bg-bone hover:text-ink"
                 }`}
               >
                 {tier.btnLabel}

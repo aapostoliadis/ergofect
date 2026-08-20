@@ -35,14 +35,14 @@ const contactMethods = [
 
 export default function ContactInfoSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32">
+    <section className="bg-ink text-bone py-20 md:py-32">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 md:mb-6 text-cobalt-light">
             [ CONTACT DETAILS ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-12 md:mb-16 max-w-3xl">
-            Or Reach Us <span className="text-[#D6FF00]">Directly</span>.
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16 max-w-3xl">
+            Or Reach Us <span className="text-cobalt-light">Directly</span>.
           </h2>
         </FadeIn>
 
@@ -52,19 +52,19 @@ export default function ContactInfoSection() {
               {method.href ? (
                 <a
                   href={method.href}
-                  className="border border-white/10 p-6 md:p-8 flex flex-col group hover:border-[#D6FF00]/30 transition-colors"
+                  className="border border-white/10 p-6 md:p-8 flex flex-col group hover:border-cobalt-light/40 transition-colors"
                 >
-                  <div className="text-[#D6FF00] mb-4">{method.icon}</div>
+                  <div className="text-cobalt-light mb-4">{method.icon}</div>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-2">
                     {method.label}
                   </p>
-                  <p className="text-lg md:text-xl font-bold uppercase tracking-wider group-hover:text-[#D6FF00] transition-colors">
+                  <p className="text-lg md:text-xl font-bold uppercase tracking-wider group-hover:text-cobalt-light transition-colors">
                     {method.value}
                   </p>
                 </a>
               ) : (
                 <div className="border border-white/10 p-6 md:p-8 flex flex-col">
-                  <div className="text-[#D6FF00] mb-4">{method.icon}</div>
+                  <div className="text-cobalt-light mb-4">{method.icon}</div>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-2">
                     {method.label}
                   </p>

@@ -122,20 +122,20 @@ export default function PrivacyPage() {
   return (
     <>
       <Head>
-        <title>Privacy Policy - Ergsum®</title>
+        <title>Privacy Policy - Ergsum.</title>
         <meta
           name="description"
           content="Ergsum Privacy Policy explaining data collection, AI data handling, security, retention, cookies, and privacy rights."
         />
       </Head>
 
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-[#111111] text-[#F3F3EF]">
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-ink text-bone">
         <div className="container">
           <FadeIn>
-            <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 text-[#D6FF00]">
+            <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 text-cobalt-light">
               [ LEGAL / PRIVACY ]
             </p>
-            <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6 max-w-5xl">
+            <h1 className="text-5xl md:text-8xl font-semibold tracking-[-0.04em] leading-none mb-6 max-w-5xl">
               Privacy Policy
             </h1>
             <p className="text-sm md:text-lg opacity-70 leading-relaxed max-w-2xl">
@@ -154,7 +154,7 @@ export default function PrivacyPage() {
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-2">
                   {label}
                 </p>
-                <p className="text-lg md:text-xl font-black uppercase tracking-tighter">
+                <p className="text-lg md:text-xl font-semibold tracking-[-0.04em]">
                   {value}
                 </p>
               </FadeIn>
@@ -163,13 +163,13 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="bg-[#F3F3EF] text-[#111111] py-16 md:py-24 border-b border-black/10">
+      <section className="bg-bone text-ink py-16 md:py-24 border-b border-black/10">
         <div className="container">
           <FadeIn>
             <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-4">
               [ Your Rights ]
             </p>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-10">
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-[-0.04em] mb-10">
               Control Over Your Data.
             </h2>
           </FadeIn>
@@ -178,7 +178,7 @@ export default function PrivacyPage() {
               <FadeIn
                 key={right}
                 delay={index * 80}
-                className="border border-black/10 p-5 hover:bg-black hover:text-[#F3F3EF] transition-colors"
+                className="border border-black/10 p-5 hover:bg-ink hover:text-bone transition-colors"
               >
                 <p className="font-mono text-[10px] uppercase opacity-40 mb-3">
                   {String(index + 1).padStart(2, "0")}
@@ -192,7 +192,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="bg-[#F3F3EF] text-[#111111] py-16 md:py-24">
+      <section className="bg-bone text-ink py-16 md:py-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
             <aside className="lg:col-span-4 lg:block">
@@ -206,7 +206,7 @@ export default function PrivacyPage() {
                       <a
                         key={section.id}
                         href={`#${section.id}`}
-                        className="flex gap-3 text-xs md:text-sm uppercase font-bold tracking-wider hover:text-[#D6FF00] transition-colors"
+                        className="flex gap-3 text-xs md:text-sm uppercase font-bold tracking-wider hover:text-cobalt transition-colors"
                       >
                         <span className="font-mono opacity-40">
                           {String(index + 1).padStart(2, "0")}
@@ -225,12 +225,12 @@ export default function PrivacyPage() {
                   key={section.id}
                   delay={index * 50}
                   id={section.id}
-                  className="border border-black/10 p-6 md:p-8 bg-[#F3F3EF] scroll-mt-28"
+                  className="border border-black/10 p-6 md:p-8 bg-bone scroll-mt-28"
                 >
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-40 mb-3">
                     Section {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-5">
+                  <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-5">
                     {section.title}
                   </h2>
                   <div className="space-y-4">
@@ -246,11 +246,11 @@ export default function PrivacyPage() {
                 </FadeIn>
               ))}
 
-              <FadeIn className="bg-black text-[#F3F3EF] p-6 md:p-8">
-                <p className="font-mono text-[10px] md:text-xs uppercase text-[#D6FF00] mb-4">
+              <FadeIn className="bg-ink text-bone p-6 md:p-8">
+                <p className="font-mono text-[10px] md:text-xs uppercase text-cobalt-light mb-4">
                   [ Privacy Request ]
                 </p>
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-4">
                   Need To Exercise Your Rights?
                 </h2>
                 <p className="text-sm md:text-base opacity-70 leading-relaxed mb-6 max-w-2xl">
@@ -260,13 +260,13 @@ export default function PrivacyPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="mailto:hello@ergsum.ai"
-                    className="bg-[#D6FF00] text-black py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white transition-colors"
+                    className="bg-cobalt text-bone py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
                   >
                     Submit Privacy Request
                   </a>
                   <Link
                     href="/terms"
-                    className="border border-white/20 py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-black transition-colors"
+                    className="border border-white/20 py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
                   >
                     View Terms
                   </Link>

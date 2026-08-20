@@ -33,11 +33,11 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="how" className="py-20 md:py-32 bg-[#F3F3EF]">
+    <section id="how" className="py-20 md:py-32 bg-bone">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-20">
           <FadeIn>
-            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
+            <h2 className="text-5xl md:text-7xl font-semibold tracking-[-0.04em] leading-none">
               Lightning-Fast <br /> Deployment.
             </h2>
           </FadeIn>
@@ -55,12 +55,12 @@ export default function ProcessSection() {
               delay={step.delay}
               className={`p-6 md:p-8 border flex flex-col h-full ${
                 step.highlight
-                  ? "border-[#D6FF00] bg-[#D6FF00]"
-                  : "border-black/10 bg-white"
+                  ? "border-cobalt bg-cobalt/10"
+                  : "border-ink/10 bg-paper"
               }`}
             >
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-6 md:mb-8 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-black rounded-full"></span> {step.week}
+                <span className="w-1.5 h-1.5 bg-ink rounded-full"></span> {step.week}
               </p>
               <h3 className="text-lg md:text-xl font-bold uppercase mb-4">{step.title}</h3>
               <p className="opacity-70 mt-auto text-sm">{step.desc}</p>

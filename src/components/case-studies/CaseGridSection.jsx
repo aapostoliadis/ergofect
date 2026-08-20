@@ -53,11 +53,11 @@ const cases = [
 
 export default function CaseGridSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32">
+    <section className="bg-ink text-bone py-20 md:py-32">
       <div className="container">
         <FadeIn>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-4">
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+            <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
               More Success Stories.
             </h2>
             <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
@@ -73,9 +73,9 @@ export default function CaseGridSection() {
               delay={i * 100}
               className="group cursor-pointer"
             >
-              <div className="relative min-h-[280px] md:min-h-[340px] border border-white/10 overflow-hidden flex flex-col justify-end p-6 md:p-8 hover:border-[#D6FF00]/30 transition-colors">
+              <div className="relative min-h-[280px] md:min-h-[340px] border border-bone/10 overflow-hidden flex flex-col justify-end p-6 md:p-8 hover:border-cobalt-light/30 transition-colors">
                 <div className={`absolute inset-0 bg-gradient-to-t ${item.color}`}></div>
-                <div className="w-32 h-32 bg-[#D6FF00] rounded-full blur-[80px] opacity-0 group-hover:opacity-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700"></div>
+                <div className="w-32 h-32 bg-cobalt-light rounded-full blur-[80px] opacity-0 group-hover:opacity-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700"></div>
 
                 <div className="relative z-10">
                   <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest opacity-50 mb-1">
@@ -87,9 +87,9 @@ export default function CaseGridSection() {
                   <p className="text-sm md:text-base opacity-70 mb-6 leading-relaxed">
                     {item.headline}
                   </p>
-                  <div className="border-t border-white/10 pt-4 flex justify-between items-end">
+                  <div className="border-t border-bone/10 pt-4 flex justify-between items-end">
                     <div>
-                      <p className="text-2xl md:text-3xl font-black text-[#D6FF00]">
+                      <p className="text-2xl md:text-3xl font-semibold text-cobalt-light">
                         {item.stat}
                       </p>
                       <p className="font-mono text-[10px] uppercase opacity-50 mt-1">

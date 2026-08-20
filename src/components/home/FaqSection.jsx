@@ -37,12 +37,12 @@ export default function FaqSection() {
   }
 
   return (
-    <section className="py-20 md:py-32 bg-[#F3F3EF]">
+    <section className="py-20 md:py-32 bg-bone">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <FadeIn>
-              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-4 md:mb-6">
+              <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-4 md:mb-6">
                 Frequently <br /> Asked Questions
               </h2>
               <p className="opacity-60 text-sm md:text-base">
@@ -53,7 +53,7 @@ export default function FaqSection() {
           <div className="md:col-span-7">
             {faqs.map((faq, i) => (
               <FadeIn key={i} delay={faq.delay}>
-                <div className="border-b border-black/10">
+                <div className="border-b border-ink/10">
                   <div
                     className="py-4 md:py-6 cursor-pointer flex justify-between items-center gap-4"
                     onClick={() => toggle(i)}

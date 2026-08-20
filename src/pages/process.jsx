@@ -11,7 +11,7 @@ export default function Process() {
   return (
     <>
       <Head>
-        <title>Our Process - Ergsum® | How We Automate</title>
+        <title>Our Process - Ergsum. | How We Automate</title>
         <meta
           name="description"
           content="Learn how Ergsum deploys AI automations in just 6 weeks — from process audit to live deployment with zero downtime."

@@ -2,19 +2,19 @@ import FadeIn from "@/components/FadeIn";
 
 export default function CaseStudiesHeroSection() {
   return (
-    <section className="pt-32 pb-16 md:pt-40 md:pb-20 min-h-[60vh] md:min-h-[70vh] flex flex-col justify-center bg-[#111111] text-[#F3F3EF]">
+    <section className="pt-32 pb-16 md:pt-40 md:pb-20 min-h-[60vh] md:min-h-[70vh] flex flex-col justify-center bg-ink text-bone">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ CASE STUDIES ]
           </p>
         </FadeIn>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
           <div>
             <FadeIn delay={100}>
-              <h1 className="text-5xl md:text-[8vw] lg:text-[5.5vw] leading-[0.9] font-black uppercase tracking-tighter">
+              <h1 className="text-5xl md:text-[8vw] lg:text-[5.5vw] leading-[0.9] font-semibold tracking-[-0.04em]">
                 Real Results From{" "}
-                <span className="text-[#D6FF00]">Real</span> Companies.
+                <span className="text-cobalt-light">Real</span> Companies.
               </h1>
             </FadeIn>
           </div>
@@ -26,21 +26,21 @@ export default function CaseStudiesHeroSection() {
               </p>
             </FadeIn>
             <FadeIn delay={300}>
-              <div className="grid grid-cols-3 gap-6 border-t border-white/20 pt-6">
+              <div className="grid grid-cols-3 gap-6 border-t border-bone/20 pt-6">
                 <div>
-                  <p className="text-3xl md:text-4xl font-black">12</p>
+                  <p className="text-3xl md:text-4xl font-semibold">12</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                     Industries
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl md:text-4xl font-black">45+</p>
+                  <p className="text-3xl md:text-4xl font-semibold">45+</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                     Projects
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl md:text-4xl font-black">$8.2M</p>
+                  <p className="text-3xl md:text-4xl font-semibold">$8.2M</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                     Saved for Clients
                   </p>

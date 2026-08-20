@@ -5,14 +5,14 @@ const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-[#111111] text-[#F3F3EF] pt-20 md:pt-32 pb-20 md:pb-32">
+    <section id="contact" className="bg-ink text-bone pt-20 md:pt-32 pb-20 md:pb-32">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
           <div>
             <FadeIn>
-              <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6 md:mb-8">
+              <h2 className="text-5xl md:text-8xl font-semibold tracking-[-0.04em] leading-none mb-6 md:mb-8">
                 Ready to Automate{" "}
-                <span className="text-[#D6FF00]">Your Biggest Bottleneck?</span>
+                <span className="text-cobalt-light">Your Biggest Bottleneck?</span>
               </h2>
               <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm mb-8 md:mb-12 max-w-md">
                 I personally review every automation audit to ensure we can
@@ -48,7 +48,7 @@ export default function ContactSection() {
                     <label className="block mb-2 opacity-50">Name</label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-white/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
                       placeholder="Jane Doe"
                     />
                   </div>
@@ -56,7 +56,7 @@ export default function ContactSection() {
                     <label className="block mb-2 opacity-50">Email</label>
                     <input
                       type="email"
-                      className="w-full bg-transparent border-b border-white/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
                       placeholder="jane@company.com"
                     />
                   </div>
@@ -65,7 +65,7 @@ export default function ContactSection() {
                   <label className="block mb-2 opacity-50">Company</label>
                   <input
                     type="text"
-                    className="w-full bg-transparent border-b border-white/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                    className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
                     placeholder="Your Company Name"
                   />
                 </div>
@@ -78,10 +78,10 @@ export default function ContactSection() {
                     {spendOptions.map((opt) => (
                       <label
                         key={opt}
-                        className="flex items-center gap-2 cursor-pointer border border-white/20 px-3 md:px-4 py-2 hover:border-[#D6FF00] transition-colors w-full sm:w-auto"
+                        className="flex items-center gap-2 cursor-pointer border border-bone/20 px-3 md:px-4 py-2 hover:border-cobalt-light transition-colors w-full sm:w-auto"
                       >
                         <input type="radio" name="spend" className="hidden" />
-                        <span className="w-3 h-3 border border-white rounded-full block shrink-0"></span>
+                        <span className="w-3 h-3 border border-bone rounded-full block shrink-0"></span>
                         {opt}
                       </label>
                     ))}
@@ -90,7 +90,7 @@ export default function ContactSection() {
 
                 <Link
                   href="/book-audit"
-                  className="bg-[#D6FF00] text-black w-full py-4 font-bold text-base md:text-lg hover:bg-white transition-colors mt-6 md:mt-8 block text-center"
+                  className="bg-cobalt-light text-ink w-full py-4 font-bold text-base md:text-lg hover:bg-bone transition-colors mt-6 md:mt-8 block text-center"
                 >
                   Request Free Audit
                 </Link>

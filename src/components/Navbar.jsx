@@ -107,8 +107,8 @@ export default function Navbar() {
   }
 
   const navClass = scrolled
-    ? "bg-[#F3F3EF]/95 backdrop-blur-md border-b border-black/10 text-[#111111]"
-    : "bg-transparent mix-blend-difference text-[#F3F3EF]";
+    ? "bg-bone/95 backdrop-blur-md border-b border-ink/10 text-ink"
+    : "bg-transparent mix-blend-difference text-bone";
 
   const menuLinks = [
     { href: "/", label: "Home" },
@@ -126,8 +126,8 @@ export default function Navbar() {
       >
         <div className="container flex justify-between items-center">
           <div className="flex items-center w-1/2 md:w-1/3">
-            <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter uppercase relative z-50">
-              Ergsum®
+            <Link href="/" className="text-2xl md:text-3xl font-semibold tracking-[-0.045em] relative z-50">
+              Ergsum<span className="text-cobalt">.</span>
             </Link>
           </div>
           <div className="hidden md:flex flex-col items-center justify-center text-[10px] tracking-widest uppercase font-mono opacity-70 w-1/3 text-center">
@@ -159,7 +159,7 @@ export default function Navbar() {
       {/* Fullscreen Menu Overlay */}
       <div
         data-lenis-prevent
-        className={`fixed inset-0 z-40 bg-[#F3F3EF] text-[#111111] transition-transform duration-700 ease-in-out overflow-y-auto ${
+        className={`fixed inset-0 z-40 bg-bone text-ink transition-transform duration-700 ease-in-out overflow-y-auto ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -170,10 +170,10 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className={`menu-link text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter transition-all hover:translate-x-4 transform duration-300 w-fit mb-4 md:mb-2 ${
+                className={`menu-link text-5xl sm:text-6xl md:text-8xl font-semibold tracking-[-0.045em] transition-all hover:translate-x-4 transform duration-300 w-fit mb-4 md:mb-2 ${
                   activeLink === link.href
-                    ? "bg-[#D6FF00] text-black px-3 md:px-4"
-                    : "hover:bg-[#D6FF00] hover:text-black hover:px-3 md:hover:px-4"
+                    ? "bg-ink text-bone px-3 md:px-4"
+                    : "hover:bg-ink hover:text-bone hover:px-3 md:hover:px-4"
                 }`}
               >
                 {link.label}
@@ -182,21 +182,21 @@ export default function Navbar() {
           </div>
           <div className="w-full md:w-1/3 flex flex-col justify-end md:justify-center mt-12 md:mt-0 font-mono text-sm uppercase">
             <div className="mb-8">
-              <p className="opacity-50 mb-2">[ CONTACT US ]</p>
+              <p className="opacity-50 mb-2 tracking-[0.14em]">[ Contact us ]</p>
               <a
                 href="mailto:hello@ergsum.ai"
-                className="bg-[#D6FF00] text-black px-2 py-1 text-xl font-bold inline-block hover:bg-black hover:text-[#D6FF00] transition-colors"
+                className="text-cobalt border-b border-cobalt/35 pb-1 text-xl font-medium inline-block hover:text-ink hover:border-ink/50 transition-colors normal-case"
               >
-                HELLO@ERGSUM.AI
+                hello@ergsum.ai
               </a>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
-                <p className="opacity-50 mb-2">[ SOCIALS ]</p>
+                <p className="opacity-50 mb-2 tracking-[0.14em]">[ Socials ]</p>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:underline">1.0 X / Twitter</a></li>
-                  <li><a href="#" className="hover:underline">1.1 LinkedIn</a></li>
-                  <li><a href="#" className="hover:underline">1.2 Instagram</a></li>
+                  <li><a href="#" className="hover:text-cobalt">1.0 X / Twitter</a></li>
+                  <li><a href="#" className="hover:text-cobalt">1.1 LinkedIn</a></li>
+                  <li><a href="#" className="hover:text-cobalt">1.2 Instagram</a></li>
                 </ul>
               </div>
             </div>

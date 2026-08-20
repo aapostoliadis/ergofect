@@ -29,7 +29,7 @@ const milestones = [
 
 export default function StorySection() {
   return (
-    <section className="py-20 md:py-32 bg-[#F3F3EF] border-b border-black/10">
+    <section className="py-20 md:py-32 bg-bone border-b border-black/10">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16 mb-16 md:mb-20">
           <div className="lg:col-span-1">
@@ -37,7 +37,7 @@ export default function StorySection() {
               <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
                 [ OUR STORY ]
               </p>
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
                 Built From
                 <br /> Experience.
               </h2>
@@ -73,13 +73,13 @@ export default function StorySection() {
                     <div
                       className={`inline-block px-3 py-1 font-mono text-xs uppercase tracking-widest mb-3 ${
                         item.highlight
-                          ? "bg-[#D6FF00] text-black font-bold"
+                          ? "bg-ink text-bone font-bold"
                           : "bg-black/5"
                       }`}
                     >
                       {item.year}
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-2">
+                    <h3 className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] mb-2">
                       {item.title}
                     </h3>
                     <p className="text-sm md:text-base opacity-70 leading-relaxed max-w-md">
@@ -93,7 +93,7 @@ export default function StorySection() {
                   ></div>
                 </div>
 
-                <div className="absolute left-4 md:left-1/2 top-1 w-3 h-3 rounded-full border-2 border-black bg-[#F3F3EF] -translate-x-1/2 hidden sm:block"></div>
+                <div className="absolute left-4 md:left-1/2 top-1 w-3 h-3 rounded-full border-2 border-black bg-bone -translate-x-1/2 hidden sm:block"></div>
               </FadeIn>
             ))}
           </div>

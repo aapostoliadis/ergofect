@@ -32,13 +32,13 @@ const guarantees = [
 
 export default function GuaranteeSection() {
   return (
-    <section className="py-20 md:py-32 bg-[#F3F3EF] border-b border-black/10">
+    <section className="py-20 md:py-32 bg-bone border-b border-ink/10">
       <div className="container">
         <FadeIn>
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
             [ OUR GUARANTEE ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-16 md:mb-20 max-w-3xl">
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-16 md:mb-20 max-w-3xl">
             We Put Our Money Where Our Code Is.
           </h2>
         </FadeIn>
@@ -48,10 +48,10 @@ export default function GuaranteeSection() {
             <FadeIn
               key={i}
               delay={i * 150}
-              className="bg-black text-[#F3F3EF] p-6 md:p-8 flex flex-col"
+              className="bg-ink text-bone p-6 md:p-8 flex flex-col"
             >
-              <div className="text-[#D6FF00] mb-6">{item.icon}</div>
-              <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter mb-3">
+              <div className="text-cobalt-light mb-6">{item.icon}</div>
+              <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.04em] mb-3">
                 {item.title}
               </h3>
               <p className="text-sm opacity-60 leading-relaxed mt-auto">

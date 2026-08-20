@@ -11,7 +11,7 @@ export default function CaseStudies() {
   return (
     <>
       <Head>
-        <title>Case Studies - Ergsum® | AI Automation Results</title>
+        <title>Case Studies - Ergsum. | AI Automation Results</title>
         <meta
           name="description"
           content="See how Ergsum helped real companies automate operations, cut costs, and scale without adding headcount."

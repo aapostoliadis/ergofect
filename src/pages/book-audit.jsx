@@ -47,7 +47,7 @@ export default function BookAudit() {
   return (
     <>
       <Head>
-        <title>Book Free Audit - Ergsum® | AI Automation Audit</title>
+        <title>Book Free Audit - Ergsum. | AI Automation Audit</title>
         <meta
           name="description"
           content="Request a free automation audit from Ergsum. We'll map your workflows and show you exactly where AI can save you time and money."
@@ -57,19 +57,19 @@ export default function BookAudit() {
       </Head>
 
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#111111] text-[#F3F3EF]">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-ink text-bone">
         <div className="container">
           <FadeIn>
-            <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+            <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 md:mb-6 text-cobalt-light">
               [ FREE AUTOMATION AUDIT ]
             </p>
           </FadeIn>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
             <div>
               <FadeIn delay={100}>
-                <h1 className="text-5xl md:text-[7vw] lg:text-[5vw] leading-[0.9] font-black uppercase tracking-tighter">
+                <h1 className="text-5xl md:text-[7vw] lg:text-[5vw] leading-[0.9] font-semibold tracking-[-0.04em]">
                   Discover What You Could{" "}
-                  <span className="text-[#D6FF00]">Automate</span>.
+                  <span className="text-cobalt-light">Automate</span>.
                 </h1>
               </FadeIn>
             </div>
@@ -107,17 +107,17 @@ export default function BookAudit() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-[#F3F3EF] py-12 md:py-16 border-b border-black/10">
+      <section className="bg-bone py-12 md:py-16 border-b border-black/10">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {steps.map((step, i) => (
               <FadeIn key={i} delay={i * 100}>
                 <div className="flex items-start gap-4 md:gap-5">
-                  <p className="text-[#D6FF00] bg-black px-2 py-1 font-mono text-xs font-bold shrink-0">
+                  <p className="text-bone bg-ink px-2 py-1 font-mono text-xs font-bold shrink-0">
                     {step.number}
                   </p>
                   <div>
-                    <h3 className="text-base md:text-lg font-bold uppercase tracking-tighter mb-1">
+                    <h3 className="text-base md:text-lg font-bold tracking-[-0.04em] mb-1">
                       {step.title}
                     </h3>
                     <p className="text-sm opacity-60">{step.desc}</p>
@@ -130,7 +130,7 @@ export default function BookAudit() {
       </section>
 
       {/* Form */}
-      <section className="bg-[#F3F3EF] py-16 md:py-24">
+      <section className="bg-bone py-16 md:py-24">
         <div className="container max-w-4xl">
           <FadeIn>
             <form className="space-y-10 md:space-y-12">
@@ -143,7 +143,7 @@ export default function BookAudit() {
                     onClick={() => setFormStep(i)}
                     className={`flex items-center gap-2 px-3 py-2 border transition-colors ${
                       formStep === i
-                        ? "border-black bg-black text-[#D6FF00]"
+                        ? "border-ink bg-ink text-bone"
                         : formStep > i
                         ? "border-black/20 bg-black/5"
                         : "border-black/10"
@@ -157,7 +157,7 @@ export default function BookAudit() {
 
               {/* Step 1: Your Info */}
               <div className={formStep === 0 ? "block" : "hidden"}>
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-8">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-8">
                   Tell Us About You.
                 </h2>
                 <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
@@ -166,7 +166,7 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Full Name *</label>
                       <input
                         type="text"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                         placeholder="Jane Doe"
                         required
                       />
@@ -175,7 +175,7 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Work Email *</label>
                       <input
                         type="email"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                         placeholder="jane@company.com"
                         required
                       />
@@ -186,7 +186,7 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Company Name *</label>
                       <input
                         type="text"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                         placeholder="Your Company"
                         required
                       />
@@ -195,7 +195,7 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Your Role</label>
                       <input
                         type="text"
-                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                        className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                         placeholder="CEO, CTO, VP Ops..."
                       />
                     </div>
@@ -210,7 +210,7 @@ export default function BookAudit() {
                           onClick={() => setSelectedTeamSize(size)}
                           className={`border px-4 py-2 transition-colors ${
                             selectedTeamSize === size
-                              ? "border-black bg-black text-[#D6FF00]"
+                              ? "border-ink bg-ink text-bone"
                               : "border-black/20 hover:border-black"
                           }`}
                         >
@@ -223,7 +223,7 @@ export default function BookAudit() {
                 <button
                   type="button"
                   onClick={() => setFormStep(1)}
-                  className="mt-10 bg-black text-[#D6FF00] py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-[#D6FF00] hover:text-black transition-colors"
+                  className="mt-10 bg-ink text-bone py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
                 >
                   Continue →
                 </button>
@@ -231,7 +231,7 @@ export default function BookAudit() {
 
               {/* Step 2: Your Needs */}
               <div className={formStep === 1 ? "block" : "hidden"}>
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-8">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-8">
                   What Do You Need?
                 </h2>
                 <div className="space-y-8 font-mono text-[10px] md:text-sm uppercase">
@@ -247,19 +247,19 @@ export default function BookAudit() {
                           onClick={() => toggleService(svc)}
                           className={`border px-4 py-3 text-left flex items-center gap-3 transition-colors ${
                             selectedServices.includes(svc)
-                              ? "border-black bg-black text-[#D6FF00]"
+                              ? "border-ink bg-ink text-bone"
                               : "border-black/20 hover:border-black"
                           }`}
                         >
                           <span
                             className={`w-3 h-3 border shrink-0 flex items-center justify-center ${
                               selectedServices.includes(svc)
-                                ? "border-[#D6FF00] bg-[#D6FF00]"
+                                ? "border-cobalt bg-cobalt"
                                 : "border-black/40"
                             }`}
                           >
                             {selectedServices.includes(svc) && (
-                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
                             )}
@@ -281,7 +281,7 @@ export default function BookAudit() {
                           onClick={() => setSelectedSpend(opt)}
                           className={`border px-4 py-2 transition-colors ${
                             selectedSpend === opt
-                              ? "border-black bg-black text-[#D6FF00]"
+                              ? "border-ink bg-ink text-bone"
                               : "border-black/20 hover:border-black"
                           }`}
                         >
@@ -302,7 +302,7 @@ export default function BookAudit() {
                   <button
                     type="button"
                     onClick={() => setFormStep(2)}
-                    className="bg-black text-[#D6FF00] py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-[#D6FF00] hover:text-black transition-colors"
+                    className="bg-ink text-bone py-3 md:py-4 px-8 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-cobalt transition-colors"
                   >
                     Continue →
                   </button>
@@ -311,7 +311,7 @@ export default function BookAudit() {
 
               {/* Step 3: Details */}
               <div className={formStep === 2 ? "block" : "hidden"}>
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-8">
+                <h2 className="text-2xl md:text-4xl font-semibold tracking-[-0.04em] mb-8">
                   Almost Done.
                 </h2>
                 <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
@@ -321,7 +321,7 @@ export default function BookAudit() {
                     </label>
                     <textarea
                       rows={5}
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none resize-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
                       placeholder="e.g., Our support team spends 4 hours daily on repetitive ticket responses..."
                       required
                     />
@@ -332,7 +332,7 @@ export default function BookAudit() {
                     </label>
                     <textarea
                       rows={3}
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none resize-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
                       placeholder="e.g., Reduce response time by 50%, cut support costs by $20k/mo..."
                     />
                   </div>
@@ -342,7 +342,7 @@ export default function BookAudit() {
                     </label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                       placeholder="Google, referral, social media..."
                     />
                   </div>
@@ -357,7 +357,7 @@ export default function BookAudit() {
                   </button>
                   <button
                     type="button"
-                    className="bg-[#D6FF00] text-black py-3 md:py-4 px-8 md:px-12 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-black hover:text-[#D6FF00] transition-colors"
+                    className="bg-cobalt text-bone py-3 md:py-4 px-8 md:px-12 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-ink transition-colors"
                   >
                     Submit Audit Request
                   </button>
@@ -369,30 +369,30 @@ export default function BookAudit() {
       </section>
 
       {/* Trust Signals */}
-      <section className="bg-[#111111] text-[#F3F3EF] py-16 md:py-20">
+      <section className="bg-ink text-bone py-16 md:py-20">
         <div className="container">
           <FadeIn>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
               <div>
-                <p className="text-3xl md:text-4xl font-black">200+</p>
+                <p className="text-3xl md:text-4xl font-semibold">200+</p>
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                   Automations Deployed
                 </p>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-black">98%</p>
+                <p className="text-3xl md:text-4xl font-semibold">98%</p>
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                   Client Retention
                 </p>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-black">24hr</p>
+                <p className="text-3xl md:text-4xl font-semibold">24hr</p>
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                   Response Time
                 </p>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-black text-[#D6FF00]">Free</p>
+                <p className="text-3xl md:text-4xl font-semibold text-cobalt-light">Free</p>
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                   No Commitment
                 </p>

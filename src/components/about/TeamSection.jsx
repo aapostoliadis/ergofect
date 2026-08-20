@@ -41,14 +41,14 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32">
+    <section className="bg-ink text-bone py-20 md:py-32">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ THE TEAM ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12 md:mb-16 max-w-3xl">
-            Small Team. <span className="text-[#D6FF00]">Big Impact.</span>
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16 max-w-3xl">
+            Small Team. <span className="text-cobalt-light">Big Impact.</span>
           </h2>
         </FadeIn>
 
@@ -57,7 +57,7 @@ export default function TeamSection() {
             <FadeIn
               key={i}
               delay={i * 100}
-              className="border border-white/10 p-6 md:p-8 group hover:border-[#D6FF00]/30 transition-colors"
+              className="border border-white/10 p-6 md:p-8 group hover:border-cobalt-light/30 transition-colors"
             >
               <div className="flex items-center gap-4 mb-4 md:mb-6">
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden bg-gray-700 shrink-0">

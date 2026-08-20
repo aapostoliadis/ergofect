@@ -23,13 +23,13 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 md:py-32 bg-[#F3F3EF] border-b border-black/10">
+    <section className="py-20 md:py-32 bg-bone border-b border-ink/10">
       <div className="container">
         <FadeIn>
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
             [ CLIENT TESTIMONIALS ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16">
             What They Say.
           </h2>
         </FadeIn>
@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
             <FadeIn
               key={i}
               delay={i * 150}
-              className="border border-black/10 p-6 md:p-8 flex flex-col justify-between"
+              className="border border-ink/10 p-6 md:p-8 flex flex-col justify-between"
             >
               <div className="mb-8">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="opacity-20 mb-4">
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
-              <div className="flex items-center gap-4 border-t border-black/10 pt-6">
+              <div className="flex items-center gap-4 border-t border-ink/10 pt-6">
                 <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img

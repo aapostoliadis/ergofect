@@ -12,14 +12,14 @@ const serviceOptions = [
 
 export default function ContactFormSection() {
   return (
-    <section className="bg-[#F3F3EF] py-20 md:py-32 border-b border-black/10">
+    <section className="bg-bone py-20 md:py-32 border-b border-black/10">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
           <div>
             <FadeIn>
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6 md:mb-8">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-6 md:mb-8">
                 Request Your Free{" "}
-                <span className="text-[#D6FF00] bg-black px-2 inline-block">
+                <span className="bg-ink text-bone px-2 inline-block">
                   Audit
                 </span>
                 .
@@ -60,7 +60,7 @@ export default function ContactFormSection() {
                     <label className="block mb-2 opacity-50">Name</label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                       placeholder="Jane Doe"
                     />
                   </div>
@@ -68,7 +68,7 @@ export default function ContactFormSection() {
                     <label className="block mb-2 opacity-50">Email</label>
                     <input
                       type="email"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                       placeholder="jane@company.com"
                     />
                   </div>
@@ -79,7 +79,7 @@ export default function ContactFormSection() {
                     <label className="block mb-2 opacity-50">Company</label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                       placeholder="Your Company Name"
                     />
                   </div>
@@ -87,7 +87,7 @@ export default function ContactFormSection() {
                     <label className="block mb-2 opacity-50">Role</label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                       placeholder="Your Role"
                     />
                   </div>
@@ -135,14 +135,14 @@ export default function ContactFormSection() {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-[#D6FF00] transition-colors rounded-none resize-none"
+                    className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
                     placeholder="Describe the workflows you'd like to automate..."
                   />
                 </div>
 
                 <button
                   type="button"
-                  className="bg-black text-[#D6FF00] w-full py-4 font-bold text-base md:text-lg hover:bg-[#D6FF00] hover:text-black transition-colors"
+                  className="bg-ink text-bone w-full py-4 font-bold text-base md:text-lg hover:bg-cobalt transition-colors"
                 >
                   Request Free Audit
                 </button>

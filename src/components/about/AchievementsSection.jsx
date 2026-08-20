@@ -15,14 +15,14 @@ const logos = [
 
 export default function AchievementsSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32 border-t border-white/10">
+    <section className="bg-ink text-bone py-20 md:py-32 border-t border-white/10">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
             [ BY THE NUMBERS ]
           </p>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-16 md:mb-20">
-            Results Speak <span className="text-[#D6FF00]">Louder</span>.
+          <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none mb-16 md:mb-20">
+            Results Speak <span className="text-cobalt-light">Louder</span>.
           </h2>
         </FadeIn>
 
@@ -31,9 +31,9 @@ export default function AchievementsSection() {
             <FadeIn
               key={i}
               delay={stat.delay}
-              className="bg-[#111111] p-6 md:p-10 text-center"
+              className="bg-ink p-6 md:p-10 text-center"
             >
-              <p className="text-4xl md:text-6xl font-black mb-2">{stat.value}</p>
+              <p className="text-4xl md:text-6xl font-semibold mb-2">{stat.value}</p>
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
                 {stat.label}
               </p>
@@ -49,7 +49,7 @@ export default function AchievementsSection() {
             {logos.map((logo, i) => (
               <div
                 key={i}
-                className="border border-white/10 py-6 flex items-center justify-center font-bold text-sm md:text-base uppercase tracking-widest opacity-30 hover:opacity-100 hover:border-[#D6FF00]/30 transition-all"
+                className="border border-white/10 py-6 flex items-center justify-center font-bold text-sm md:text-base uppercase tracking-widest opacity-30 hover:opacity-100 hover:border-cobalt-light/30 transition-all"
               >
                 {logo}
               </div>

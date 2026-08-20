@@ -11,7 +11,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us - Ergsum® | AI Automation Specialists</title>
+        <title>About Us - Ergsum. | AI Automation Specialists</title>
         <meta
           name="description"
           content="Learn about Ergsum — the AI automation studio helping scaling companies eliminate operational bottlenecks without adding headcount."

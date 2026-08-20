@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Services - Ergsum® | AI Automation Solutions</title>
+        <title>Services - Ergsum. | AI Automation Solutions</title>
         <meta
           name="description"
           content="Explore Ergsum's AI automation services — from customer support and data processing to custom AI solutions built for your operations."

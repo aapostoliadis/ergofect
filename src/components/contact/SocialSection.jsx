@@ -29,13 +29,13 @@ const socials = [
 
 export default function SocialSection() {
   return (
-    <section className="py-20 md:py-32 bg-[#F3F3EF]">
+    <section className="py-20 md:py-32 bg-bone">
       <div className="container">
         <FadeIn>
-          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.14em] mb-4 opacity-60">
             [ FOLLOW US ]
           </p>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none mb-12 md:mb-16">
             Stay Connected.
           </h2>
         </FadeIn>
@@ -45,9 +45,9 @@ export default function SocialSection() {
             <FadeIn key={i} delay={i * 100}>
               <a
                 href={item.href}
-                className="border border-black/10 p-6 md:p-8 flex flex-col group hover:bg-black hover:text-[#F3F3EF] transition-colors duration-500"
+                className="border border-black/10 p-6 md:p-8 flex flex-col group hover:bg-ink hover:text-bone transition-colors duration-500"
               >
-                <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter mb-1 group-hover:text-[#D6FF00] transition-colors duration-500">
+                <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.04em] mb-1 group-hover:text-cobalt-light transition-colors duration-500">
                   {item.name}
                 </h3>
                 <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mb-4">

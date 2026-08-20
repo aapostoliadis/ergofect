@@ -2,17 +2,17 @@ import FadeIn from "@/components/FadeIn";
 
 export default function MissionSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32">
+    <section className="bg-ink text-bone py-20 md:py-32">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
           <div>
             <FadeIn>
-              <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-8 md:mb-12 text-[#D6FF00]">
+              <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-8 md:mb-12 text-cobalt-light">
                 [ OUR MISSION ]
               </p>
-              <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-7xl font-semibold tracking-[-0.04em] leading-none">
                 Automation Should Be{" "}
-                <span className="text-[#D6FF00]">Accessible</span>, Not
+                <span className="text-cobalt-light">Accessible</span>, Not
                 Exclusive.
               </h2>
             </FadeIn>
@@ -30,7 +30,7 @@ export default function MissionSection() {
                 <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest opacity-50 mb-4">
                   [ OUR VISION ]
                 </p>
-                <p className="text-2xl md:text-3xl font-black uppercase tracking-tighter leading-tight">
+                <p className="text-2xl md:text-3xl font-semibold tracking-[-0.04em] leading-tight">
                   A world where no team wastes time on work a machine could
                   handle better.
                 </p>

@@ -21,17 +21,17 @@ const features = [
 
 export default function ServiceDetailSection() {
   return (
-    <section className="bg-[#111111] text-[#F3F3EF] py-20 md:py-32">
+    <section className="bg-ink text-bone py-20 md:py-32">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 mb-16 md:mb-20">
           <div>
             <FadeIn>
-              <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-[#D6FF00]">
+              <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
                 [ DEEP DIVE ]
               </p>
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.04em] leading-none">
                 Customer Support{" "}
-                <span className="text-[#D6FF00]">Reimagined</span>.
+                <span className="text-cobalt-light">Reimagined</span>.
               </h2>
             </FadeIn>
           </div>
@@ -50,12 +50,12 @@ export default function ServiceDetailSection() {
             <FadeIn
               key={i}
               delay={i * 100}
-              className="border border-white/10 p-6 md:p-8 group hover:border-[#D6FF00]/30 transition-colors"
+              className="border border-bone/10 p-6 md:p-8 group hover:border-cobalt-light/30 transition-colors"
             >
               <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-[#D6FF00] rounded-full mt-2 shrink-0"></div>
+                <div className="w-2 h-2 bg-cobalt-light rounded-full mt-2 shrink-0"></div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter mb-3">
+                  <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.04em] mb-3">
                     {feat.title}
                   </h3>
                   <p className="text-sm opacity-60 leading-relaxed">
@@ -68,16 +68,16 @@ export default function ServiceDetailSection() {
         </div>
 
         <FadeIn delay={500} className="mt-12 md:mt-16">
-          <div className="border border-white/10 p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div className="border border-bone/10 p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
-              <p className="text-2xl md:text-4xl font-black mb-1">
-                Avg. <span className="text-[#D6FF00]">62%</span> Cost Reduction
+              <p className="text-2xl md:text-4xl font-semibold mb-1">
+                Avg. <span className="text-cobalt-light">62%</span> Cost Reduction
               </p>
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
                 Across All Support Automation Deployments
               </p>
             </div>
-            <p className="text-5xl md:text-6xl font-black opacity-10">24/7</p>
+            <p className="text-5xl md:text-6xl font-semibold opacity-10">24/7</p>
           </div>
         </FadeIn>
       </div>
