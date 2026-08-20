@@ -1,9 +1,34 @@
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import FadeIn from "@/components/FadeIn";
 
 const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
 
 export default function ContactSection() {
+  const router = useRouter();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [errors, setErrors] = useState({});
+
+  function handleSubmit() {
+    const nextErrors = {};
+    if (!name.trim()) nextErrors.name = "Please enter your name.";
+    if (!email.trim()) {
+      nextErrors.email = "Please enter your email.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      nextErrors.email = "Please enter a valid email address.";
+    }
+    if (!company.trim()) nextErrors.company = "Please enter your company name.";
+
+    if (Object.keys(nextErrors).length > 0) {
+      setErrors(nextErrors);
+      return;
+    }
+    setErrors({});
+    router.push("/book-audit");
+  }
+
   return (
     <section id="contact" className="bg-ink text-bone pt-20 md:pt-32 pb-20 md:pb-32">
       <div className="container">
@@ -48,26 +73,53 @@ export default function ContactSection() {
                     <label className="block mb-2 opacity-50">Name</label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
+                        errors.name ? "border-negative" : "border-bone/20"
+                      }`}
                       placeholder="Jane Doe"
+                      required
+                      aria-invalid={Boolean(errors.name)}
                     />
+                    {errors.name && (
+                      <p className="mt-2 normal-case tracking-normal text-negative">{errors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block mb-2 opacity-50">Email</label>
                     <input
                       type="email"
-                      className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
+                        errors.email ? "border-negative" : "border-bone/20"
+                      }`}
                       placeholder="jane@company.com"
+                      required
+                      aria-invalid={Boolean(errors.email)}
                     />
+                    {errors.email && (
+                      <p className="mt-2 normal-case tracking-normal text-negative">{errors.email}</p>
+                    )}
                   </div>
                 </div>
                 <div>
                   <label className="block mb-2 opacity-50">Company</label>
                   <input
                     type="text"
-                    className="w-full bg-transparent border-b border-bone/20 pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    className={`w-full bg-transparent border-b pb-2 focus:outline-none focus:border-cobalt-light transition-colors rounded-none ${
+                      errors.company ? "border-negative" : "border-bone/20"
+                    }`}
                     placeholder="Your Company Name"
+                    required
+                    aria-invalid={Boolean(errors.company)}
                   />
+                  {errors.company && (
+                    <p className="mt-2 normal-case tracking-normal text-negative">{errors.company}</p>
+                  )}
                 </div>
 
                 <div>
@@ -88,12 +140,13 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <Link
-                  href="/book-audit"
+                <button
+                  type="button"
+                  onClick={handleSubmit}
                   className="bg-cobalt-light text-ink w-full py-4 font-bold text-base md:text-lg hover:bg-bone transition-colors mt-6 md:mt-8 block text-center"
                 >
                   Request Free Audit
-                </Link>
+                </button>
               </form>
             </FadeIn>
           </div>
