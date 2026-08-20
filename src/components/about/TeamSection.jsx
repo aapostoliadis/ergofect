@@ -15,10 +15,10 @@ export default function TeamSection() {
       <div className="container">
         <FadeIn>
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
-            [ THE TEAM ]
+            [ THE FOUNDER ]
           </p>
           <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-12 md:mb-16 max-w-3xl">
-            Small Team. <span className="text-cobalt-light">Big Impact.</span>
+            Experience That <span className="text-cobalt-light">Creates Impact.</span>
           </h2>
         </FadeIn>
 
