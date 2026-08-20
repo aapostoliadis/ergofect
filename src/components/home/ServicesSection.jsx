@@ -2,39 +2,39 @@ import FadeIn from "@/components/FadeIn";
 
 const services = [
   {
+    title: "Custom AI Solutions",
+    headline: "Bespoke systems for unique operational challenges.",
+    tags: ["Computer Vision", "NLP Models", "Custom APIs"],
+    delay: 100,
+  },
+  {
     title: "Workflow Automation",
     headline: "Connect your tools and eliminate manual handoffs.",
     tags: ["CRM Automation", "Lead Qualification", "Approval Workflows"],
-    delay: 100,
+    delay: 200,
   },
   {
     title: "Customer Support Automation",
     headline: "Handle inquiries 24/7 with human-like accuracy.",
     tags: ["Chatbots w/ Escalation", "Auto-Email Replies", "Ticket Routing"],
-    delay: 200,
+    delay: 300,
   },
   {
     title: "Data Processing & Analytics",
     headline: "Transform raw data into insights automatically.",
     tags: ["Report Generation", "Data Cleansing", "Predictive Analytics"],
-    delay: 300,
+    delay: 400,
   },
   {
     title: "Document Intelligence",
     headline: "Extract, classify, and process documents at scale.",
     tags: ["OCR Processing", "Contract Analysis", "Invoice Matching"],
-    delay: 400,
+    delay: 500,
   },
   {
     title: "Sales & Marketing Automation",
     headline: "Accelerate pipeline without growing your team.",
     tags: ["Lead Scoring", "Email Sequences", "A/B Testing"],
-    delay: 500,
-  },
-  {
-    title: "Custom AI Solutions",
-    headline: "Bespoke systems for unique operational challenges.",
-    tags: ["Computer Vision", "NLP Models", "Custom APIs"],
     delay: 600,
   },
 ];
