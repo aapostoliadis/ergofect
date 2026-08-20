@@ -18,11 +18,11 @@ export default function HeroSection() {
           <div className="w-full lg:w-2/3">
             <FadeIn delay={100}>
               <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[-0.04em]">
-                Scale Operations <br /> Without Hiring <br />
+                Automate Smarter.
+                <br />
                 <span className="text-bone bg-ink px-2 md:px-4 inline-block mt-2">
-                  [100]
-                </span>{" "}
-                People.
+                  Grow Faster.
+                </span>
               </h1>
             </FadeIn>
             <FadeIn delay={200}>

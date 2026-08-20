@@ -21,7 +21,7 @@ export default function MissionSection() {
             <FadeIn delay={200}>
               <p className="text-lg md:text-xl font-medium mb-8 leading-relaxed">
                 We believe every growing business deserves enterprise-grade
-                automation. Our mission is to democratize AI operations — making
+                automation. Our mission is to democratize AI operations - making
                 it fast to deploy, easy to manage, and impossible to outgrow.
               </p>
             </FadeIn>

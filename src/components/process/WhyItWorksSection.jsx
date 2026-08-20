@@ -4,7 +4,7 @@ const reasons = [
   {
     number: "01",
     title: "We Never Skip The Map",
-    desc: "Automating before you've mapped the workflow is the single most common way these projects fail. We map first, every time — no exceptions.",
+    desc: "Automating before you've mapped the workflow is the single most common way these projects fail. We map first, every time - no exceptions.",
   },
   {
     number: "02",
@@ -24,7 +24,7 @@ const reasons = [
   {
     number: "05",
     title: "No Big-Bang Migrations",
-    desc: "We migrate department by department, old tool running read-only in parallel, until accuracy is proven — not a single risky cutover weekend.",
+    desc: "We migrate department by department, old tool running read-only in parallel, until accuracy is proven - not a single risky cutover weekend.",
   },
   {
     number: "06",
@@ -52,7 +52,7 @@ export default function WhyItWorksSection() {
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-2xl">
                 Across hundreds of builds, projects don&apos;t fail on effort
-                — they fail on sequence. Here&apos;s what we do differently.
+                - they fail on sequence. Here&apos;s what we do differently.
               </p>
             </FadeIn>
           </div>

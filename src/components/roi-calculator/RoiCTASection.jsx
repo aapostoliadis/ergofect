@@ -14,7 +14,7 @@ export default function RoiCTASection() {
               Turn The Estimate Into A Plan.
             </h2>
             <p className="text-sm md:text-base opacity-60 leading-relaxed mb-10 md:mb-14 max-w-xl mx-auto">
-              A free process audit turns these estimates into a real number —
+              A free process audit turns these estimates into a real number -
               mapped against your actual workflows, tools, and team.
             </p>
           </FadeIn>

@@ -32,10 +32,10 @@ export default function ServicesCTASection() {
                   Request Free Audit
                 </Link>
                 <Link
-                  href="/case-studies"
+                  href="/about"
                   className="border border-bone/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest text-center hover:bg-bone hover:text-ink transition-colors"
                 >
-                  View Case Studies
+                  Learn About Us
                 </Link>
               </div>
             </FadeIn>

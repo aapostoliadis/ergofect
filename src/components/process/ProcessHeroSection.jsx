@@ -21,7 +21,7 @@ export default function ProcessHeroSection() {
           <div className="flex flex-col justify-end">
             <FadeIn delay={200}>
               <p className="text-lg md:text-xl font-medium max-w-lg mb-8">
-                We don&apos;t believe in 6-month rollouts — or in automating
+                We don&apos;t believe in 6-month rollouts - or in automating
                 first and mapping later. Same sequence every time: map,
                 model, build, then automate. That order is why it works.
               </p>

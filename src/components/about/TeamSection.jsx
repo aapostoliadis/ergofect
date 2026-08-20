@@ -7,36 +7,6 @@ const team = [
     seed: "Felix",
     desc: "Former ops lead at a Fortune 500. Built Ergsum to solve the problem he saw every day.",
   },
-  {
-    name: "Sarah Chen",
-    role: "CTO",
-    seed: "Sarah",
-    desc: "Ex-Google engineer. Architected the AI orchestration platform from the ground up.",
-  },
-  {
-    name: "Marcus Rivera",
-    role: "Head of Automation",
-    seed: "Marcus",
-    desc: "15 years in workflow optimization. Leads every major deployment personally.",
-  },
-  {
-    name: "Emily Nakamura",
-    role: "Head of Client Success",
-    seed: "Emily",
-    desc: "Ensures every client achieves measurable ROI within the first 30 days.",
-  },
-  {
-    name: "David Okafor",
-    role: "Lead AI Engineer",
-    seed: "David",
-    desc: "Specialist in NLP and computer vision. Builds the smart layer behind every automation.",
-  },
-  {
-    name: "Lisa Andersson",
-    role: "Head of Design",
-    seed: "Lisa",
-    desc: "Creates intuitive dashboards that make complex automations feel simple.",
-  },
 ];
 
 export default function TeamSection() {
@@ -52,7 +22,7 @@ export default function TeamSection() {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 max-w-md gap-4 md:gap-6">
           {team.map((member, i) => (
             <FadeIn
               key={i}

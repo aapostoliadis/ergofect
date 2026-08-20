@@ -18,7 +18,6 @@ export default function Footer() {
                 <li><Link href="/" className="hover:text-cobalt-light">Home</Link></li>
                 <li><Link href="/about" className="hover:text-cobalt-light">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-cobalt-light">Services</Link></li>
-                <li><Link href="/case-studies" className="hover:text-cobalt-light">Case Studies</Link></li>
                 <li><Link href="/process" className="hover:text-cobalt-light">Process</Link></li>
                 <li><Link href="/roi-calculator" className="hover:text-cobalt-light">ROI Calculator</Link></li>
                 <li><Link href="/contact" className="hover:text-cobalt-light">Contact</Link></li>

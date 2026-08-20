@@ -16,7 +16,7 @@ export default function ProcessCTASection() {
             <p className="text-sm md:text-base opacity-60 leading-relaxed mb-10 md:mb-14 max-w-xl mx-auto">
               Every engagement starts with a free process audit. We&apos;ll map
               your workflows, identify the biggest ROI opportunities, and give
-              you a clear plan — no commitment required.
+              you a clear plan - no commitment required.
             </p>
           </FadeIn>
           <FadeIn delay={200}>

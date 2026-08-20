@@ -22,7 +22,7 @@ export default function ServicesHeroSection() {
             <FadeIn delay={200}>
               <p className="text-lg md:text-xl font-medium max-w-lg mb-8">
                 We don&apos;t sell generic software. We build custom AI systems
-                tailored to your workflows, tools, and team — deployed in weeks,
+                tailored to your workflows, tools, and team - deployed in weeks,
                 not months.
               </p>
             </FadeIn>

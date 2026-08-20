@@ -68,7 +68,7 @@ export const services = [
     number: "02",
     title: "Data Processing & Analytics",
     headline: "Transform raw data into insights automatically.",
-    desc: "Automate data extraction, cleaning, transformation, and reporting — from spreadsheets to dashboards in minutes.",
+    desc: "Automate data extraction, cleaning, transformation, and reporting - from spreadsheets to dashboards in minutes.",
     tags: ["Report Generation", "Data Cleansing", "Predictive Analytics", "ETL Pipelines"],
     features: [
       "Automated data pipelines",
@@ -194,7 +194,7 @@ export const services = [
     number: "04",
     title: "Document Intelligence",
     headline: "Extract, classify, and process documents at scale.",
-    desc: "AI-powered document processing for invoices, contracts, forms, and compliance documents — with 99%+ accuracy.",
+    desc: "AI-powered document processing for invoices, contracts, forms, and compliance documents - with 99%+ accuracy.",
     tags: ["OCR Processing", "Contract Analysis", "Invoice Matching", "Compliance Checks"],
     features: [
       "Advanced OCR technology",

@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "How involved do we need to be during implementation?",
-    answer: "We keep your involvement minimal. Typically, we need a few hours in Week 1 for the process audit and periodic check-ins during build phase. Your team won't need to stop their daily work — we handle the heavy lifting.",
+    answer: "We keep your involvement minimal. Typically, we need a few hours in Week 1 for the process audit and periodic check-ins during build phase. Your team won't need to stop their daily work - we handle the heavy lifting.",
     delay: 200,
   },
   {

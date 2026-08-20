@@ -3,7 +3,7 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 const highlights = [
-  ["Effective Date", "April 28, 2026"],
+  ["Effective Date", "August 20, 2026"],
   ["Data Sold", "Never"],
   ["Privacy Contact", "hello@ergsum.ai"],
 ];

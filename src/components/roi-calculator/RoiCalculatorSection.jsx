@@ -201,7 +201,7 @@ export default function RoiCalculatorSection() {
                     <p className="text-xl md:text-2xl font-semibold tracking-[-0.04em]">
                       {results.paybackMonths
                         ? `${results.paybackMonths.toFixed(1)} mo`
-                        : "—"}
+                        : "-"}
                     </p>
                     <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
                       Payback Period

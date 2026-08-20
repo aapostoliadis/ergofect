@@ -4,25 +4,25 @@ const steps = [
   {
     week: "Week 1",
     title: "Map & Consolidate",
-    desc: "We walk every workflow with the people who run it, mark the handoffs and duplicate entries, then audit your tool stack — absorb, keep, or kill.",
+    desc: "We walk every workflow with the people who run it, mark the handoffs and duplicate entries, then audit your tool stack - absorb, keep, or kill.",
     highlight: false,
   },
   {
     week: "Week 2-3",
     title: "Data Model",
-    desc: "One schema, one source of truth. Every entity — clients, projects, invoices — gets a single canonical home instead of three disconnected tools.",
+    desc: "One schema, one source of truth. Every entity - clients, projects, invoices - gets a single canonical home instead of three disconnected tools.",
     highlight: false,
   },
   {
     week: "Week 4-5",
     title: "Build & Migrate",
-    desc: "We rebuild the core system department by department, migrate historical data, and run old and new in parallel until accuracy is proven. No automation yet — that's deliberate.",
+    desc: "We rebuild the core system department by department, migrate historical data, and run old and new in parallel until accuracy is proven. No automation yet - that's deliberate.",
     highlight: true,
   },
   {
     week: "Week 6+",
     title: "Agents & Automation",
-    desc: "Once the data model holds, we layer on AI agents and background automation — routed across model tiers to keep cost down without losing accuracy.",
+    desc: "Once the data model holds, we layer on AI agents and background automation - routed across model tiers to keep cost down without losing accuracy.",
     highlight: false,
   },
 ];
@@ -44,7 +44,7 @@ export default function TimelineSection() {
             <p className="text-xl md:text-2xl font-medium max-w-md">
               Every project follows the same disciplined sequence: map, then
               model, then build, then automate. Skipping the order is the
-              single biggest reason automation projects fail — so we don't.
+              single biggest reason automation projects fail - so we don't.
             </p>
           </FadeIn>
         </div>

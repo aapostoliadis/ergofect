@@ -6,20 +6,7 @@ export default function Navbar() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [currentTime, setCurrentTime] = useState("New York, US");
   const [activeLink, setActiveLink] = useState("/");
-
-  useEffect(() => {
-    function updateTime() {
-      const now = new Date();
-      setCurrentTime(
-        `New York, US ${now.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", timeZone: "America/New_York" })}`
-      );
-    }
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     function handleScroll() {
@@ -32,11 +19,6 @@ export default function Navbar() {
   useEffect(() => {
     if (router.pathname === "/about") {
       setActiveLink("/about");
-      return;
-    }
-
-    if (router.pathname === "/case-studies") {
-      setActiveLink("/case-studies");
       return;
     }
 
@@ -59,7 +41,6 @@ export default function Navbar() {
       home: "/",
       services: "/#services",
       how: "/#how",
-      "case-studies": "/#case-studies",
       contact: "/#contact",
     };
 
@@ -113,7 +94,6 @@ export default function Navbar() {
   const menuLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/case-studies", label: "Case Studies" },
     { href: "/services", label: "Services" },
     { href: "/process", label: "Process" },
     { href: "/contact", label: "Contact" },
@@ -132,7 +112,6 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex flex-col items-center justify-center text-[10px] tracking-widest uppercase font-mono opacity-70 w-1/3 text-center">
             <span>AI Automation Specialists</span>
-            <span>{currentTime}</span>
           </div>
           <div className="flex justify-end w-1/2 md:w-1/3 relative z-50">
             <button

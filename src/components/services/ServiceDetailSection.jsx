@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 const features = [
   {
     title: "Intelligent Routing",
-    desc: "AI classifies tickets by intent, urgency, and sentiment — then routes to the right agent or auto-resolves.",
+    desc: "AI classifies tickets by intent, urgency, and sentiment - then routes to the right agent or auto-resolves.",
   },
   {
     title: "Context-Aware Responses",

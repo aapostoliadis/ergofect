@@ -25,29 +25,41 @@ export default function AboutHeroSection() {
           <div className="flex flex-col justify-end">
             <FadeIn delay={200}>
               <p className="text-lg md:text-2xl font-medium max-w-lg">
-                Founded in 2022, Ergsum is an AI automation studio that helps
-                scaling companies eliminate operational bottlenecks — without
+                Founded in 2026, Ergsum is an AI automation studio that helps
+                scaling companies eliminate operational bottlenecks - without
                 adding headcount.
               </p>
             </FadeIn>
             <FadeIn delay={300} className="mt-8">
-              <div className="grid grid-cols-3 gap-6 border-t border-black/20 pt-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-black/20 pt-6">
                 <div>
-                  <p className="text-3xl md:text-4xl font-semibold">200+</p>
+                  <p className="text-3xl md:text-4xl font-semibold">6</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    Automations Deployed
+                    Steps, In Sequence
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl md:text-4xl font-semibold">45+</p>
+                  <p className="text-3xl md:text-4xl font-semibold">7-12</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    Global Clients
+                    Tools Collapsed
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl md:text-4xl font-semibold">98%</p>
+                  <p className="text-3xl md:text-4xl font-semibold">15-30</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    Client Retention
+                    Entities Modelled
+                  </p>
+                </div>
+                <div>
+                  <p className="text-3xl md:text-4xl font-semibold">4</p>
+                  <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
+                    First Agents
+                  </p>
+                </div>
+                <div>
+                  <p className="text-3xl md:text-4xl font-semibold">80%</p>
+                  <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
+                    AI Cost Cut By Routing
                   </p>
                 </div>
               </div>

@@ -45,7 +45,7 @@ export default function ContactFormSection() {
                     John Doe
                   </p>
                   <p className="font-mono text-[10px] md:text-xs opacity-50 uppercase">
-                    Founder &amp; CEO — Reviews Every Audit
+                    Founder &amp; CEO - Reviews Every Audit
                   </p>
                 </div>
               </div>

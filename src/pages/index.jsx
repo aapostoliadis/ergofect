@@ -4,8 +4,6 @@ import MarqueeSection from "@/components/home/MarqueeSection";
 import ProblemSection from "@/components/home/ProblemSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProcessSection from "@/components/home/ProcessSection";
-import CaseStudiesSection from "@/components/home/CaseStudiesSection";
-import PricingSection from "@/components/home/PricingSection";
 import FaqSection from "@/components/home/FaqSection";
 import ContactSection from "@/components/home/ContactSection";
 
@@ -23,8 +21,6 @@ export default function Home() {
       <ProblemSection />
       <ServicesSection />
       <ProcessSection />
-      <CaseStudiesSection />
-      <PricingSection />
       <FaqSection />
       <ContactSection />
     </>

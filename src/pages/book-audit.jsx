@@ -123,7 +123,7 @@ export default function BookAudit() {
                 <p className="text-lg md:text-xl font-medium max-w-lg mb-8">
                   Our founder personally reviews every audit request. You&apos;ll
                   receive a detailed report with automation opportunities and
-                  ROI projections — completely free, no strings attached.
+                  ROI projections - completely free, no strings attached.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>

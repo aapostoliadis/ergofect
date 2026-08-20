@@ -3,7 +3,7 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 const highlights = [
-  ["Effective Date", "April 28, 2026"],
+  ["Effective Date", "August 20, 2026"],
   ["Applies To", "Website, audits, proposals, and automation services"],
   ["Response Time", "Legal requests reviewed within 5 business days"],
 ];

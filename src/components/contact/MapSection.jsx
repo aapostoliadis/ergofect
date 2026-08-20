@@ -34,7 +34,7 @@ export default function MapSection() {
                 350 Fifth Avenue, Suite 4800
               </p>
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
-                New York, NY 10118 — United States
+                New York, NY 10118 - United States
               </p>
             </div>
             <a

@@ -16,7 +16,7 @@ const values = [
   {
     number: "03",
     title: "Client-First Engineering",
-    desc: "We don't build what's cool — we build what moves the needle for your operations.",
+    desc: "We don't build what's cool - we build what moves the needle for your operations.",
     delay: 200,
   },
   {
@@ -28,7 +28,7 @@ const values = [
   {
     number: "05",
     title: "Continuous Optimization",
-    desc: "Every system we build gets smarter over time. We audit, refine, and improve — always.",
+    desc: "Every system we build gets smarter over time. We audit, refine, and improve - always.",
     delay: 400,
   },
   {
@@ -57,7 +57,7 @@ export default function ValuesSection() {
           <div className="lg:col-span-2 flex items-end">
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-2xl">
-                These aren&apos;t wall posters — they&apos;re the principles we
+                These aren&apos;t wall posters - they&apos;re the principles we
                 hire against, build with, and hold ourselves accountable to.
               </p>
             </FadeIn>
