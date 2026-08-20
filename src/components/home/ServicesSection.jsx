@@ -2,21 +2,21 @@ import FadeIn from "@/components/FadeIn";
 
 const services = [
   {
+    title: "Workflow Automation",
+    headline: "Connect your tools and eliminate manual handoffs.",
+    tags: ["CRM Automation", "Lead Qualification", "Approval Workflows"],
+    delay: 100,
+  },
+  {
     title: "Customer Support",
     headline: "Handle inquiries 24/7 with human-like accuracy.",
     tags: ["Chatbots w/ Escalation", "Auto-Email Replies", "Ticket Routing"],
-    delay: 100,
+    delay: 200,
   },
   {
     title: "Data Processing",
     headline: "Transform raw data into insights automatically.",
     tags: ["Report Generation", "Data Cleansing", "Predictive Analytics"],
-    delay: 200,
-  },
-  {
-    title: "Workflow Automation",
-    headline: "Connect your tools and eliminate manual handoffs.",
-    tags: ["CRM Automation", "Lead Qualification", "Approval Workflows"],
     delay: 300,
   },
 ];
