@@ -3,8 +3,8 @@ import FadeIn from "@/components/FadeIn";
 const values = [
   {
     number: "01",
-    title: "Speed Over Perfection",
-    desc: "We ship fast and iterate faster. A working automation today beats a perfect one next quarter.",
+    title: "Speed Without Compromise",
+    desc: "We deliver fast without sacrificing quality. Every automation is carefully engineered, rigorously tested, and ready to perform from day one.",
     delay: 0,
   },
   {
