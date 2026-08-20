@@ -9,6 +9,7 @@ export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
+  const [spend, setSpend] = useState("");
   const [errors, setErrors] = useState({});
 
   function handleSubmit() {
@@ -128,14 +129,18 @@ export default function ContactSection() {
                   </label>
                   <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
                     {spendOptions.map((opt) => (
-                      <label
+                      <button
                         key={opt}
-                        className="flex items-center gap-2 cursor-pointer border border-bone/20 px-3 md:px-4 py-2 hover:border-cobalt-light transition-colors w-full sm:w-auto"
+                        type="button"
+                        onClick={() => setSpend(opt)}
+                        className={`flex items-center gap-2 border px-3 md:px-4 py-2 transition-colors w-full sm:w-auto ${
+                          spend === opt
+                            ? "border-cobalt-light bg-cobalt-light text-ink"
+                            : "border-bone/20 hover:border-cobalt-light"
+                        }`}
                       >
-                        <input type="radio" name="spend" className="hidden" />
-                        <span className="w-3 h-3 border border-bone rounded-full block shrink-0"></span>
                         {opt}
-                      </label>
+                      </button>
                     ))}
                   </div>
                 </div>
