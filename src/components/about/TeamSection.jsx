@@ -58,7 +58,7 @@ export default function TeamSection() {
               Akis is a seasoned AI Engineer/Consultant and product designer
               with 26 years of experience, specializing in AI/ML, fintech,
               healthtech, dashboard design, SaaS, and eCommerce. As a
-              Certified AI Consultant (CAIC) from the USW AI Institute, he
+              Certified AI Consultant (CAIC) from the USA AI Institute, he
               helps organizations and professionals navigate AI
               transformation and implementation strategies. His expertise
               spans from small businesses to enterprise systems, with
