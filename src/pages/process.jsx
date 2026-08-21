@@ -11,10 +11,10 @@ export default function Process() {
   return (
     <>
       <Head>
-        <title>Our Process - Ergsum. | How We Automate</title>
+        <title>Our Process - Ergofect. | How We Automate</title>
         <meta
           name="description"
-          content="Learn how Ergsum deploys AI automations in just 6 weeks - from process audit to live deployment with zero downtime."
+          content="Learn how Ergofect deploys AI automations in just 6 weeks - from process audit to live deployment with zero downtime."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

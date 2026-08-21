@@ -7,7 +7,7 @@ export default function RoiCalculator() {
   return (
     <>
       <Head>
-        <title>ROI Calculator - Ergsum. | AI Automation Returns</title>
+        <title>ROI Calculator - Ergofect. | AI Automation Returns</title>
         <meta
           name="description"
           content="Estimate the return on automating your operations. Six inputs, instant payback period and 3-year net position."

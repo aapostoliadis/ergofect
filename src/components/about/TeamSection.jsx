@@ -5,7 +5,7 @@ const team = [
     name: "Akis Apostoliadis",
     role: "Founder",
     seed: "Felix",
-    desc: "Certified AI Consultant and veteran product designer. Built Ergsum to eliminate operational bottlenecks.",
+    desc: "Certified AI Consultant and veteran product designer. Built Ergofect to eliminate operational bottlenecks.",
   },
 ];
 

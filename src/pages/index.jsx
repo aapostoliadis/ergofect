@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ergsum. - AI Automation Specialists</title>
+        <title>Ergofect. - AI Automation Specialists</title>
         <meta name="description" content="Build custom AI systems that handle your repetitive work, so you can focus on growth, not grunt work." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

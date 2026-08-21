@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 const highlights = [
   ["Effective Date", "August 20, 2026"],
   ["Data Sold", "Never"],
-  ["Privacy Contact", "hello@ergsum.ai"],
+  ["Privacy Contact", "hello@ergofect.ai"],
 ];
 
 const rights = [
@@ -22,7 +22,7 @@ const sections = [
     id: "overview",
     title: "Privacy Overview",
     body: [
-      "This Privacy Policy explains how Ergsum collects, uses, shares, stores, and protects information when you visit our website, request an audit, contact us, or engage our AI automation services.",
+      "This Privacy Policy explains how Ergofect collects, uses, shares, stores, and protects information when you visit our website, request an audit, contact us, or engage our AI automation services.",
       "We design our data practices around operational necessity, security, transparency, and respect for client confidentiality.",
     ],
   },
@@ -104,7 +104,7 @@ const sections = [
     id: "international",
     title: "International Transfers",
     body: [
-      "Ergsum and its service providers may process information in countries other than your own. Where required, we use appropriate safeguards for cross-border transfers.",
+      "Ergofect and its service providers may process information in countries other than your own. Where required, we use appropriate safeguards for cross-border transfers.",
       "By using our website or services, you understand that information may be processed where we or our vendors operate.",
     ],
   },
@@ -122,10 +122,10 @@ export default function PrivacyPage() {
   return (
     <>
       <Head>
-        <title>Privacy Policy - Ergsum.</title>
+        <title>Privacy Policy - Ergofect.</title>
         <meta
           name="description"
-          content="Ergsum Privacy Policy explaining data collection, AI data handling, security, retention, cookies, and privacy rights."
+          content="Ergofect Privacy Policy explaining data collection, AI data handling, security, retention, cookies, and privacy rights."
         />
       </Head>
 
@@ -259,7 +259,7 @@ export default function PrivacyPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="mailto:hello@ergsum.ai"
+                    href="mailto:hello@ergofect.ai"
                     className="bg-cobalt text-bone py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
                   >
                     Submit Privacy Request

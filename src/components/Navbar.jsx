@@ -107,7 +107,7 @@ export default function Navbar() {
         <div className="container flex justify-between items-center">
           <div className="flex items-center w-1/2 md:w-1/3">
             <Link href="/" className="text-2xl md:text-3xl font-semibold tracking-[-0.045em] relative z-50">
-              Ergsum<span className="text-cobalt">.</span>
+              Ergofect<span className="text-cobalt">.</span>
             </Link>
           </div>
           <div className="hidden md:flex flex-col items-center justify-center text-[10px] tracking-widest uppercase font-mono opacity-70 w-1/3 text-center">
@@ -163,10 +163,10 @@ export default function Navbar() {
             <div className="mb-8">
               <p className="opacity-50 mb-2 tracking-[0.14em]">[ Contact us ]</p>
               <a
-                href="mailto:hello@ergsum.ai"
+                href="mailto:hello@ergofect.ai"
                 className="text-cobalt border-b border-cobalt/35 pb-1 text-xl font-medium inline-block hover:text-ink hover:border-ink/50 transition-colors normal-case"
               >
-                hello@ergsum.ai
+                hello@ergofect.ai
               </a>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
