@@ -208,9 +208,7 @@ export default function BookAudit() {
                   Thanks, {fullName.trim().split(" ")[0]}.
                 </h2>
                 <p className="text-graphite max-w-lg mx-auto">
-                  Your email app should now be open with the audit request
-                  addressed to us. Send it from {workEmail} and we&apos;ll be in
-                  touch within 24 hours.
+                  Thank you! We&apos;ll be in touch within 24 hours.
                 </p>
               </div>
             ) : (

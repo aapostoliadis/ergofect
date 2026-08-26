@@ -133,9 +133,7 @@ export default function ContactSection() {
                     Thanks, {fullName.trim().split(" ")[0]}.
                   </h3>
                   <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm max-w-md">
-                    Your email app should now be open with the audit request
-                    addressed to us. Send it from {workEmail} and we&apos;ll be in
-                    touch within 24 hours.
+                    Thank you! We&apos;ll be in touch within 24 hours.
                   </p>
                 </div>
               ) : (

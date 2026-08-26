@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Name and email are required" });
     }
 
-    if (!apiKey || !from) {
+    if (!apiKey || !from || from.includes("your-verified-domain.com")) {
       return res.status(503).json({ error: "Email service is not configured" });
     }
 
