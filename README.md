@@ -1,23 +1,4 @@
 
-create areadme.md for github repo
-
-Message#: 2
-
-Created a polished GitHub README for Ergofect.
-
-Download 
-
-Replace <repository-url> and <repository-folder> with the actual GitHub details.
-
-
-
-Library
-/
-Ergofect
-/
-README.md
-
-
 Ergofect
 Human-centered AI automation for smarter, more efficient businesses.
 
