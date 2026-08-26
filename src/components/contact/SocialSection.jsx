@@ -24,7 +24,7 @@ const socials = [
   //  handle: "@ErgofectAI",
   //  href: "#",
   //  desc: "Tutorials, demos, and automation deep-dives.",
-  },
+ // },
 ];
 
 export default function SocialSection() {
