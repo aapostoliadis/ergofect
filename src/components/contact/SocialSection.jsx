@@ -3,27 +3,27 @@ import FadeIn from "@/components/FadeIn";
 const socials = [
   {
     name: "LinkedIn",
-    handle: "@ergofect-ai",
-    href: "#",
+    handle: "@ergofect",
+    href: "https://www.linkedin.com/company/144746941",
     desc: "Company updates, case studies, and team insights.",
   },
   {
     name: "Twitter / X",
-    handle: "@ergofect_ai",
-    href: "#",
+    handle: "@ergofect",
+    href: "https://x.com/ergofect",
     desc: "Hot takes on AI automation and behind-the-scenes content.",
   },
-  {
-    name: "GitHub",
-    handle: "@ergofect-ai",
-    href: "#",
-    desc: "Open-source tools and automation templates.",
-  },
-  {
-    name: "YouTube",
-    handle: "@ErgofectAI",
-    href: "#",
-    desc: "Tutorials, demos, and automation deep-dives.",
+ // {
+  //  name: "GitHub",
+  //  handle: "@ergofect-ai",
+  //  href: "#",
+  //  desc: "Open-source tools and automation templates.",
+ // },
+  //{
+  //  name: "YouTube",
+  //  handle: "@ErgofectAI",
+  //  href: "#",
+  //  desc: "Tutorials, demos, and automation deep-dives.",
   },
 ];
 
