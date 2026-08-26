@@ -25,6 +25,7 @@ export default function ContactSection() {
   const [bottleneck, setBottleneck] = useState("");
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function toggleService(svc) {
     setSelectedServices((prev) =>
@@ -61,24 +62,31 @@ export default function ContactSection() {
     setFormStep(targetStep);
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const stepErrors = validateStep(2);
     if (Object.keys(stepErrors).length > 0) {
       setErrors(stepErrors);
       return;
     }
     setErrors({});
-    sendAuditEmail({
-      "Full name": fullName.trim(),
-      "Work email": workEmail.trim(),
-      "Company name": companyName.trim(),
-      Role: role.trim(),
-      "Team size": selectedTeamSize,
-      Services: selectedServices,
-      "Monthly operational spend": selectedSpend,
-      Bottleneck: bottleneck.trim(),
-    });
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      await sendAuditEmail({
+        "Full name": fullName.trim(),
+        "Work email": workEmail.trim(),
+        "Company name": companyName.trim(),
+        Role: role.trim(),
+        "Team size": selectedTeamSize,
+        Services: selectedServices,
+        "Monthly operational spend": selectedSpend,
+        Bottleneck: bottleneck.trim(),
+      });
+      setSubmitted(true);
+    } catch {
+      setErrors({ submit: "We could not send your request. Please try again." });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -361,11 +369,13 @@ export default function ContactSection() {
                     <button
                       type="button"
                       onClick={handleSubmit}
+                      disabled={isSubmitting}
                       className="bg-cobalt-light text-ink py-3 md:py-4 px-8 md:px-12 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-bone transition-colors"
                     >
                       Submit Audit Request
                     </button>
                   </div>
+                  {errors.submit && <p className="text-negative">{errors.submit}</p>}
                 </div>
               </form>
               )}

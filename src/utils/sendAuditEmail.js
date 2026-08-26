@@ -1,12 +1,11 @@
-const recipient = "info@ergofect.com";
+export default async function sendAuditEmail(fields) {
+  const response = await fetch("/api/send-audit-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(fields),
+  });
 
-export default function sendAuditEmail(fields) {
-  const body = Object.entries(fields)
-    .filter(([, value]) => value !== undefined && value !== "")
-    .map(([label, value]) => `${label}: ${Array.isArray(value) ? value.join(", ") : value}`)
-    .join("\n");
-
-  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(
-    "New Ergofect Audit Request"
-  )}&body=${encodeURIComponent(body)}`;
+  if (!response.ok) {
+    throw new Error("Email delivery failed");
+  }
 }
