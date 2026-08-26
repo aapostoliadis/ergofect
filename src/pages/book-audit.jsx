@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+import sendAuditEmail from "@/utils/sendAuditEmail";
 
 const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
 const serviceOptions = [
@@ -40,7 +41,10 @@ export default function BookAudit() {
   const [fullName, setFullName] = useState("");
   const [workEmail, setWorkEmail] = useState("");
   const [companyName, setCompanyName] = useState("");
+  const [role, setRole] = useState("");
   const [bottleneck, setBottleneck] = useState("");
+  const [successCriteria, setSuccessCriteria] = useState("");
+  const [referralSource, setReferralSource] = useState("");
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -86,6 +90,18 @@ export default function BookAudit() {
       return;
     }
     setErrors({});
+    sendAuditEmail({
+      "Full name": fullName.trim(),
+      "Work email": workEmail.trim(),
+      "Company name": companyName.trim(),
+      Role: role.trim(),
+      "Team size": selectedTeamSize,
+      Services: selectedServices,
+      "Monthly operational spend": selectedSpend,
+      Bottleneck: bottleneck.trim(),
+      "Success criteria": successCriteria.trim(),
+      "Referral source": referralSource.trim(),
+    });
     setSubmitted(true);
   }
 
@@ -184,8 +200,9 @@ export default function BookAudit() {
                   Thanks, {fullName.trim().split(" ")[0]}.
                 </h2>
                 <p className="text-graphite max-w-lg mx-auto">
-                  We&apos;ve received your audit request and will be in touch at{" "}
-                  {workEmail} within 24 hours.
+                  Your email app should now be open with the audit request
+                  addressed to us. Send it from {workEmail} and we&apos;ll be in
+                  touch within 24 hours.
                 </p>
               </div>
             ) : (
@@ -275,6 +292,8 @@ export default function BookAudit() {
                       <label className="block mb-2 opacity-50">Your Role</label>
                       <input
                         type="text"
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
                         className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                         placeholder="CEO, CTO, VP Ops..."
                       />
@@ -420,6 +439,8 @@ export default function BookAudit() {
                     </label>
                     <textarea
                       rows={3}
+                      value={successCriteria}
+                      onChange={(e) => setSuccessCriteria(e.target.value)}
                       className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
                       placeholder="e.g., Reduce response time by 50%, cut support costs by $20k/mo..."
                     />
@@ -430,6 +451,8 @@ export default function BookAudit() {
                     </label>
                     <input
                       type="text"
+                      value={referralSource}
+                      onChange={(e) => setReferralSource(e.target.value)}
                       className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none"
                       placeholder="Google, referral, social media..."
                     />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FadeIn from "@/components/FadeIn";
+import sendAuditEmail from "@/utils/sendAuditEmail";
 
 const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
 const serviceOptions = [
@@ -67,6 +68,16 @@ export default function ContactSection() {
       return;
     }
     setErrors({});
+    sendAuditEmail({
+      "Full name": fullName.trim(),
+      "Work email": workEmail.trim(),
+      "Company name": companyName.trim(),
+      Role: role.trim(),
+      "Team size": selectedTeamSize,
+      Services: selectedServices,
+      "Monthly operational spend": selectedSpend,
+      Bottleneck: bottleneck.trim(),
+    });
     setSubmitted(true);
   }
 
@@ -114,8 +125,9 @@ export default function ContactSection() {
                     Thanks, {fullName.trim().split(" ")[0]}.
                   </h3>
                   <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm max-w-md">
-                    We&apos;ve received your audit request and will be in touch
-                    at {workEmail} within 24 hours.
+                    Your email app should now be open with the audit request
+                    addressed to us. Send it from {workEmail} and we&apos;ll be in
+                    touch within 24 hours.
                   </p>
                 </div>
               ) : (
