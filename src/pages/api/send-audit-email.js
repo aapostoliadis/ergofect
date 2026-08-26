@@ -10,31 +10,46 @@ export default async function handler(req, res) {
     const fields = req.body || {};
     const name = fields["Full name"]?.trim();
     const email = fields["Work email"]?.trim();
+    const apiKey = process.env.RESEND_API_KEY;
+    const from = process.env.RESEND_FROM_EMAIL;
 
     if (!name || !email) {
       return res.status(400).json({ error: "Name and email are required" });
     }
 
-    const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+    if (!apiKey || !from) {
+      return res.status(503).json({ error: "Email service is not configured" });
+    }
+
+    const message = Object.entries(fields)
+      .filter(([, value]) => value !== undefined && value !== "")
+      .map(([label, value]) => `${label}: ${Array.isArray(value) ? value.join(", ") : value}`)
+      .join("\n");
+
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
-        ...fields,
-        name,
-        email,
-        _replyto: email,
-        _subject: "New Ergofect Audit Request",
-        _template: "table",
-        _captcha: "false",
+        from,
+        to: [recipient],
+        reply_to: email,
+        subject: "New Ergofect Audit Request",
+        text: message,
       }),
     });
 
     if (!response.ok) {
-      return res.status(502).json({ error: "Email delivery failed" });
+      const providerError = await response.json().catch(() => null);
+      return res.status(502).json({
+        error: providerError?.message || "Email delivery failed",
+      });
     }
 
     return res.status(200).json({ success: true });
   } catch {
-    return res.status(500).json({ error: "Email delivery failed" });
+    return res.status(500).json({ error: "Email service could not be reached" });
   }
 }

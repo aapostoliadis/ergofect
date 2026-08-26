@@ -6,6 +6,7 @@ export default async function sendAuditEmail(fields) {
   });
 
   if (!response.ok) {
-    throw new Error("Email delivery failed");
+    const result = await response.json().catch(() => null);
+    throw new Error(result?.error || "Email delivery failed");
   }
 }

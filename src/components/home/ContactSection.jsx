@@ -82,8 +82,8 @@ export default function ContactSection() {
         Bottleneck: bottleneck.trim(),
       });
       setSubmitted(true);
-    } catch {
-      setErrors({ submit: "We could not send your request. Please try again." });
+    } catch (error) {
+      setErrors({ submit: error.message || "We could not send your request. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
