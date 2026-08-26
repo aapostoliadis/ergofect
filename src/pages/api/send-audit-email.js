@@ -7,11 +7,22 @@ export default async function handler(req, res) {
   }
 
   try {
+    const fields = req.body || {};
+    const name = fields["Full name"]?.trim();
+    const email = fields["Work email"]?.trim();
+
+    if (!name || !email) {
+      return res.status(400).json({ error: "Name and email are required" });
+    }
+
     const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
-        ...req.body,
+        ...fields,
+        name,
+        email,
+        _replyto: email,
         _subject: "New Ergofect Audit Request",
         _template: "table",
         _captcha: "false",
