@@ -175,7 +175,6 @@ export default function Navbar() {
                 <ul className="space-y-2">
                   <li><a href="#" className="hover:text-cobalt">1.0 X / Twitter</a></li>
                   <li><a href="#" className="hover:text-cobalt">1.1 LinkedIn</a></li>
-                  <li><a href="#" className="hover:text-cobalt">1.2 Instagram</a></li>
                 </ul>
               </div>
             </div>
