@@ -163,10 +163,10 @@ export default function Navbar() {
             <div className="mb-8">
               <p className="opacity-50 mb-2 tracking-[0.14em]">[ Contact us ]</p>
               <a
-                href="mailto:info@ergofect.ai"
+                href="mailto:info@ergofect.com"
                 className="text-cobalt border-b border-cobalt/35 pb-1 text-xl font-medium inline-block hover:text-ink hover:border-ink/50 transition-colors normal-case"
               >
-                info@ergofect.ai
+                info@ergofect.com
               </a>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
