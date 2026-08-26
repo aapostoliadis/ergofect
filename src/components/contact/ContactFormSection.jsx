@@ -138,7 +138,7 @@ export default function ContactFormSection() {
                     Thanks, {fullName.trim().split(" ")[0]}.
                   </h3>
                   <p className="font-mono opacity-60 uppercase text-[10px] md:text-sm max-w-md">
-                    Thank you! We&apos;ll be in touch within 24 hours.
+                    We&apos;ll be in touch within 24 hours.
                   </p>
                 </div>
               ) : (

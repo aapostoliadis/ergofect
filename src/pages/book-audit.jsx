@@ -208,7 +208,7 @@ export default function BookAudit() {
                   Thanks, {fullName.trim().split(" ")[0]}.
                 </h2>
                 <p className="text-graphite max-w-lg mx-auto">
-                  Thank you! We&apos;ll be in touch within 24 hours.
+                  We&apos;ll be in touch within 24 hours.
                 </p>
               </div>
             ) : (
