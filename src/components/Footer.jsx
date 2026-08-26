@@ -33,7 +33,7 @@ export default function Footer() {
             <div>
               <p className="opacity-50 mb-4 tracking-[0.14em]">[ Socials ]</p>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-cobalt-light">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/144746941" className="hover:text-cobalt-light">LinkedIn</a></li>
                 <li><a href="#" className="hover:text-cobalt-light">Twitter</a></li>
               </ul>
             </div>
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col text-center sm:text-left justify-center sm:flex-row sm:justify-between items-start sm:items-center font-mono text-[8px] md:text-[10px] uppercase opacity-40 mt-8 gap-2">
-          <p className="w-full sm:w-auto">© 2026 Ergofect AI, Inc. All Rights Reserved.</p>
+          <p className="w-full sm:w-auto">© 2026 Ergofect, All Rights Reserved.</p>
           <p className="w-full sm:w-auto">Designed for Scale.</p>
         </div>
       </div>
