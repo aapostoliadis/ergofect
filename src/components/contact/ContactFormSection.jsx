@@ -169,7 +169,7 @@ export default function ContactFormSection() {
                   <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                       <div>
-                        <label className="block mb-2 opacity-50">Full Name</label>
+                        <label className="block mb-2 opacity-50">Full Name *</label>
                         <input
                           type="text"
                           value={fullName}
@@ -186,7 +186,7 @@ export default function ContactFormSection() {
                         )}
                       </div>
                       <div>
-                        <label className="block mb-2 opacity-50">Work Email</label>
+                        <label className="block mb-2 opacity-50">Work Email *</label>
                         <input
                           type="email"
                           value={workEmail}
@@ -205,7 +205,7 @@ export default function ContactFormSection() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                       <div>
-                        <label className="block mb-2 opacity-50">Company Name</label>
+                        <label className="block mb-2 opacity-50">Company Name *</label>
                         <input
                           type="text"
                           value={companyName}
@@ -343,7 +343,7 @@ export default function ContactFormSection() {
                   <div className="space-y-6 md:space-y-8 font-mono text-[10px] md:text-sm uppercase">
                     <div>
                       <label className="block mb-2 opacity-50">
-                        Describe Your Biggest Operational Bottleneck
+                        Describe Your Biggest Operational Bottleneck *
                       </label>
                       <textarea
                         rows={4}
