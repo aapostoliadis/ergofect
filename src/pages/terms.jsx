@@ -225,12 +225,6 @@ export default function TermsPage() {
                   clarification, contact our team before using the services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="mailto:hello@ergofect.ai"
-                    className="bg-cobalt text-bone py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
-                  >
-                    Email Legal Team
-                  </a>
                   <Link
                     href="/privacy"
                     className="border border-white/20 py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
