@@ -5,7 +5,7 @@ const team = [
     name: "Akis Apostoliadis",
     role: "Founder",
     seed: "Felix",
-    desc: "Certified AI Consultant and veteran product designer. Built Ergofect to eliminate operational bottlenecks.",
+    desc: "26 years in product design and AI consulting. Built Ergofect to eliminate operational bottlenecks.",
   },
 ];
 
@@ -55,15 +55,12 @@ export default function TeamSection() {
 
           <FadeIn delay={200}>
             <p className="text-base md:text-lg opacity-70 leading-relaxed">
-              Akis is a seasoned AI Engineer/Consultant and product designer
-              with 26 years of experience, specializing in AI/ML, fintech,
-              healthtech, dashboard design, SaaS, and eCommerce. As a
-              Certified AI Consultant (CAIC) from the USA AI Institute, he
-              helps organizations and professionals navigate AI
-              transformation and implementation strategies. His expertise
-              spans from small businesses to enterprise systems, with
-              clients including Harvard, Kraft Heinz, Sony Pictures, WeWork,
-              Pfizer, and Colgate-Palmolive, among others.
+              Akis has spent 26 years in product design and AI consulting,
+              across fintech, healthtech, and SaaS. Before founding Ergofect,
+              that work took him inside teams at Harvard, Kraft Heinz, Sony
+              Pictures, WeWork, Pfizer, and Colgate-Palmolive. Ergofect is
+              where that experience turns into six-week automation builds,
+              and he reviews every one personally.
             </p>
           </FadeIn>
         </div>

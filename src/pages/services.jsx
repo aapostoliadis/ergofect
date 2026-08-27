@@ -1,5 +1,6 @@
 import Head from "next/head";
 import ServicesHeroSection from "@/components/services/ServicesHeroSection";
+import IndustrySection from "@/components/services/IndustrySection";
 import ServiceListSection from "@/components/services/ServiceListSection";
 import ServiceDetailSection from "@/components/services/ServiceDetailSection";
 import TechStackSection from "@/components/services/TechStackSection";
@@ -19,6 +20,7 @@ export default function Services() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ServicesHeroSection />
+      <IndustrySection />
       <ServiceListSection />
       <ServiceDetailSection />
       <TechStackSection />

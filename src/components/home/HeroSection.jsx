@@ -18,17 +18,18 @@ export default function HeroSection() {
           <div className="w-full lg:w-2/3">
             <FadeIn delay={100}>
               <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[0em]">
-                Automate Smarter.
+                The manual work between your tools,
                 <br />
                 <span className="text-bone bg-ink px-2 md:px-4 inline-block mt-2">
-                  Grow Faster.
+                  gone in six weeks.
                 </span>
               </h1>
             </FadeIn>
             <FadeIn delay={200}>
               <p className="text-lg md:text-2xl mt-6 md:mt-8 max-w-xl font-medium">
-                Build custom AI systems that handle your repetitive work, so you
-                can focus on growth, not grunt work.
+                Ergofect builds the automation layer that sits on top of the CRM,
+                helpdesk, and spreadsheets you already run. No new platform, no
+                migration, no long contract.
               </p>
             </FadeIn>
             <FadeIn delay={300} className="mt-8 md:mt-12">

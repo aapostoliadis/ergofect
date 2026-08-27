@@ -38,15 +38,18 @@ export default function ProblemSection() {
             <FadeIn delay={300} className="w-[15%] bg-ink/30 h-[40%] transition-all duration-1000" />
             <FadeIn delay={400} className="w-[15%] bg-ink/60 h-[70%] transition-all duration-1000" />
             <FadeIn delay={500} className="w-[15%] bg-ink h-[100%] transition-all duration-1000 relative">
-              <span className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 font-bold text-lg md:text-xl">
-                $12.4M
+              <span className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 font-bold text-lg md:text-xl whitespace-nowrap">
+                $624,000
               </span>
             </FadeIn>
-            <p className="absolute -bottom-8 md:-bottom-10 right-0 font-mono text-[10px] md:text-xs uppercase opacity-50">
-              Hidden Labor Costs per Year
+            <p className="absolute -bottom-8 md:-bottom-10 right-0 font-mono text-[10px] md:text-xs uppercase opacity-50 text-right">
+              Lost to manual work between systems, per year
             </p>
           </div>
         </div>
+        <p className="font-mono text-[10px] md:text-xs uppercase opacity-40 mt-16 md:mt-20">
+          Based on 40 people losing 5 hours a week at a $60 loaded hourly cost. See the full math.
+        </p>
       </div>
     </section>
   );
