@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 const highlights = [
   ["Effective Date", "August 20, 2026"],
   ["Data Sold", "Never"],
-  ["Privacy Contact", "hello@ergofect.ai"],
+  ["Privacy Contact", "info@ergofect.com"],
 ];
 
 const rights = [
@@ -259,7 +259,7 @@ export default function PrivacyPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="mailto:hello@ergofect.ai"
+                    href="mailto:info@ergofect.com"
                     className="bg-cobalt text-bone py-3 px-6 font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:text-ink transition-colors"
                   >
                     Submit Privacy Request

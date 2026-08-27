@@ -31,7 +31,7 @@ export default function AboutCTASection() {
                   Request Free Audit
                 </Link>
                 <a
-                  href="mailto:hello@ergofect.ai"
+                  href="mailto:info@ergofect.com"
                   className="border border-white/20 py-3 md:py-4 px-6 md:px-8 font-bold text-xs md:text-sm uppercase tracking-widest text-center hover:bg-bone hover:text-ink transition-colors"
                 >
                   Email Us Directly
