@@ -3,6 +3,59 @@ import Link from "next/link";
 
 const CONSENT_KEY = "ergofect-cookie-consent";
 
+function loadApolloInbound() {
+  if (document.querySelector('script[data-ergofect-apollo-inbound]')) return;
+
+  const timeoutMs = 15000;
+  let timeoutId;
+  const style = document.createElement("style");
+  style.id = "apollo-form-prehide-css";
+  style.textContent = `
+    form:has(input[type="email" i]),form:has(input[name="email" i]),.hs-form-iframe{position:relative!important}
+    form:has(input[type="email" i])::before,form:has(input[name="email" i])::before,.hs-form-iframe::before{content:"";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;width:50px;height:50px;margin:auto;border:2.5px solid #e1e1e1;border-top:2.5px solid #9ea3a6;border-radius:50%;animation:spin 1s linear infinite;background-color:transparent;pointer-events:auto;z-index:999999;opacity:1}
+    form:has(input[type="email" i]) *,form:has(input[name="email" i]) *,.hs-form-iframe *{opacity:0!important;user-select:none!important;pointer-events:none!important}
+    @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+  `;
+  (document.head || document.documentElement).appendChild(style);
+
+  function cleanup() {
+    const styleElement = document.getElementById("apollo-form-prehide-css");
+    if (styleElement) styleElement.remove();
+    if (timeoutId) clearTimeout(timeoutId);
+  }
+
+  timeoutId = setTimeout(() => {
+    console.warn("[Apollo] Form enrichment timeout after 5s - revealing forms. Check network and console for errors.");
+    cleanup();
+  }, timeoutMs);
+
+  const script = document.createElement("script");
+  const cacheKey = Math.random().toString(36).substring(7);
+  script.src = `https://assets.apollo.io/js/apollo-inbound.js?nocache=${cacheKey}`;
+  script.defer = true;
+  script.dataset.ergofectApolloInbound = "true";
+  script.onerror = () => {
+    console.error("[Apollo] Failed to load form enrichment script");
+    cleanup();
+  };
+  script.onload = () => {
+    try {
+      window.ApolloInbound.formEnrichment.init({
+        appId: "6a9258dba20b68000c4a4d3e",
+        onReady: cleanup,
+        onError: (error) => {
+          console.error("[Apollo] Form enrichment init error:", error);
+          cleanup();
+        },
+      });
+    } catch (error) {
+      console.error("[Apollo] Error initializing form enrichment:", error);
+      cleanup();
+    }
+  };
+  document.head.appendChild(script);
+}
+
 function loadTrackingScripts() {
   if (document.querySelector('script[data-ergofect-google-tag]')) return;
 
@@ -28,6 +81,7 @@ function loadTrackingScripts() {
     window.trackingFunctions?.onLoad({ appId: "6a9194244fedf0000c31ff6b" });
   };
   document.head.appendChild(apolloScript);
+  loadApolloInbound();
 }
 
 export default function CookieConsent() {
