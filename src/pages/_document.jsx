@@ -4,6 +4,17 @@ export default function Document() {
   return (
     <Html lang="en" className="scroll-smooth">
       <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BG0L3Q3QBB" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BG0L3Q3QBB');
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
