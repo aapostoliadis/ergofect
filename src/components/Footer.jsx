@@ -35,7 +35,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li><a href="https://www.linkedin.com/company/ergofect" className="hover:text-cobalt-light">LinkedIn</a></li>
                 <li><a href="https://x.com/ergofect" className="hover:text-cobalt-light">Twitter</a></li>
-                <li><a href="https://www.youtube.com/@ErgofectAI" className="hover:text-cobalt-light">YouTube</a></li>
+                <li><a href="https://www.youtube.com/@ergofect" className="hover:text-cobalt-light">YouTube</a></li>
               </ul>
             </div>
           </div>
