@@ -175,6 +175,7 @@ export default function Navbar() {
                 <ul className="space-y-2">
                   <li><a href="https://x.com/ergofect" className="hover:text-cobalt">1.0 X / Twitter</a></li>
                   <li><a href="https://www.linkedin.com/company/ergofect" className="hover:text-cobalt">1.1 LinkedIn</a></li>
+                  <li><a href="https://www.youtube.com/@ergofect" className="hover:text-cobalt">1.2 YouTube</a></li>
                 </ul>
               </div>
             </div>
