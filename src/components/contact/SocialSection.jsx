@@ -19,12 +19,12 @@ const socials = [
   //  href: "#",
   //  desc: "Open-source tools and automation templates.",
  // },
-  //{
-  //  name: "YouTube",
-  //  handle: "@ErgofectAI",
-  //  href: "#",
-  //  desc: "Tutorials, demos, and automation deep-dives.",
- // },
+  {
+   name: "YouTube",
+  handle: "@ErgofectAI",
+  href: "https://www.youtube.com/@ergofect",
+  desc: "Tutorials, demos, and automation deep-dives.",
+  },
 ];
 
 export default function SocialSection() {
