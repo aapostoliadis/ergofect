@@ -33,7 +33,7 @@ export default function Footer() {
             <div>
               <p className="opacity-50 mb-4 tracking-[0.14em]">[ Socials ]</p>
               <ul className="space-y-2">
-                <li><a href="https://www.linkedin.com/company/144746941" className="hover:text-cobalt-light">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/ergofect" className="hover:text-cobalt-light">LinkedIn</a></li>
                 <li><a href="https://x.com/ergofect" className="hover:text-cobalt-light">Twitter</a></li>
               </ul>
             </div>

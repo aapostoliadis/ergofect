@@ -173,8 +173,8 @@ export default function Navbar() {
               <div>
                 <p className="opacity-50 mb-2 tracking-[0.14em]">[ Socials ]</p>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-cobalt">1.0 X / Twitter</a></li>
-                  <li><a href="#" className="hover:text-cobalt">1.1 LinkedIn</a></li>
+                  <li><a href="https://x.com/ergofect" className="hover:text-cobalt">1.0 X / Twitter</a></li>
+                  <li><a href="https://www.linkedin.com/company/ergofect" className="hover:text-cobalt">1.1 LinkedIn</a></li>
                 </ul>
               </div>
             </div>

@@ -1,0 +1,230 @@
+From e7d26d3aebb4217e1bbbe2780867789bc19920a4 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 27 Aug 2026 05:44:26 +0000
+Subject: [PATCH] Rewrite homepage hero, problem stat, founder bio, and add
+ industry section
+
+- Homepage hero: replace generic headline with the automation-layer
+  positioning already used in the LinkedIn company page copy.
+- Problem section: swap the unsourced $12.4M figure for the worked
+  $624,000 example from the Medium article series, with the math
+  shown as a footnote.
+- Founder bio (about page + team card): clarify that the enterprise
+  client list is from Akis's product/design career before Ergofect,
+  not Ergofect engagements.
+- Services page: add an industry-first section (freight/3PL,
+  insurance MGAs, healthcare groups, professional services) ahead of
+  the generic six-category service list, matching the vertical
+  content already written.
+- ROI calculator hero: add a one-line pricing anchor ("engagements
+  typically start around $10,000 a month") ahead of the sliders to
+  close the gap with the $120k build-cost default.
+---
+ src/components/about/TeamSection.jsx          | 17 ++---
+ src/components/home/HeroSection.jsx           |  9 +--
+ src/components/home/ProblemSection.jsx        | 11 ++--
+ .../roi-calculator/RoiHeroSection.jsx         |  6 +-
+ src/components/services/IndustrySection.jsx   | 65 +++++++++++++++++++
+ src/pages/services.jsx                        |  2 +
+ 6 files changed, 90 insertions(+), 20 deletions(-)
+ create mode 100644 src/components/services/IndustrySection.jsx
+
+diff --git a/src/components/about/TeamSection.jsx b/src/components/about/TeamSection.jsx
+index 24490b8..f344fee 100644
+--- a/src/components/about/TeamSection.jsx
++++ b/src/components/about/TeamSection.jsx
+@@ -5,7 +5,7 @@ const team = [
+     name: "Akis Apostoliadis",
+     role: "Founder",
+     seed: "Felix",
+-    desc: "Certified AI Consultant and veteran product designer. Built Ergofect to eliminate operational bottlenecks.",
++    desc: "26 years in product design and AI consulting. Built Ergofect to eliminate operational bottlenecks.",
+   },
+ ];
+ 
+@@ -55,15 +55,12 @@ export default function TeamSection() {
+ 
+           <FadeIn delay={200}>
+             <p className="text-base md:text-lg opacity-70 leading-relaxed">
+-              Akis is a seasoned AI Engineer/Consultant and product designer
+-              with 26 years of experience, specializing in AI/ML, fintech,
+-              healthtech, dashboard design, SaaS, and eCommerce. As a
+-              Certified AI Consultant (CAIC) from the USA AI Institute, he
+-              helps organizations and professionals navigate AI
+-              transformation and implementation strategies. His expertise
+-              spans from small businesses to enterprise systems, with
+-              clients including Harvard, Kraft Heinz, Sony Pictures, WeWork,
+-              Pfizer, and Colgate-Palmolive, among others.
++              Akis has spent 26 years in product design and AI consulting,
++              across fintech, healthtech, and SaaS. Before founding Ergofect,
++              that work took him inside teams at Harvard, Kraft Heinz, Sony
++              Pictures, WeWork, Pfizer, and Colgate-Palmolive. Ergofect is
++              where that experience turns into six-week automation builds,
++              and he reviews every one personally.
+             </p>
+           </FadeIn>
+         </div>
+diff --git a/src/components/home/HeroSection.jsx b/src/components/home/HeroSection.jsx
+index 8556f67..c01f246 100644
+--- a/src/components/home/HeroSection.jsx
++++ b/src/components/home/HeroSection.jsx
+@@ -18,17 +18,18 @@ export default function HeroSection() {
+           <div className="w-full lg:w-2/3">
+             <FadeIn delay={100}>
+               <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[0em]">
+-                Automate Smarter.
++                The manual work between your tools,
+                 <br />
+                 <span className="text-bone bg-ink px-2 md:px-4 inline-block mt-2">
+-                  Grow Faster.
++                  gone in six weeks.
+                 </span>
+               </h1>
+             </FadeIn>
+             <FadeIn delay={200}>
+               <p className="text-lg md:text-2xl mt-6 md:mt-8 max-w-xl font-medium">
+-                Build custom AI systems that handle your repetitive work, so you
+-                can focus on growth, not grunt work.
++                Ergofect builds the automation layer that sits on top of the CRM,
++                helpdesk, and spreadsheets you already run. No new platform, no
++                migration, no long contract.
+               </p>
+             </FadeIn>
+             <FadeIn delay={300} className="mt-8 md:mt-12">
+diff --git a/src/components/home/ProblemSection.jsx b/src/components/home/ProblemSection.jsx
+index cc177ea..c11e3c6 100644
+--- a/src/components/home/ProblemSection.jsx
++++ b/src/components/home/ProblemSection.jsx
+@@ -38,15 +38,18 @@ export default function ProblemSection() {
+             <FadeIn delay={300} className="w-[15%] bg-ink/30 h-[40%] transition-all duration-1000" />
+             <FadeIn delay={400} className="w-[15%] bg-ink/60 h-[70%] transition-all duration-1000" />
+             <FadeIn delay={500} className="w-[15%] bg-ink h-[100%] transition-all duration-1000 relative">
+-              <span className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 font-bold text-lg md:text-xl">
+-                $12.4M
++              <span className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 font-bold text-lg md:text-xl whitespace-nowrap">
++                $624,000
+               </span>
+             </FadeIn>
+-            <p className="absolute -bottom-8 md:-bottom-10 right-0 font-mono text-[10px] md:text-xs uppercase opacity-50">
+-              Hidden Labor Costs per Year
++            <p className="absolute -bottom-8 md:-bottom-10 right-0 font-mono text-[10px] md:text-xs uppercase opacity-50 text-right">
++              Lost to manual work between systems, per year
+             </p>
+           </div>
+         </div>
++        <p className="font-mono text-[10px] md:text-xs uppercase opacity-40 mt-16 md:mt-20">
++          Based on 40 people losing 5 hours a week at a $60 loaded hourly cost. See the full math.
++        </p>
+       </div>
+     </section>
+   );
+diff --git a/src/components/roi-calculator/RoiHeroSection.jsx b/src/components/roi-calculator/RoiHeroSection.jsx
+index ea83d73..a6506a0 100644
+--- a/src/components/roi-calculator/RoiHeroSection.jsx
++++ b/src/components/roi-calculator/RoiHeroSection.jsx
+@@ -18,8 +18,10 @@ export default function RoiHeroSection() {
+           </FadeIn>
+           <FadeIn delay={200} className="flex items-end">
+             <p className="text-lg md:text-xl font-medium max-w-lg">
+-              Six inputs. No sales call required. Move the sliders to your
+-              real numbers and see the return before you talk to us.
++              Six inputs. No sales call required. Engagements typically start
++              around $10,000 a month, the sliders below default to a mid-size
++              first build, move them to your real numbers and see the return
++              before you talk to us.
+             </p>
+           </FadeIn>
+         </div>
+diff --git a/src/components/services/IndustrySection.jsx b/src/components/services/IndustrySection.jsx
+new file mode 100644
+index 0000000..b1cde98
+--- /dev/null
++++ b/src/components/services/IndustrySection.jsx
+@@ -0,0 +1,65 @@
++import FadeIn from "@/components/FadeIn";
++
++const industries = [
++  {
++    number: "01",
++    industry: "Freight brokerage & 3PL",
++    process:
++      "Load tracking and proof of delivery, matched to a load number without a person checking three portals and a phone call.",
++  },
++  {
++    number: "02",
++    industry: "Insurance MGAs & reinsurance intermediaries",
++    process:
++      "Policy binding and endorsement processing, built from the same underwriting rules already in use.",
++  },
++  {
++    number: "03",
++    industry: "Multi-location healthcare groups",
++    process:
++      "Insurance verification and intake, run once instead of separately at every location.",
++  },
++  {
++    number: "04",
++    industry: "Professional services firms",
++    process:
++      "Client onboarding and time reconciliation, across the CRM, project tool, and time tracker that currently don't talk to each other.",
++  },
++];
++
++export default function IndustrySection() {
++  return (
++    <section className="bg-ink text-bone py-20 md:py-32 border-b border-ink/10">
++      <div className="container">
++        <FadeIn>
++          <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 md:mb-6 text-cobalt-light">
++            [ BY INDUSTRY ]
++          </p>
++          <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none mb-12 md:mb-16 max-w-3xl">
++            The manual process we usually automate first.
++          </h2>
++        </FadeIn>
++
++        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
++          {industries.map((item, i) => (
++            <FadeIn
++              key={item.number}
++              delay={i * 100}
++              className="border border-bone/10 p-6 md:p-8 hover:border-cobalt-light/30 transition-colors"
++            >
++              <p className="text-cobalt-light font-mono text-xs uppercase mb-4">
++                {item.number}
++              </p>
++              <h3 className="text-xl md:text-2xl font-semibold tracking-[0em] mb-3">
++                {item.industry}
++              </h3>
++              <p className="text-sm opacity-60 leading-relaxed">
++                {item.process}
++              </p>
++            </FadeIn>
++          ))}
++        </div>
++      </div>
++    </section>
++  );
++}
+diff --git a/src/pages/services.jsx b/src/pages/services.jsx
+index 9e165cc..e85427c 100644
+--- a/src/pages/services.jsx
++++ b/src/pages/services.jsx
+@@ -1,5 +1,6 @@
+ import Head from "next/head";
+ import ServicesHeroSection from "@/components/services/ServicesHeroSection";
++import IndustrySection from "@/components/services/IndustrySection";
+ import ServiceListSection from "@/components/services/ServiceListSection";
+ import ServiceDetailSection from "@/components/services/ServiceDetailSection";
+ import TechStackSection from "@/components/services/TechStackSection";
+@@ -19,6 +20,7 @@ export default function Services() {
+         <link rel="icon" href="/favicon.ico" />
+       </Head>
+       <ServicesHeroSection />
++      <IndustrySection />
+       <ServiceListSection />
+       <ServiceDetailSection />
+       <TechStackSection />
+-- 
+2.43.0
+

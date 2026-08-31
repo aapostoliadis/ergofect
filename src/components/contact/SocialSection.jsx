@@ -4,7 +4,7 @@ const socials = [
   {
     name: "LinkedIn",
     handle: "@ergofect",
-    href: "https://www.linkedin.com/company/144746941",
+    href: "https://www.linkedin.com/company/ergofect",
     desc: "Company updates, case studies, and team insights.",
   },
   {
