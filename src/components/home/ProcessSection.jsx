@@ -1,35 +1,19 @@
 import FadeIn from "@/components/FadeIn";
+import { pilotPhases } from "@/data/pilot";
 
-const steps = [
-  {
-    week: "Week 1",
-    title: "Process Audit",
-    desc: "We map your workflows, identify opportunities, and calculate potential ROI.",
-    highlight: false,
-    delay: 0,
-  },
-  {
-    week: "Week 2-3",
-    title: "Solution Design",
-    desc: "Custom AI architecture tailored to your company's systems and needs.",
-    highlight: false,
-    delay: 100,
-  },
-  {
-    week: "Week 4-5",
-    title: "Build & Test",
-    desc: "Development, integration, and rigorous testing with your team.",
-    highlight: true,
-    delay: 200,
-  },
-  {
-    week: "Week 6",
-    title: "Deployment",
-    desc: "Deployed with full team training and handover support.",
-    highlight: false,
-    delay: 300,
-  },
-];
+const stepDescriptions = {
+  map: "We choose one workflow, record its baseline, and agree where human review stays.",
+  design: "We define the integrations, exceptions, controls, owner, and acceptance criteria.",
+  build: "We connect the existing tools and compare automated output with the current process.",
+  launch: "The scoped workflow goes live with monitoring, documentation, and a named owner.",
+};
+
+const steps = pilotPhases.map((phase, index) => ({
+  ...phase,
+  desc: stepDescriptions[phase.id],
+  highlight: phase.id === "build",
+  delay: index * 100,
+}));
 
 export default function ProcessSection() {
   return (
@@ -38,12 +22,12 @@ export default function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-20">
           <FadeIn>
             <h2 className="text-5xl md:text-7xl font-semibold tracking-[0em] leading-none">
-              Lightning-Fast <br /> Deployment.
+              One Workflow. <br /> A Measurable Finish Line.
             </h2>
           </FadeIn>
           <FadeIn delay={100} className="flex items-end">
             <p className="text-xl md:text-2xl font-medium max-w-md">
-              From first call to live automation in just 6 weeks.
+              The target is an initial production workflow in about six weeks—not a company-wide transformation.
             </p>
           </FadeIn>
         </div>

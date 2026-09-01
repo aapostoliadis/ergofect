@@ -1,63 +1,57 @@
 import FadeIn from "@/components/FadeIn";
+import { pilotPhases } from "@/data/pilot";
 
-const phases = [
-  {
-    number: "01",
-    title: "Map & Consolidate",
-    week: "Week 1",
+const phaseDetails = {
+  map: {
     activities: [
-      "Walk every workflow end-to-end with the person who owns it",
+      "Walk the selected workflow end-to-end with the person who owns it",
       "Mark every handoff between people, tools, and systems",
       "Flag duplicate data entry - the same fact typed twice",
       "Time the manual work to size the real opportunity",
-      "Pull your true tool stack from billing, not memory",
-      "Classify every tool: absorb, keep, or kill",
+      "Record volume, handling time, errors, exceptions, and review effort",
+      "Choose the smallest workflow with a meaningful production outcome",
     ],
-    deliverable: "Workflow map, automation backlog, and target tool stack",
+    deliverable: "Current-state map, measured baseline, pilot scope, and owner",
   },
-  {
-    number: "02",
-    title: "Data Model",
-    week: "Week 2-3",
+  design: {
     activities: [
-      "Define entity groups - commercial, delivery, finance, people, knowledge",
-      "Model relationships so every record connects to something",
-      "Design for 2x current scale, not a hypothetical 50x",
-      "Set standard conventions: source system, source ID, status events",
-      "Write the schema - clients, projects, documents, constraints",
-      "Confirm one canonical home for every fact in the business",
+      "Define the minimum records, fields, and relationships the pilot needs",
+      "Name the source system for every fact used in the workflow",
+      "Document permissions, retention, and sensitive-data boundaries",
+      "Design human review, exception queues, and a safe fallback",
+      "Agree acceptance criteria and the production measurement window",
+      "Confirm which existing systems stay unchanged",
     ],
-    deliverable: "Reviewed schema and data architecture ready to build against",
+    deliverable: "Approved pilot design, controls, acceptance criteria, and test set",
   },
-  {
-    number: "03",
-    title: "Build & Migrate",
-    week: "Week 4-5",
+  build: {
     activities: [
-      "Migrate highest manual-hour departments first",
-      "Rebuild views your team already knows - familiar on day one",
-      "Run idempotent, re-runnable migrations with reconciliation checks",
-      "Run old and new tools in parallel, old tool read-only",
-      "Train each department as its data goes live",
-      "Automate nothing yet - the model has to hold first",
+      "Connect only the systems and data required by the pilot",
+      "Keep the current workflow available while output is compared",
+      "Test normal examples, edge cases, failures, and permission boundaries",
+      "Move pilot data only where the agreed architecture requires it",
+      "Give reviewers a clear queue for approvals and corrections",
+      "Reconcile output against the baseline before production release",
     ],
-    deliverable: "Live core system, fully migrated, adoption tracked department by department",
+    deliverable: "Shadow-tested workflow, reconciled output, and go-live decision",
   },
-  {
-    number: "04",
-    title: "Agents & Automation",
-    week: "Week 6+",
+  launch: {
     activities: [
-      "Layer in agents in order: document intake, generation, answers, routing",
-      "Route each request across model tiers to cut AI spend without losing accuracy",
-      "Ship background automations in waves, shadow-tested before going live",
-      "Give every automation a kill switch and an owner",
-      "Report hours reclaimed against baseline, fortnightly",
-      "Run continuous optimization sprints for 90 days post-launch",
+      "Release the agreed workflow to its first production users",
+      "Monitor exceptions, failures, response quality, and human overrides",
+      "Keep a kill switch, fallback path, and named operational owner",
+      "Train the people who review or correct the workflow",
+      "Measure observed results against the recorded baseline",
+      "Choose whether to optimize, expand, or stop after the review window",
     ],
-    deliverable: "Live agents and automations with monitoring, kill switches, and a review cadence",
+    deliverable: "Initial production workflow, evidence report, and next-step decision",
   },
-];
+};
+
+const phases = pilotPhases.map((phase) => ({
+  ...phase,
+  ...phaseDetails[phase.id],
+}));
 
 export default function PhaseDetailSection() {
   return (

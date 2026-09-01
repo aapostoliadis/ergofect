@@ -4,32 +4,32 @@ const reasons = [
   {
     number: "01",
     title: "We Never Skip The Map",
-    desc: "Automating before you've mapped the workflow is the single most common way these projects fail. We map first, every time - no exceptions.",
+    desc: "Mapping the current workflow exposes handoffs, exceptions, and missing ownership before they become build problems.",
   },
   {
     number: "02",
-    title: "Nothing Gets Automated Mid-Migration",
-    desc: "Automating a process while its data model is still moving just automates the mess. We hold off until the core system is stable.",
+    title: "No Default Platform Replacement",
+    desc: "The pilot works around the systems already in place. We move data or replace a tool only when the agreed scope requires it.",
   },
   {
     number: "03",
-    title: "We Model For 2x, Not 50x",
-    desc: "Designing for a hypothetical future scale burns weeks on fields you'll never use. We build for where you're actually headed.",
+    title: "The Scope Has A Boundary",
+    desc: "One workflow, a named set of systems, and explicit exclusions keep the first release useful and controllable.",
   },
   {
     number: "04",
-    title: "One Home For Every Fact",
-    desc: "The same client sitting in two disconnected tools is how data quietly drifts out of sync. Every fact gets exactly one canonical source.",
+    title: "One Source For Every Pilot Fact",
+    desc: "Every record the pilot uses has a named source, owner, and reconciliation rule so conflicts are visible.",
   },
   {
     number: "05",
-    title: "No Big-Bang Migrations",
-    desc: "We migrate department by department, old tool running read-only in parallel, until accuracy is proven - not a single risky cutover weekend.",
+    title: "Human Review Is Designed In",
+    desc: "Approvals, overrides, exception queues, and safe fallbacks are part of the workflow—not an afterthought.",
   },
   {
     number: "06",
-    title: "Routing, Not One Model For Everything",
-    desc: "Every request gets routed to the cheapest model that can handle it, escalating to a frontier model only when it's actually needed.",
+    title: "Evidence Decides The Next Step",
+    desc: "The observed production result determines whether to optimize, expand, or stop. A polished demo is not the finish line.",
   },
 ];
 
@@ -51,8 +51,8 @@ export default function WhyItWorksSection() {
           <div className="lg:col-span-2 flex items-end">
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-2xl">
-                Across hundreds of builds, projects don&apos;t fail on effort
-                - they fail on sequence. Here&apos;s what we do differently.
+                A useful pilot depends on the order of decisions: map the work,
+                bound the scope, define controls, then build and measure.
               </p>
             </FadeIn>
           </div>

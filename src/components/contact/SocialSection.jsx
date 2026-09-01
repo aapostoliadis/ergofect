@@ -5,7 +5,7 @@ const socials = [
     name: "LinkedIn",
     handle: "@ergofect",
     href: "https://www.linkedin.com/company/ergofect",
-    desc: "Company updates, case studies, and team insights.",
+    desc: "Company updates, delivery notes, and evidence as it is approved.",
   },
   {
     name: "Twitter / X",

@@ -4,27 +4,27 @@ import FadeIn from "@/components/FadeIn";
 const faqs = [
   {
     question: "Do you require long-term contracts?",
-    answer: "No, we don't require long-term contracts. All our plans are month-to-month with the flexibility to scale up or down as your needs change. We believe in earning your business every month through results, not lock-ins.",
+    answer: "The initial pilot is defined in a fixed proposal with clear scope, acceptance criteria, and commercial terms. Any ongoing support or expansion is priced and agreed separately.",
     delay: 0,
   },
   {
     question: "Can we make changes to the automated workflows ourselves?",
-    answer: "Absolutely. Every automation we build comes with an intuitive dashboard that lets your team tweak rules, update templates, and adjust triggers without any coding. For deeper changes, our support team is always available.",
+    answer: "We identify which rules, templates, and controls your team should manage during pilot design. Changes that affect integrations, security, or the agreed workflow are handled through a scoped change request.",
     delay: 100,
   },
   {
     question: "How involved do we need to be during implementation?",
-    answer: "We keep your involvement minimal. Typically, we need a few hours in Week 1 for the process audit and periodic check-ins during build phase. Your team won't need to stop their daily work - we handle the heavy lifting.",
+    answer: "We need a workflow owner, access to representative examples, and regular review points. Your team helps define the rules and exceptions; we handle the mapping, build, testing, and release work.",
     delay: 200,
   },
   {
     question: "Do you work with companies outside the US?",
-    answer: "Yes, we work with companies worldwide. Our team operates across multiple time zones, and our AI solutions are designed to support multi-language and multi-region deployments out of the box.",
+    answer: "Yes. Ergofect is based in Europe and works with UK, European, and international teams when the data, regulatory, and time-zone requirements fit the engagement.",
     delay: 300,
   },
   {
     question: "What happens if the automation breaks?",
-    answer: "Every automation includes built-in monitoring and alerts. If something fails, our system automatically flags the issue and falls back to a safe state. Our engineering team is notified instantly and typically resolves issues within minutes, not hours.",
+    answer: "The pilot defines monitoring, alerts, a safe fallback, and a named workflow owner before release. Response commitments for ongoing support are documented separately, so your team knows exactly what happens when an exception occurs.",
     delay: 400,
   },
 ];

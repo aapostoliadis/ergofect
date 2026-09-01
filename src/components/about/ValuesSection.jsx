@@ -22,13 +22,13 @@ const values = [
   {
     number: "04",
     title: "Relentless Reliability",
-    desc: "Our automations run 24/7/365. Downtime isn't acceptable. Period.",
+    desc: "Every production workflow needs monitoring, a named owner, and a safe fallback when something changes.",
     delay: 300,
   },
   {
     number: "05",
     title: "Continuous Optimization",
-    desc: "Every system we build gets smarter over time. We audit, refine, and improve - always.",
+    desc: "When ongoing optimization is in scope, observed exceptions and reviewer feedback guide the next change.",
     delay: 400,
   },
   {

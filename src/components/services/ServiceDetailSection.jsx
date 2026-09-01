@@ -2,20 +2,20 @@ import FadeIn from "@/components/FadeIn";
 
 const features = [
   {
-    title: "Intelligent Routing",
-    desc: "AI classifies tickets by intent, urgency, and sentiment - then routes to the right agent or auto-resolves.",
+    title: "Classify and Route",
+    desc: "Defined rules and model output can classify requests, suggest priority, and route work to the right queue.",
   },
   {
-    title: "Context-Aware Responses",
-    desc: "Our models understand conversation history, account data, and product context for accurate replies.",
+    title: "Grounded Drafts",
+    desc: "Response drafts use the approved knowledge and customer context available to the scoped workflow.",
   },
   {
-    title: "Seamless Escalation",
-    desc: "When AI can't solve it, tickets are escalated with full context so agents never start from scratch.",
+    title: "Escalation Context",
+    desc: "Uncertain or sensitive requests move to a person with the source context and decision trail attached.",
   },
   {
-    title: "Continuous Learning",
-    desc: "Every resolution feeds back into the model. Accuracy improves automatically over time.",
+    title: "Review and Measurement",
+    desc: "Corrections and exceptions are recorded so performance can be reviewed against the agreed baseline.",
   },
 ];
 
@@ -30,16 +30,16 @@ export default function ServiceDetailSection() {
                 [ DEEP DIVE ]
               </p>
               <h2 className="text-4xl md:text-6xl font-semibold tracking-[0em] leading-none">
-                Customer Support{" "}
-                <span className="text-cobalt-light">Reimagined</span>.
+                Human Review{" "}
+                <span className="text-cobalt-light">Built In</span>.
               </h2>
             </FadeIn>
           </div>
           <div className="flex items-end">
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-lg">
-                Our most deployed service. See how we turn support from a cost
-                center into a competitive advantage.
+                Automation handles the repeatable route. People keep control of
+                ambiguous, sensitive, or high-impact decisions.
               </p>
             </FadeIn>
           </div>
@@ -71,13 +71,13 @@ export default function ServiceDetailSection() {
           <div className="border border-bone/10 p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <p className="text-2xl md:text-4xl font-semibold mb-1">
-                Avg. <span className="text-cobalt-light">62%</span> Cost Reduction
+                Baseline. Acceptance Criteria. <span className="text-cobalt-light">Observed Result.</span>
               </p>
               <p className="font-mono text-[10px] md:text-xs uppercase opacity-50">
-                Across All Support Automation Deployments
+                Every published outcome must show how it was measured
               </p>
             </div>
-            <p className="text-5xl md:text-6xl font-semibold opacity-10">24/7</p>
+            <p className="text-5xl md:text-6xl font-semibold opacity-10">PROOF</p>
           </div>
         </FadeIn>
       </div>

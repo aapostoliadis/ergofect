@@ -3,17 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import sendAuditEmail from "@/utils/sendAuditEmail";
-
-const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
-const serviceOptions = [
-  "Customer Support Automation",
-  "Data Processing & Analytics",
-  "Workflow Automation",
-  "Document Intelligence",
-  "Sales & Marketing Automation",
-  "Custom AI Solution",
-];
-const teamSizeOptions = ["1-10", "11-50", "51-200", "201-500", "500+"];
+import { serviceOptions, spendOptions, teamSizeOptions } from "@/data/auditOptions";
 
 const steps = [
   {
@@ -448,7 +438,7 @@ export default function BookAudit() {
                       value={successCriteria}
                       onChange={(e) => setSuccessCriteria(e.target.value)}
                       className="w-full bg-transparent border-b border-black/20 pb-2 focus:outline-none focus:border-cobalt focus:ring-cobalt/20 transition-colors rounded-none resize-none"
-                      placeholder="e.g., Reduce response time by 50%, cut support costs by $20k/mo..."
+                      placeholder="e.g., Reduce handling time, cut rework, and give exceptions a clear owner..."
                     />
                   </div>
                   <div>
@@ -489,34 +479,34 @@ export default function BookAudit() {
         </div>
       </section>
 
-      {/* Trust Signals */}
+      {/* What Happens Next */}
       <section className="bg-ink text-bone py-16 md:py-20">
         <div className="container">
           <FadeIn>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-l border-bone/15">
               <div>
-                <p className="text-3xl md:text-4xl font-semibold">200+</p>
-                <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                  Automations Deployed
-                </p>
+                <div className="p-5 md:p-6 border-r border-b border-bone/15 h-full">
+                  <p className="font-mono text-xs text-cobalt-light mb-5">01</p>
+                  <p className="font-semibold">Founder review</p>
+                </div>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-semibold">98%</p>
-                <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                  Client Retention
-                </p>
+                <div className="p-5 md:p-6 border-r border-b border-bone/15 h-full">
+                  <p className="font-mono text-xs text-cobalt-light mb-5">02</p>
+                  <p className="font-semibold">Workflow fit check</p>
+                </div>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-semibold">24hr</p>
-                <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                  Response Time
-                </p>
+                <div className="p-5 md:p-6 border-r border-b border-bone/15 h-full">
+                  <p className="font-mono text-xs text-cobalt-light mb-5">03</p>
+                  <p className="font-semibold">Free process audit</p>
+                </div>
               </div>
               <div>
-                <p className="text-3xl md:text-4xl font-semibold text-cobalt-light">Free</p>
-                <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                  No Commitment
-                </p>
+                <div className="p-5 md:p-6 border-r border-b border-bone/15 h-full">
+                  <p className="font-mono text-xs text-cobalt-light mb-5">04</p>
+                  <p className="font-semibold">Scoped proposal</p>
+                </div>
               </div>
             </div>
           </FadeIn>

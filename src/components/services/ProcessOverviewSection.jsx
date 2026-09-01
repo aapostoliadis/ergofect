@@ -1,31 +1,18 @@
 import FadeIn from "@/components/FadeIn";
+import { pilotPhases } from "@/data/pilot";
 
-const steps = [
-  {
-    week: "Week 1",
-    title: "Process Audit",
-    desc: "We map your workflows, identify automation opportunities, and calculate potential ROI for each one.",
-    highlight: false,
-  },
-  {
-    week: "Week 2-3",
-    title: "Solution Design",
-    desc: "Custom AI architecture tailored to your company's existing systems, tools, and team capabilities.",
-    highlight: false,
-  },
-  {
-    week: "Week 4-5",
-    title: "Build & Test",
-    desc: "Rapid development, seamless integration, and rigorous testing in parallel with your live environment.",
-    highlight: true,
-  },
-  {
-    week: "Week 6",
-    title: "Deploy & Support",
-    desc: "Go live with zero downtime. Full team training, documentation, and ongoing optimization included.",
-    highlight: false,
-  },
-];
+const stepDescriptions = {
+  map: "We select one workflow, document its handoffs, and record the baseline before proposing a build.",
+  design: "We define integrations, data boundaries, human review, fallback paths, and acceptance criteria.",
+  build: "We connect the existing systems and compare automated output with the current process using real examples.",
+  launch: "Release the scoped workflow with monitoring, documentation, human oversight, and a named owner.",
+};
+
+const steps = pilotPhases.map((phase) => ({
+  ...phase,
+  desc: stepDescriptions[phase.id],
+  highlight: phase.id === "build",
+}));
 
 export default function ProcessOverviewSection() {
   return (
@@ -37,13 +24,13 @@ export default function ProcessOverviewSection() {
               [ HOW IT WORKS ]
             </p>
             <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none">
-              Lightning-Fast <br /> Deployment.
+              One Bounded <br /> Initial Release.
             </h2>
           </FadeIn>
           <FadeIn delay={100} className="flex items-end">
             <p className="text-xl md:text-2xl font-medium max-w-md">
-              From first call to live automation in just 6 weeks. Every project
-              follows our battle-tested framework.
+              The target is one production workflow in about six weeks. Broader
+              rollout follows only after the pilot is measured and accepted.
             </p>
           </FadeIn>
         </div>

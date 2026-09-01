@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 const categories = [
   {
     label: "AI & Machine Learning",
-    tools: ["OpenAI GPT-5.6", "Claude", "LangChain", "TensorFlow", "Hugging Face", "Custom Models"],
+    tools: ["OpenAI Models", "Claude", "LangChain", "TensorFlow", "Hugging Face", "Custom Models"],
   },
   {
     label: "Integrations",
@@ -37,9 +37,9 @@ export default function TechStackSection() {
           <div className="lg:col-span-2 flex items-end">
             <FadeIn delay={100}>
               <p className="text-lg md:text-xl font-medium max-w-2xl">
-                We use best-in-class tools - but we&apos;re never locked into one
-                stack. Every solution is built around what works best for your
-                existing infrastructure.
+                The pilot stack is selected around the agreed workflow,
+                security constraints, and existing infrastructure. Tool choices
+                stay visible in the proposal and technical handover.
               </p>
             </FadeIn>
           </div>

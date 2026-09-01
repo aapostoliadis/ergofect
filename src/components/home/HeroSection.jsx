@@ -18,26 +18,26 @@ export default function HeroSection() {
           <div className="w-full lg:w-2/3">
             <FadeIn delay={100}>
               <h1 className="text-6xl md:text-[10vw] lg:text-[9vw] leading-[0.9] font-semibold tracking-[0em]">
-                Automate Smarter.
+                One workflow.
                 <br />
                 <span className="text-bone bg-ink px-2 md:px-4 inline-block mt-2">
-                  Grow Faster.
+                  Live in about six weeks.
                 </span>
               </h1>
             </FadeIn>
             <FadeIn delay={200}>
               <p className="text-lg md:text-2xl mt-6 md:mt-8 max-w-xl font-medium">
-                Ergofect builds the automation layer that sits on top of the CRM,
-                helpdesk, and spreadsheets you already run. No new platform, no
-                migration, no long contract.
+                Ergofect connects the CRM, helpdesk, documents, and spreadsheets
+                you already run. Data moves only when the agreed pilot needs it;
+                replacing your core systems is never the default.
               </p>
             </FadeIn>
-            <FadeIn delay={300} className="mt-8 md:mt-12">
+            <FadeIn delay={300} className="mt-8 md:mt-12 flex flex-wrap items-center gap-6">
               <a
-                href="#how"
-                className="flex items-center gap-4 text-xs md:text-sm font-bold uppercase tracking-widest border-b-2 border-ink pb-2 w-fit hover:pr-4 transition-all group"
+                href="/pilot"
+                className="flex items-center gap-4 bg-ink text-bone px-5 py-4 text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-cobalt transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
               >
-                See How It Works
+                See the pilot scope
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -53,6 +53,12 @@ export default function HeroSection() {
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
+              </a>
+              <a
+                href="/case-studies"
+                className="text-xs md:text-sm font-bold uppercase tracking-widest border-b-2 border-ink pb-2 hover:text-cobalt hover:border-cobalt transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+              >
+                How we verify results
               </a>
             </FadeIn>
           </div>
@@ -74,8 +80,8 @@ export default function HeroSection() {
 
                 <div className="relative z-10 flex justify-between items-start">
                   <p className="font-mono text-[8px] md:text-[10px] uppercase w-2/3 md:w-1/2">
-                    What used to take hours now runs automatically without human
-                    oversight.
+                    Routine steps run automatically. Exceptions stay visible to
+                    the person who owns the workflow.
                   </p>
                   <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
                 </div>

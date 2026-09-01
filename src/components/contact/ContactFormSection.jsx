@@ -1,17 +1,7 @@
 import { useState } from "react";
 import FadeIn from "@/components/FadeIn";
 import sendAuditEmail from "@/utils/sendAuditEmail";
-
-const spendOptions = ["Under $10k", "$10k-$50k", "$50k-$100k", "$100k+"];
-const serviceOptions = [
-  "Customer Support Automation",
-  "Data Processing & Analytics",
-  "Workflow Automation",
-  "Document Intelligence",
-  "Sales & Marketing Automation",
-  "Custom AI Solution",
-];
-const teamSizeOptions = ["1-10", "11-50", "51-200", "201-500", "500+"];
+import { serviceOptions, spendOptions, teamSizeOptions } from "@/data/auditOptions";
 
 export default function ContactFormSection() {
   const [formStep, setFormStep] = useState(0);

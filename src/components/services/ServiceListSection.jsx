@@ -1,62 +1,6 @@
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
-
-const services = [
-  {
-    number: "01",
-    slug: "custom-ai",
-    title: "Custom AI Solutions",
-    headline: "Bespoke systems for unique operational challenges.",
-    desc: "When off-the-shelf won't cut it, we build custom AI models and integrations designed specifically for your business.",
-    tags: ["Computer Vision", "NLP Models", "Custom APIs", "Edge Deployment"],
-    delay: 0,
-  },
-  {
-    number: "02",
-    slug: "workflow-automation",
-    title: "Workflow Automation",
-    headline: "Connect your tools and eliminate manual handoffs.",
-    desc: "Seamlessly integrate your CRM, ERP, and SaaS tools into unified automated workflows that run without human intervention.",
-    tags: ["CRM Automation", "Lead Qualification", "Approval Workflows", "Multi-Tool Sync"],
-    delay: 100,
-  },
-  {
-    number: "03",
-    slug: "customer-support",
-    title: "Customer Support Automation",
-    headline: "Handle inquiries 24/7 with human-like accuracy.",
-    desc: "Deploy AI agents that understand context, resolve tickets, route complex cases, and learn from every interaction.",
-    tags: ["Chatbots w/ Escalation", "Auto-Email Replies", "Ticket Routing", "Sentiment Analysis"],
-    delay: 200,
-  },
-  {
-    number: "04",
-    slug: "data-processing",
-    title: "Data Processing & Analytics",
-    headline: "Transform raw data into insights automatically.",
-    desc: "Automate data extraction, cleaning, transformation, and reporting - from spreadsheets to dashboards in minutes.",
-    tags: ["Report Generation", "Data Cleansing", "Predictive Analytics", "ETL Pipelines"],
-    delay: 300,
-  },
-  {
-    number: "05",
-    slug: "document-intelligence",
-    title: "Document Intelligence",
-    headline: "Extract, classify, and process documents at scale.",
-    desc: "AI-powered document processing for invoices, contracts, forms, and compliance documents - with 99%+ accuracy.",
-    tags: ["OCR Processing", "Contract Analysis", "Invoice Matching", "Compliance Checks"],
-    delay: 400,
-  },
-  {
-    number: "06",
-    slug: "sales-marketing",
-    title: "Sales & Marketing Automation",
-    headline: "Accelerate pipeline without growing your team.",
-    desc: "Automate lead scoring, email sequences, content personalization, and campaign optimization with intelligent AI agents.",
-    tags: ["Lead Scoring", "Email Sequences", "A/B Testing", "Funnel Optimization"],
-    delay: 500,
-  },
-];
+import { services } from "@/data/services";
 
 export default function ServiceListSection() {
   return (
@@ -70,10 +14,9 @@ export default function ServiceListSection() {
 
         <div className="flex flex-col">
           {services.map((service, i) => (
-            <Link href={`/services/${service.slug}`}>
+            <Link key={service.slug} href={`/services/${service.slug}`}>
               <FadeIn
-                key={i}
-                delay={service.delay}
+                delay={i * 100}
                 className="border-t border-ink/10 py-8 md:py-12 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 group hover:bg-ink hover:text-bone transition-colors duration-500 cursor-pointer md:px-4 md:-mx-4"
               >
               <div className="lg:col-span-1 flex items-start">

@@ -2,6 +2,16 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+const menuLinks = [
+  { href: "/", label: "Home" },
+  { href: "/pilot", label: "Pilot" },
+  { href: "/services", label: "Services" },
+  { href: "/case-studies", label: "Evidence" },
+  { href: "/process", label: "Process" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function Navbar() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,23 +27,15 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (router.pathname === "/about") {
-      setActiveLink("/about");
-      return;
-    }
+    const directRoutes = menuLinks
+      .map(({ href }) => href)
+      .filter((href) => href !== "/");
+    const directRoute = directRoutes.find(
+      (path) => router.pathname === path || router.pathname.startsWith(`${path}/`)
+    );
 
-    if (router.pathname === "/services") {
-      setActiveLink("/services");
-      return;
-    }
-
-    if (router.pathname === "/process") {
-      setActiveLink("/process");
-      return;
-    }
-
-    if (router.pathname === "/contact") {
-      setActiveLink("/contact");
+    if (directRoute) {
+      setActiveLink(directRoute);
       return;
     }
 
@@ -91,14 +93,6 @@ export default function Navbar() {
     ? "bg-bone/95 backdrop-blur-md border-b border-ink/10 text-ink"
     : "bg-transparent mix-blend-difference text-bone";
 
-  const menuLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/services", label: "Services" },
-    { href: "/process", label: "Process" },
-    { href: "/contact", label: "Contact" },
-  ];
-
   return (
     <>
       <nav
@@ -116,7 +110,10 @@ export default function Navbar() {
           <div className="flex justify-end w-1/2 md:w-1/3 relative z-50">
             <button
               onClick={toggleMenu}
-              className="flex items-center gap-2 hover:opacity-70 transition-opacity uppercase text-sm font-bold tracking-widest"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="site-menu"
+              className="flex items-center gap-2 hover:opacity-70 transition-opacity uppercase text-sm font-bold tracking-widest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cobalt"
             >
               {isMenuOpen ? (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -137,7 +134,10 @@ export default function Navbar() {
 
       {/* Fullscreen Menu Overlay */}
       <div
+        id="site-menu"
         data-lenis-prevent
+        aria-hidden={!isMenuOpen}
+        inert={isMenuOpen ? undefined : ""}
         className={`fixed inset-0 z-40 bg-bone text-ink transition-transform duration-700 ease-in-out overflow-y-auto ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
@@ -149,7 +149,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className={`menu-link text-5xl sm:text-6xl md:text-8xl font-semibold tracking-[-0.045em] transition-all hover:translate-x-4 transform duration-300 w-fit mb-4 md:mb-2 ${
+                className={`menu-link text-4xl sm:text-5xl md:text-7xl font-semibold tracking-[-0.045em] transition-all hover:translate-x-4 transform duration-300 w-fit mb-4 md:mb-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cobalt ${
                   activeLink === link.href
                     ? "bg-ink text-bone px-3 md:px-4"
                     : "hover:bg-ink hover:text-bone hover:px-3 md:hover:px-4"

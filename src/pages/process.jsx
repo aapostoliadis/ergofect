@@ -14,7 +14,7 @@ export default function Process() {
         <title>Our Process - Ergofect. | How We Automate</title>
         <meta
           name="description"
-          content="Learn how Ergofect deploys AI automations in just 6 weeks - from process audit to live deployment with zero downtime."
+          content="See how Ergofect maps, builds, tests, and releases one measurable AI automation workflow in about six weeks."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

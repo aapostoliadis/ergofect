@@ -59,8 +59,9 @@ export default function TeamSection() {
               across fintech, healthtech, and SaaS. Before founding Ergofect,
               that work took him inside teams at Harvard, Kraft Heinz, Sony
               Pictures, WeWork, Pfizer, and Colgate-Palmolive. Ergofect is
-              where that experience turns into six-week automation builds,
-              and he reviews every one personally.
+              where that experience supports scoped automation pilots and the
+              human-review tools around them. He reviews every engagement
+              personally.
             </p>
           </FadeIn>
         </div>

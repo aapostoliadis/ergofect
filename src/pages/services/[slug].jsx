@@ -4,6 +4,21 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 
+const evidenceChecks = [
+  {
+    title: "Baseline",
+    desc: "Record the current volume, effort, exceptions, and measurement method before the workflow changes.",
+  },
+  {
+    title: "Acceptance",
+    desc: "Agree what the pilot must do, where people review it, and which failures trigger the fallback path.",
+  },
+  {
+    title: "Observation",
+    desc: "Measure the live workflow over an agreed window and publish a result only with clear context and permission.",
+  },
+];
+
 export default function ServiceDetail({ service }) {
   const router = useRouter();
 
@@ -143,115 +158,41 @@ export default function ServiceDetail({ service }) {
         </div>
       </section>
 
-      {/* Case Study */}
+      {/* Evidence Standard */}
       <section className="bg-bone text-ink py-16 md:py-24">
         <div className="container">
-          <FadeIn>
-            <h3 className="text-3xl md:text-4xl font-semibold tracking-[0em] mb-12">
-              Success Story
-            </h3>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-12">
-            <div className="lg:col-span-2">
-              <FadeIn delay={100}>
-                <div className="border border-ink/10 p-6 md:p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <p className="font-mono text-xs uppercase opacity-50 mb-2">
-                        {service.caseStudy.industry}
-                      </p>
-                      <h4 className="text-2xl md:text-3xl font-semibold tracking-[0em] mb-2">
-                        {service.caseStudy.company}
-                      </h4>
-                      <div className="flex gap-4 text-sm opacity-60">
-                        <span>{service.caseStudy.employees} employees</span>
-                        <span>•</span>
-                        <span>{service.caseStudy.annualRevenue} revenue</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-6 mb-8">
-                    <div>
-                      <p className="font-mono text-xs uppercase opacity-50 mb-2">The Challenge</p>
-                      <p className="text-sm md:text-base leading-relaxed">
-                        {service.caseStudy.challenge}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs uppercase opacity-50 mb-2">Our Solution</p>
-                      <p className="text-sm md:text-base leading-relaxed">
-                        {service.caseStudy.solution}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="border-t border-ink/10 pt-6">
-                    <p className="font-mono text-xs uppercase opacity-50 mb-3">Client Testimonial</p>
-                    <blockquote className="text-sm md:text-base leading-relaxed italic">
-                      "{service.caseStudy.testimonial}"
-                    </blockquote>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 mb-12">
+            <div className="lg:col-span-5">
+              <FadeIn>
+                <p className="font-mono text-xs uppercase text-cobalt mb-4">[ EVIDENCE STANDARD ]</p>
+                <h3 className="text-3xl md:text-5xl font-semibold tracking-[0em] leading-tight text-balance">
+                  How we prove a {service.title.toLowerCase()} pilot.
+                </h3>
               </FadeIn>
             </div>
-
-            <div>
-              <FadeIn delay={200}>
-                <div className="bg-ink text-bone p-6 md:p-8 h-full">
-                  <p className="font-mono text-xs uppercase text-cobalt-light mb-6">
-                    Key Results
-                  </p>
-                  <div className="space-y-6">
-                    {service.caseStudy.results.map((result, i) => (
-                      <div key={i}>
-                        <p className="text-2xl md:text-3xl font-semibold tracking-[0em] text-cobalt-light">
-                          {result.metric}
-                        </p>
-                        <p className="text-sm font-medium uppercase tracking-wider mb-1">
-                          {result.label}
-                        </p>
-                        <p className="text-xs opacity-60">
-                          {result.detail}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="border-t border-bone/20 mt-8 pt-6">
-                    <p className="font-mono text-xs uppercase opacity-50 mb-2">
-                      Time to ROI
-                    </p>
-                    <p className="text-sm font-medium">
-                      {service.caseStudy.timeframe}
-                    </p>
-                  </div>
-                </div>
+            <div className="lg:col-span-7 flex items-end">
+              <FadeIn delay={100}>
+                <p className="text-base md:text-lg leading-relaxed opacity-70 max-w-2xl">
+                  The result is measured against the workflow that existed before the build. We do not use placeholder clients, projected savings, or a best-case test as public proof.
+                </p>
               </FadeIn>
             </div>
           </div>
 
-          {/* Additional Metrics */}
-          <FadeIn delay={300}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="border border-ink/10 p-4 text-center hover:bg-ink hover:text-bone transition-colors">
-                <p className="text-2xl font-semibold mb-1">24/7</p>
-                <p className="font-mono text-xs uppercase opacity-60">Availability</p>
-              </div>
-              <div className="border border-ink/10 p-4 text-center hover:bg-ink hover:text-bone transition-colors">
-                <p className="text-2xl font-semibold mb-1">99.9%</p>
-                <p className="font-mono text-xs uppercase opacity-60">Uptime</p>
-              </div>
-              <div className="border border-ink/10 p-4 text-center hover:bg-ink hover:text-bone transition-colors">
-                <p className="text-2xl font-semibold mb-1">&lt;100ms</p>
-                <p className="font-mono text-xs uppercase opacity-60">Response</p>
-              </div>
-              <div className="border border-ink/10 p-4 text-center hover:bg-ink hover:text-bone transition-colors">
-                <p className="text-2xl font-semibold mb-1">ISO</p>
-                <p className="font-mono text-xs uppercase opacity-60">Compliant</p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-ink/15">
+            {evidenceChecks.map((check, index) => (
+              <FadeIn key={check.title} delay={160 + index * 80} className="border-r border-b border-ink/15 p-6 md:p-8 min-h-56 flex flex-col">
+                <p className="font-mono text-xs text-cobalt mb-8">{String(index + 1).padStart(2, "0")}</p>
+                <h4 className="text-xl md:text-2xl font-semibold mb-4">{check.title}</h4>
+                <p className="text-sm leading-relaxed opacity-65 mt-auto">{check.desc}</p>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={420} className="mt-8">
+            <Link href="/case-studies" className="inline-flex items-center gap-3 border-b-2 border-ink pb-2 font-bold text-xs uppercase tracking-widest hover:gap-5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">
+              See the full evidence standard <span aria-hidden="true">→</span>
+            </Link>
           </FadeIn>
         </div>
       </section>
@@ -262,10 +203,10 @@ export default function ServiceDetail({ service }) {
           <FadeIn>
             <div className="text-center max-w-4xl mx-auto">
               <h3 className="text-3xl md:text-4xl font-semibold tracking-[0em] mb-6">
-                Ready to Transform Your Operations?
+                Ready To Scope The First Workflow?
               </h3>
               <p className="text-base md:text-lg opacity-80 mb-10">
-                Let's discuss how {service.title} can revolutionize your business processes.
+                Bring us the bottleneck. We&apos;ll map the current process and define a measurable pilot before proposing a build.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

@@ -1,9 +1,9 @@
 import FadeIn from "@/components/FadeIn";
 
-const guarantees = [
+const commitments = [
   {
-    title: "6-Week Delivery Guarantee",
-    desc: "If we don't deploy within 6 weeks, the first month of optimization is on us.",
+    title: "A Defined Initial Release",
+    desc: "The proposal names the workflow, dependencies, acceptance criteria, target timing, and what remains outside the pilot.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
@@ -11,8 +11,8 @@ const guarantees = [
     ),
   },
   {
-    title: "Zero Downtime Migration",
-    desc: "Your existing operations continue running without interruption during the entire deployment.",
+    title: "No Surprise Migration",
+    desc: "Existing systems stay in place by default. Any required data movement is identified, bounded, and approved before build work begins.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
@@ -20,8 +20,8 @@ const guarantees = [
     ),
   },
   {
-    title: "90-Day Optimization",
-    desc: "Post-launch, we run weekly optimization sprints for 90 days to maximize performance.",
+    title: "Measured Production Review",
+    desc: "After go-live, observed results are compared with the baseline so the next decision rests on evidence, not a projection.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
@@ -36,15 +36,15 @@ export default function GuaranteeSection() {
       <div className="container">
         <FadeIn>
           <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 opacity-60">
-            [ OUR GUARANTEE ]
+            [ DELIVERY COMMITMENTS ]
           </p>
           <h2 className="text-4xl md:text-7xl font-semibold tracking-[0em] leading-none mb-16 md:mb-20 max-w-3xl">
-            We Put Our Money Where Our Code Is.
+            Clear Scope Before Code.
           </h2>
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {guarantees.map((item, i) => (
+          {commitments.map((item, i) => (
             <FadeIn
               key={i}
               delay={i * 150}

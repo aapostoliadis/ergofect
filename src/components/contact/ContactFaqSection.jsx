@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "How much does a typical automation project cost?",
-    answer: "Projects range from $5k for workflow automations to $100k+ for enterprise-wide transformations. We'll provide a detailed quote after the initial audit.",
+    answer: "Focused advisory or UX/product work can start at $5,000. A fixed-scope initial production pilot typically starts at $10,000. Ongoing delivery, integration, and optimization commonly start around $10,000 per month and are agreed separately.",
   },
   {
     question: "Do I need to commit before the audit?",
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "Can you work with our existing tools?",
-    answer: "Absolutely. We integrate with 50+ platforms including Salesforce, HubSpot, Zendesk, Slack, and custom APIs. No rip-and-replace required.",
+    answer: "That is the default approach. We design around the systems already in place and confirm each required integration during the audit. Data migration or platform replacement is proposed only when the agreed workflow needs it.",
   },
 ];
 
