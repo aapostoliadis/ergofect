@@ -18,10 +18,10 @@ export default function RoiHeroSection() {
           </FadeIn>
           <FadeIn delay={200} className="flex items-end">
             <p className="text-lg md:text-xl font-medium max-w-lg">
-              Six inputs. No sales call required. Engagements typically start
-              around $10,000 a month, the sliders below default to a mid-size
-              first build, move them to your real numbers and see the return
-              before you talk to us.
+              Six inputs. No sales call required. Fixed-scope production pilots
+              typically start at $10,000; ongoing delivery often starts around
+              $10,000 per month. Move the sliders to your real numbers before
+              you talk to us.
             </p>
           </FadeIn>
         </div>

@@ -31,35 +31,29 @@ export default function AboutHeroSection() {
               </p>
             </FadeIn>
             <FadeIn delay={300} className="mt-8">
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-black/20 pt-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-black/20 pt-6">
                 <div>
-                  <p className="text-3xl md:text-4xl font-semibold">6</p>
+                  <p className="text-3xl md:text-4xl font-semibold">1</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    Steps, In Sequence
+                    Workflow First
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl md:text-4xl font-semibold">7-12</p>
+                  <p className="text-3xl md:text-4xl font-semibold">≈6</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    Tools Collapsed
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl md:text-4xl font-semibold">15-30</p>
-                  <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    Entities Modelled
+                    Weeks To Initial Go-Live
                   </p>
                 </div>
                 <div>
                   <p className="text-3xl md:text-4xl font-semibold">4</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    First Agents
+                    Delivery Gates
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl md:text-4xl font-semibold">80%</p>
+                  <p className="text-3xl md:text-4xl font-semibold">1</p>
                   <p className="font-mono text-[10px] md:text-xs uppercase opacity-50 mt-1">
-                    AI Cost Cut By Routing
+                    Named Human Owner
                   </p>
                 </div>
               </div>

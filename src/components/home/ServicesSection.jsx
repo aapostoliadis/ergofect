@@ -3,8 +3,8 @@ import FadeIn from "@/components/FadeIn";
 const services = [
   {
     title: "Custom AI Solutions",
-    headline: "Bespoke systems for unique operational challenges.",
-    tags: ["Computer Vision", "NLP Models", "Custom APIs"],
+    headline: "Build the AI layer a defined workflow actually needs.",
+    tags: ["AI Integration", "Review Interfaces", "Operational Dashboards"],
     delay: 100,
   },
   {
@@ -15,14 +15,14 @@ const services = [
   },
   {
     title: "Customer Support Automation",
-    headline: "Handle inquiries 24/7 with human-like accuracy.",
+    headline: "Resolve routine requests and route the exceptions.",
     tags: ["Chatbots w/ Escalation", "Auto-Email Replies", "Ticket Routing"],
     delay: 300,
   },
   {
     title: "Data Processing & Analytics",
-    headline: "Transform raw data into insights automatically.",
-    tags: ["Report Generation", "Data Cleansing", "Predictive Analytics"],
+    headline: "Turn recurring data work into a controlled pipeline.",
+    tags: ["Report Generation", "Data Validation", "Exception Handling"],
     delay: 400,
   },
   {
@@ -33,8 +33,8 @@ const services = [
   },
   {
     title: "Sales & Marketing Automation",
-    headline: "Accelerate pipeline without growing your team.",
-    tags: ["Lead Scoring", "Email Sequences", "A/B Testing"],
+    headline: "Automate repeatable pipeline work without losing review points.",
+    tags: ["Lead Enrichment", "CRM Routing", "Campaign Operations"],
     delay: 600,
   },
 ];

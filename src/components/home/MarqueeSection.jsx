@@ -1,6 +1,6 @@
 export default function MarqueeSection() {
   const text =
-    "HUMANS SHOULD DO HUMAN WORK. AI SHOULD DO EVERYTHING ELSE. WE BUILD THE SYSTEMS THAT MAKE THIS HAPPEN.";
+    "AUTOMATE THE REPEATABLE STEPS. KEEP PEOPLE IN CONTROL OF THE EXCEPTIONS. BUILD FROM A MEASURED BASELINE.";
 
   return (
     <section className="bg-ink py-8 md:py-12 overflow-hidden">
