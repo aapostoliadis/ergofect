@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
@@ -78,24 +79,46 @@ export default function CaseStudiesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
             <div className="lg:col-span-4">
               <FadeIn>
-                <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 text-cobalt-light">[ PUBLICATION STATUS ]</p>
+                <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest mb-4 text-cobalt-light">[ FEATURED RECORD ]</p>
                 <h2 className="text-4xl md:text-6xl font-semibold leading-none text-balance">
-                  No fictional client stories. No anonymous numbers without context.
+                  One operating record, with the caveats left in.
                 </h2>
               </FadeIn>
             </div>
-            <div className="lg:col-span-8 lg:pt-8">
+            <div className="lg:col-span-8">
               <FadeIn delay={100}>
-                <div className="border border-bone/15 p-6 md:p-10 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 font-mono text-[9rem] md:text-[13rem] leading-none opacity-[0.035] select-none" aria-hidden="true">01</div>
-                  <p className="font-mono text-xs uppercase text-cobalt-light mb-5">Verified public case study</p>
-                  <p className="text-2xl md:text-4xl font-semibold leading-tight max-w-3xl mb-6">
-                    Awaiting an approved client record that passes all four evidence gates.
-                  </p>
-                  <p className="text-sm md:text-base leading-relaxed opacity-65 max-w-2xl">
-                    Until then, Ergofect will show how results are measured and share approved private references during qualification where agreements allow. This page will not manufacture social proof to fill the space.
-                  </p>
-                </div>
+                <article className="border border-bone/15 overflow-hidden">
+                  <div className="aspect-[1.9/1] overflow-hidden bg-white border-b border-bone/15">
+                    <Image
+                      src="/images/case-studies/crystal-clear-water/project-overview.png"
+                      width={1864}
+                      height={985}
+                      alt="CrystalClearWater operational delivery dashboard overview."
+                      className="w-full h-full object-cover object-top"
+                      sizes="(max-width: 1024px) 100vw, 66vw"
+                      quality={90}
+                      unoptimized
+                    />
+                  </div>
+                  <div className="p-6 md:p-10">
+                    <div className="flex flex-wrap gap-2 mb-5 font-mono text-[10px] uppercase">
+                      <span className="bg-cobalt text-bone px-2 py-1">Operational case study</span>
+                      <span className="border border-bone/20 px-2 py-1 opacity-70">Observed + projected values</span>
+                    </div>
+                    <h3 className="text-2xl md:text-4xl font-semibold leading-tight max-w-3xl mb-5">
+                      CrystalClearWater: a delivery record you can inspect.
+                    </h3>
+                    <p className="text-sm md:text-base leading-relaxed opacity-65 max-w-2xl mb-8">
+                      Follow the build status, recorded time recovery, projected capacity, open decisions, carried risks, and accepted exceptions. The record shows where the evidence is incomplete instead of turning every number into a success claim.
+                    </p>
+                    <Link
+                      href="/case-studies/crystal-clear-water"
+                      className="inline-flex items-center gap-3 border-b-2 border-cobalt-light pb-2 font-bold text-xs uppercase tracking-widest hover:gap-5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cobalt-light"
+                    >
+                      Open the case study <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </article>
               </FadeIn>
             </div>
           </div>
