@@ -3,8 +3,6 @@ import { useEffect, useMemo, useState } from "react";
 
 const promoterNames = {
   sejal: "Sejal",
-  deshraj: "Deshraj",
-  anuj: "Anuj",
 };
 
 const opportunities = [
