@@ -5,11 +5,16 @@ export default function Footer() {
     <footer className="bg-ink text-bone pb-8 md:pb-12 overflow-x-visible overflow-y-hidden">
       <div className="container">
         <div className="border-t border-white/10 pt-8 md:pt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12">
-          <Link href="/">
-            <h1 className="text-[25vw] md:text-[8vw] lg:text-[12vw] xl:text-[15vw] font-semibold tracking-[-0.045em] leading-none opacity-20 hover:opacity-40 transition-opacity">
-              Ergofect<span className="text-cobalt-light">.</span>
-            </h1>
-          </Link>
+          <div>
+            <Link href="/">
+              <h1 className="text-[25vw] md:text-[8vw] lg:text-[12vw] xl:text-[15vw] font-semibold tracking-[-0.045em] leading-none opacity-20 hover:opacity-40 transition-opacity">
+                Ergofect<span className="text-cobalt-light">.</span>
+              </h1>
+            </Link>
+            <a className="mt-8 block h-[62px] w-[198px]" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
+              <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
+            </a>
+          </div>
 
           <div className="flex flex-wrap md:flex-nowrap gap-12 md:gap-20 font-mono text-[10px] md:text-xs uppercase mb-4 w-full md:w-auto">
             <div>
@@ -42,10 +47,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        <a className="mt-8 block h-[62px] w-[198px]" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
-          <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
-        </a>
 
         <div className="flex flex-col text-center sm:text-left justify-center sm:flex-row sm:justify-between items-start sm:items-center font-mono text-[8px] md:text-[10px] uppercase opacity-40 mt-8 gap-2">
           <p className="w-full sm:w-auto">© 2026 Ergofect, All Rights Reserved.</p>
