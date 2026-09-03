@@ -11,9 +11,14 @@ export default function Footer() {
                 Ergofect<span className="text-cobalt-light">.</span>
               </h1>
             </Link>
-            <a className="mt-8 block h-[62px] w-[198px]" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
-              <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a className="block h-[62px] w-[198px] shrink-0" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
+                <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
+              </a>
+              <a className="block h-[54px] w-[250px] shrink-0" href="https://www.producthunt.com/products/ergofect?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-ergofect" target="_blank" rel="noopener noreferrer">
+                <img className="block h-[54px] w-[250px] max-w-none" alt="Ergofect. - Automate Smarter. Grow Faster. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1237403&amp;theme=light&amp;t=1788442963743" />
+              </a>
+            </div>
           </div>
 
           <div className="flex flex-wrap md:flex-nowrap gap-12 md:gap-20 font-mono text-[10px] md:text-xs uppercase mb-4 w-full md:w-auto">
