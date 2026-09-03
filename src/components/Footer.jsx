@@ -39,6 +39,9 @@ export default function Footer() {
                 <li><a href="https://x.com/ergofect" className="hover:text-cobalt-light">Twitter</a></li>
                 <li><a href="https://www.youtube.com/@ergofect" className="hover:text-cobalt-light">YouTube</a></li>
               </ul>
+              <a href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
+                <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
+              </a>
             </div>
           </div>
         </div>
