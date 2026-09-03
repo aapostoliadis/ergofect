@@ -32,19 +32,20 @@ export default function Footer() {
                 <li><Link href="/privacy" className="hover:text-cobalt-light">Privacy</Link></li>
               </ul>
             </div>
-            <div className="shrink-0">
+            <div>
               <p className="opacity-50 mb-4 tracking-[0.14em]">[ Socials ]</p>
               <ul className="space-y-2">
                 <li><a href="https://www.linkedin.com/company/ergofect" className="hover:text-cobalt-light">LinkedIn</a></li>
                 <li><a href="https://x.com/ergofect" className="hover:text-cobalt-light">Twitter</a></li>
                 <li><a href="https://www.youtube.com/@ergofect" className="hover:text-cobalt-light">YouTube</a></li>
               </ul>
-              <a className="mt-6 block w-[198px] shrink-0" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
-                <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
-              </a>
             </div>
           </div>
         </div>
+
+        <a className="mt-8 block h-[62px] w-[198px]" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
+          <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
+        </a>
 
         <div className="flex flex-col text-center sm:text-left justify-center sm:flex-row sm:justify-between items-start sm:items-center font-mono text-[8px] md:text-[10px] uppercase opacity-40 mt-8 gap-2">
           <p className="w-full sm:w-auto">© 2026 Ergofect, All Rights Reserved.</p>
