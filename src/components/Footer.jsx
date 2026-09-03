@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-bone pb-8 md:pb-12 overflow-hidden">
+    <footer className="bg-ink text-bone pb-8 md:pb-12 overflow-x-visible overflow-y-hidden">
       <div className="container">
         <div className="border-t border-white/10 pt-8 md:pt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12">
           <Link href="/">
@@ -32,15 +32,15 @@ export default function Footer() {
                 <li><Link href="/privacy" className="hover:text-cobalt-light">Privacy</Link></li>
               </ul>
             </div>
-            <div>
+            <div className="shrink-0">
               <p className="opacity-50 mb-4 tracking-[0.14em]">[ Socials ]</p>
               <ul className="space-y-2">
                 <li><a href="https://www.linkedin.com/company/ergofect" className="hover:text-cobalt-light">LinkedIn</a></li>
                 <li><a href="https://x.com/ergofect" className="hover:text-cobalt-light">Twitter</a></li>
                 <li><a href="https://www.youtube.com/@ergofect" className="hover:text-cobalt-light">YouTube</a></li>
               </ul>
-              <a href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
-                <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
+              <a className="mt-6 block w-[198px] shrink-0" href="https://launchstag.com/p/ergofect" target="_blank" rel="noopener">
+                <img className="block h-[62px] w-[198px] max-w-none" src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
               </a>
             </div>
           </div>
