@@ -18,6 +18,9 @@ export default function Footer() {
               <a className="block h-[54px] w-[250px] shrink-0" href="https://www.producthunt.com/products/ergofect?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-ergofect" target="_blank" rel="noopener noreferrer">
                 <img className="block h-[54px] w-[250px] max-w-none" alt="Ergofect. - Automate Smarter. Grow Faster. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1237403&amp;theme=light&amp;t=1788442963743" />
               </a>
+              <a className="block h-[80px] w-[256px] shrink-0" href="https://tools.cafe" target="_blank" rel="noopener">
+                <img className="block h-[80px] w-[256px] max-w-none" src="https://tools.cafe/b/light.svg" alt="Featured on tools.cafe" width="256" height="80" />
+              </a>
             </div>
           </div>
 
