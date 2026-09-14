@@ -179,6 +179,15 @@ html{scroll-behavior:auto}
 /* Native vector artwork: visible before scripts and independent of canvas. */
 .workflow-backdrop{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#040914}
 .workflow-backdrop .flow-vector{position:absolute;left:50%;top:0;transform:translateX(-50%);width:100%;min-width:720px;height:100%;display:block;fill:none;stroke:none;overflow:visible}
+.flow-gate-plane{position:absolute;left:50%;top:0;transform:translateX(-50%);width:100%;min-width:720px;height:100%}
+.flow-gate-plane [data-flow-gate]{position:absolute;transform:translate(-50%,-50%);display:block;width:104px;height:104px;object-fit:contain;outline:1px solid #789ae24d;outline-offset:2px}
 .inner-page .workflow-backdrop{display:none}
-@media(max-width:719px){.workflow-backdrop [data-flow-labels]{display:none}}
+@media(max-width:719px){.workflow-backdrop [data-flow-labels]{display:none}.flow-gate-plane [data-flow-gate]{width:80px;height:80px}}
 /* workflow-vector:css-end */
+/* Supplied Ergofect logo, with its original proportions and background. */
+.brand{align-items:center;flex-shrink:0;line-height:1}
+.brand-logo{display:block;width:64px;height:64px;max-width:none;object-fit:contain}
+.nav{padding-top:12px;padding-bottom:12px}
+.footer-brand .brand-logo{width:80px;height:80px}
+@media(max-width:600px){.nav .brand-logo{width:56px;height:56px}.nav{padding-top:10px;padding-bottom:10px}}
+/* supplied-logo:css-end */

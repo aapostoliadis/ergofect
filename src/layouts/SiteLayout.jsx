@@ -8,6 +8,7 @@ export default function SiteLayout({children}) {
   const menu=useRef(null);
   return <div className="site-v2-shell inner-page" onKeyDown={event=>{if(event.key==='Escape'&&open){setOpen(false);menu.current?.focus();}}}>
     <Head>
+      <link rel="icon" type="image/png" sizes="400x400" href="/ergofect-assets/ergofect-avatar.png" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
       <link rel="stylesheet" href="/site-shell.css" />
       <link rel="stylesheet" href="/site-runtime.css" />
@@ -15,7 +16,7 @@ export default function SiteLayout({children}) {
     </Head>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <header className="site-header"><nav className="nav" aria-label="Main navigation">
-      <a className="brand" href="/" aria-label="Ergofect home">Ergofect<span className="brand-mark">.</span></a>
+      <a className="brand" href="/" aria-label="Ergofect home"><img className="brand-logo" src="/ergofect-assets/ergofect-avatar.png" width="64" height="64" alt="Ergofect" /></a>
       <div id="nav-links" className={'nav-links'+(open?' is-open':'')}>
         {[['Expertise','/services'],['In practice','/#solutions'],['Our process','/process'],['Evidence','/case-studies'],['About','/about']].map(([label,href])=><a key={href} href={href}>{label}</a>)}
       </div>
