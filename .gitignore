@@ -27,3 +27,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Local dependency cache and release checks
+/.npm-cache/
+/output/
