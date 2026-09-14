@@ -8,7 +8,11 @@ export default function SiteLayout({children}) {
   const menu=useRef(null);
   return <div className="site-v2-shell inner-page" onKeyDown={event=>{if(event.key==='Escape'&&open){setOpen(false);menu.current?.focus();}}}>
     <Head>
-      <link rel="icon" type="image/png" sizes="400x400" href="/ergofect-assets/ergofect-avatar.png" />
+      <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico?v=ergofect-1" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ergofect-1" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ergofect-1" />
+      <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=ergofect-1" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=ergofect-1" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
       <link rel="stylesheet" href="/site-shell.css" />
       <link rel="stylesheet" href="/site-runtime.css" />

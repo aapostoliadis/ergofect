@@ -23,6 +23,9 @@ for (const page of manifest) {
   records.push({ route, source: page.file.replaceAll('\\', '/'), sha256: crypto.createHash('sha256').update(html).digest('hex') });
 }
 const assetDir = path.join(root, 'public/ergofect-assets');
+for (const file of ['favicon.svg', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png']) {
+  fs.copyFileSync(path.join(source, file), path.join(root, 'public', file));
+}
 fs.mkdirSync(assetDir, { recursive: true });
 for (const file of fs.readdirSync(path.join(source, 'assets'))) {
   if (!/\.(png|webp)$/.test(file)) continue;

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>Ergofect</title>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#1b315f"/>
+      <stop offset=".75" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h32v32H0z"/>
+  <path fill="#f4f4f4" d="M4 4h18v4H8v6h12v4H8v6h14v4H4z"/>
+  <path fill="#4970cf" d="M26 24h4v4h-4z"/>
+</svg>
