@@ -11,7 +11,7 @@ Build with `npm ci` and `npm run build`. Verify with `npm start` against the rel
 Rollback: revert the release commit or restore the previous Vercel production deployment. The original API routes and React pages were not removed.
 # UI audit, 14 September 2026
 
-The approved flow artwork is restricted to the homepage hero. Reading sections use solid surfaces. The homepage now presents a workflow index, reviewable illustrative records, and the existing CrystalClearWater source evidence. Each service explains a different handoff and its human checkpoint.
+The approved flow artwork continues throughout the homepage as the visitor scrolls. Subtle navy overlays preserve text contrast, and the pause control remains available. Supporting pages retain solid reading surfaces. The homepage now presents a workflow index, reviewable illustrative records, and the existing CrystalClearWater source evidence. Each service explains a different handoff and its human checkpoint.
 
 The assessment campaign and 404 share `SiteLayout`, the imported shell stylesheet, navigation, footer, and consent runtime. Assessment validation is local and field-specific before the existing API is called. `import-approved-site.cjs` also regenerates the shell CSS and footer data.
 

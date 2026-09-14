@@ -120,6 +120,11 @@ html{scroll-behavior:auto}
 .hero-title em{color:var(--accent);background:none;-webkit-text-fill-color:currentColor}
 .hero-title{max-width:19ch}.hero-sub{max-width:610px}.hero-coordinate{font-size:11px;opacity:1}
 .page>main{background:#040914}
+/* Keep the selected workflow artwork visible through the complete homepage. */
+.home-flow .page>main{background:rgba(4,9,20,.32)}
+.home-flow .workflow-index{background:rgba(4,9,20,.42)}
+.home-flow .btn{text-shadow:none}
+.home-flow .workflow-entry h3,.home-flow .workflow-entry p,.home-flow .handoff-note,.home-flow .stat,.home-flow .home-evidence>div,.home-flow .cta-card,.home-flow .footer,.home-flow .copyright{text-shadow:0 1px 8px #040914,0 0 20px #040914}
 .inner-page .flow-canvas,.inner-page .scene-fallback,.inner-page .motion-toggle{display:none}
 .inner-hero{min-height:0;max-width:1180px;margin:auto;padding:64px 24px 52px;align-items:flex-start;text-align:left;background:none;border-bottom:1px solid var(--line-strong)}
 .inner-hero h1{font-size:clamp(36px,4.5vw,58px);max-width:24ch;font-weight:700;line-height:1.09;text-shadow:none}
@@ -165,7 +170,7 @@ html{scroll-behavior:auto}
 .range-field input[type=range]::-moz-range-track{height:3px;background:#526781}.range-field input[type=range]::-moz-range-thumb{width:16px;height:16px;background:var(--accent);border:2px solid #0b1525;border-radius:50%}
 .return-caption,.return-row,.return-secondary span,.fine-print{font-size:13px!important}.number-wrap input{font-size:16px}.mobile-return{display:none}
 .legal-meta{justify-content:flex-start}.legal-toc a{font-size:14px;padding:10px 0}.legal-copy p{font-size:16px}.legal-page .inner-hero{padding-bottom:40px}.record-caption{font-size:13px!important}
-.motion-toggle{width:44px;height:44px}.scene-offscreen .motion-toggle{visibility:hidden}
+.motion-toggle{width:44px;height:44px}
 .form-required{margin-bottom:24px;font-size:13px!important}.request-form:has(.form-review:not([hidden])) .form-required{display:none}
 @media(max-width:600px){.footer-brand{min-width:0;width:100%}.footer-cols{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.footer-cols>div:last-child{grid-column:1/-1}.footer-cols a{overflow-wrap:anywhere}}
 @media(max-width:360px){.inner-hero h1{font-size:32px;max-width:100%;overflow-wrap:anywhere}}

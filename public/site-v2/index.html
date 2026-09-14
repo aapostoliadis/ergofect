@@ -132,6 +132,11 @@ html{scroll-behavior:auto}
 .hero-title em{color:var(--accent);background:none;-webkit-text-fill-color:currentColor}
 .hero-title{max-width:19ch}.hero-sub{max-width:610px}.hero-coordinate{font-size:11px;opacity:1}
 .page>main{background:#040914}
+/* Keep the selected workflow artwork visible through the complete homepage. */
+.home-flow .page>main{background:rgba(4,9,20,.32)}
+.home-flow .workflow-index{background:rgba(4,9,20,.42)}
+.home-flow .btn{text-shadow:none}
+.home-flow .workflow-entry h3,.home-flow .workflow-entry p,.home-flow .handoff-note,.home-flow .stat,.home-flow .home-evidence>div,.home-flow .cta-card,.home-flow .footer,.home-flow .copyright{text-shadow:0 1px 8px #040914,0 0 20px #040914}
 .inner-page .flow-canvas,.inner-page .scene-fallback,.inner-page .motion-toggle{display:none}
 .inner-hero{min-height:0;max-width:1180px;margin:auto;padding:64px 24px 52px;align-items:flex-start;text-align:left;background:none;border-bottom:1px solid var(--line-strong)}
 .inner-hero h1{font-size:clamp(36px,4.5vw,58px);max-width:24ch;font-weight:700;line-height:1.09;text-shadow:none}
@@ -177,7 +182,7 @@ html{scroll-behavior:auto}
 .range-field input[type=range]::-moz-range-track{height:3px;background:#526781}.range-field input[type=range]::-moz-range-thumb{width:16px;height:16px;background:var(--accent);border:2px solid #0b1525;border-radius:50%}
 .return-caption,.return-row,.return-secondary span,.fine-print{font-size:13px!important}.number-wrap input{font-size:16px}.mobile-return{display:none}
 .legal-meta{justify-content:flex-start}.legal-toc a{font-size:14px;padding:10px 0}.legal-copy p{font-size:16px}.legal-page .inner-hero{padding-bottom:40px}.record-caption{font-size:13px!important}
-.motion-toggle{width:44px;height:44px}.scene-offscreen .motion-toggle{visibility:hidden}
+.motion-toggle{width:44px;height:44px}
 .form-required{margin-bottom:24px;font-size:13px!important}.request-form:has(.form-review:not([hidden])) .form-required{display:none}
 @media(max-width:600px){.footer-brand{min-width:0;width:100%}.footer-cols{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.footer-cols>div:last-child{grid-column:1/-1}.footer-cols a{overflow-wrap:anywhere}}
 @media(max-width:360px){.inner-hero h1{font-size:32px;max-width:100%;overflow-wrap:anywhere}}
@@ -188,7 +193,7 @@ html{scroll-behavior:auto}
 <link rel="canonical" href="https://www.ergofect.com/">
 <link rel="stylesheet" href="/site-runtime.css">
 </head>
-<body>
+<body class="home-flow">
   <canvas class="flow-canvas" aria-hidden="true"></canvas>
   <div class="scene-fallback" aria-hidden="true"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="fallback-flow"><stop stop-color="#7e94ba" stop-opacity=".2"/><stop offset=".55" stop-color="#5df0a8" stop-opacity=".5"/><stop offset="1" stop-color="#5df0a8" stop-opacity=".15"/></linearGradient></defs><g fill="none" stroke="url(#fallback-flow)" stroke-width="1.2"><path d="M-80 515C210 760 330 470 610 600S850 535 1280 535"/><path d="M-80 565C190 440 440 730 610 610S930 570 1280 570"/><path d="M-80 650C160 470 390 690 610 620S900 605 1280 605"/><path d="M-80 530C160 650 430 520 610 630S890 640 1280 640"/><path d="M-80 720C200 530 340 590 610 640S930 675 1280 675"/><path d="M-80 600C240 730 310 520 610 650S870 710 1280 710"/></g><rect x="570" y="548" width="80" height="144" rx="15" fill="#10252c" fill-opacity=".8" stroke="#5df0a8" stroke-opacity=".35"/><path d="M624 605h-28v30h28m-28-15h23" fill="none" stroke="#88ffd0" stroke-width="2.7"/></svg></div>
   <a class="skip-link" href="#features">Skip to content</a>
@@ -290,8 +295,6 @@ html{scroll-behavior:auto}
   'use strict';
   if (document.body.classList.contains('inner-page')) return;
   const canvas = document.querySelector('.flow-canvas');
-  const heroObserver = new IntersectionObserver(entries=>{document.body.classList.toggle('scene-offscreen',!entries[0].isIntersecting);});
-  const heroElement=document.querySelector('.hero');if(heroElement)heroObserver.observe(heroElement);
   const ctx = canvas.getContext('2d', { alpha: false });
   if (!ctx) {
     document.body.classList.add('scene-unavailable');
@@ -454,7 +457,6 @@ html{scroll-behavior:auto}
     const rawDt = (now - lastTime) / 1000, dt = Math.min(rawDt, .05); lastTime = now;
     if (document.hidden) return;
     lenis?.raf(now);
-    if (document.body.classList.contains('scene-offscreen')) return;
     if (fixedTime !== null) time = fixedTime;
     else if (!paused) time += dt;
     const target = forcedProgress === null ? clamp(scrollY / maxScroll) : forcedProgress;
