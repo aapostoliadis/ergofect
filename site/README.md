@@ -16,3 +16,7 @@ The approved flow artwork continues throughout the homepage as the visitor scrol
 The assessment campaign and 404 share `SiteLayout`, the imported shell stylesheet, navigation, footer, and consent runtime. Assessment validation is local and field-specific before the existing API is called. `import-approved-site.cjs` also regenerates the shell CSS and footer data.
 
 Validation included 80 route/viewport combinations (20 surfaces at 320, 390, 768, and 1280 pixels), all three example workflows, contact review/edit, assessment errors, calculator edge states, mobile menu keyboard recovery, static script parsing, link destinations, and the production build. No lead email was submitted. API implementation files are unchanged.
+
+## Flow rendering compatibility
+
+The homepage flow uses inline SVG with complete initial artwork in the HTML. Animation updates the existing vector paths and packets; it never hides the artwork and uses no canvas, WebGL, or external scene dependency. The same scroll composition, user pause control, and reduced-motion preference are retained. This replaces the canvas path after the artwork was reported absent in Comet 152; the exact browser-specific cause was not reproduced in the available browser. The user confirmed that this vector version is visible in Comet 152 before publication.

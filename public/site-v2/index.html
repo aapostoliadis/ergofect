@@ -188,14 +188,33 @@ html{scroll-behavior:auto}
 @media(max-width:360px){.inner-hero h1{font-size:32px;max-width:100%;overflow-wrap:anywhere}}
 @media(max-width:850px){.workflow-entry{grid-template-columns:30px 1fr;gap:12px 20px}.workflow-entry .handoff-note{grid-column:2}.showcase-copy{text-align:left}.showcase-copy h2,.showcase-copy p,.showcase-copy .small-note{margin-left:0}.home-evidence{grid-template-columns:1fr;gap:25px}.handoff-profile header{grid-template-columns:1fr;gap:18px}.mobile-return{display:flex;position:sticky;top:0;z-index:4;justify-content:space-between;align-items:center;gap:15px;background:#102234;padding:14px 18px;border-bottom:1px solid #65778f;margin-bottom:24px;color:#cbd8eb;font-size:12px}.mobile-return strong{font-size:22px;line-height:1.2;color:var(--accent);font-variant-numeric:tabular-nums}.mobile-return span{max-width:160px;line-height:1.4}.calculator-inputs{position:relative}}
 @media(max-width:600px){.inner-hero{padding:40px 20px 35px;min-height:0}.inner-hero h1{font-size:37px}.inner-hero .intro{font-size:16px}.inner-hero .hero-actions{max-width:none;gap:12px}.inner-hero .eyebrow{font-size:12px}.content-section{padding:42px 20px}.hero-title{font-size:42px}.hero-sub{font-size:16px}.hero-inner{padding-top:36px}.hero-note{font-size:12px}.hero-bottom{bottom:22px}.workflow-entry h3{font-size:23px}.workflow-entry p{font-size:15px}.dashboard{padding:22px 18px}.dash-top{align-items:flex-start}.dash-live{font-size:9px;max-width:90px;text-align:right;line-height:1.5}.example-record>div{grid-template-columns:1fr;gap:5px}.example-record dd{font-size:15px}.showcase-copy h2{max-width:none}.stats{grid-template-columns:1fr;gap:6px}.stat{display:grid;grid-template-columns:80px 1fr;gap:9px 18px}.stat-number{grid-column:1/-1;margin:0}.stat-label{margin:0}.stat p{grid-column:2;margin:0}.cta-card{padding:35px 0}.cta-card h2{font-size:36px}.footer-cols{gap:30px}.handoff-ledger>div{grid-template-columns:28px 1fr;gap:10px 14px}.handoff-ledger dd{grid-column:2}.handoff-ledger .human-check{padding-left:10px}.range-label label{font-size:14px}.range-field small{font-size:12px}.form-progress li{font-size:11px}.request-form{padding:24px 18px}.field{font-size:14px}.legal-page .inner-hero{padding-top:40px}.legal-meta{gap:20px}.legal-copy p{font-size:15px}.content-section p{font-size:15px}.return-row{gap:12px}.home-evidence h2{font-size:32px}}
+/* Native vector artwork: visible before scripts and independent of canvas. */
+.workflow-backdrop{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#040914}
+.workflow-backdrop .flow-vector{position:absolute;left:50%;top:0;transform:translateX(-50%);width:100%;min-width:720px;height:100%;display:block;fill:none;stroke:none;overflow:visible}
+.inner-page .workflow-backdrop{display:none}
+@media(max-width:719px){.workflow-backdrop [data-flow-labels]{display:none}}
+/* workflow-vector:css-end */
 </style>
 <noscript><style>[data-reveal]{opacity:1;transform:none}.motion-toggle,.menu-toggle{display:none}</style></noscript>
 <link rel="canonical" href="https://www.ergofect.com/">
 <link rel="stylesheet" href="/site-runtime.css">
 </head>
 <body class="home-flow">
-  <canvas class="flow-canvas" aria-hidden="true"></canvas>
-  <div class="scene-fallback" aria-hidden="true"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="fallback-flow"><stop stop-color="#7e94ba" stop-opacity=".2"/><stop offset=".55" stop-color="#5df0a8" stop-opacity=".5"/><stop offset="1" stop-color="#5df0a8" stop-opacity=".15"/></linearGradient></defs><g fill="none" stroke="url(#fallback-flow)" stroke-width="1.2"><path d="M-80 515C210 760 330 470 610 600S850 535 1280 535"/><path d="M-80 565C190 440 440 730 610 610S930 570 1280 570"/><path d="M-80 650C160 470 390 690 610 620S900 605 1280 605"/><path d="M-80 530C160 650 430 520 610 630S890 640 1280 640"/><path d="M-80 720C200 530 340 590 610 640S930 675 1280 675"/><path d="M-80 600C240 730 310 520 610 650S870 710 1280 710"/></g><rect x="570" y="548" width="80" height="144" rx="15" fill="#10252c" fill-opacity=".8" stroke="#5df0a8" stroke-opacity=".35"/><path d="M624 605h-28v30h28m-28-15h23" fill="none" stroke="#88ffd0" stroke-width="2.7"/></svg></div>
+  <!-- workflow-vector:start --><div class="workflow-backdrop" aria-hidden="true"><svg class="flow-vector" viewBox="0 0 1200 800" preserveAspectRatio="none" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="flow-lines" gradientUnits="userSpaceOnUse" x1="-50" y1="0" x2="1250" y2="0"><stop stop-color="#8196c9" stop-opacity=".11"/><stop data-flow-before offset="0.37923076923076926" stop-color="#83abd7" stop-opacity=".32"/><stop data-flow-after offset="0.5192307692307693" stop-color="#5df0a8" stop-opacity=".58"/><stop offset="1" stop-color="#5df0a8" stop-opacity=".14"/></linearGradient>
+<radialGradient id="flow-glow"><stop stop-color="#259576" stop-opacity=".17"/><stop offset="1" stop-color="#259576" stop-opacity="0"/></radialGradient>
+<linearGradient id="flow-pane" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#23464d" stop-opacity=".75"/><stop offset="1" stop-color="#081c28" stop-opacity=".6"/></linearGradient>
+<linearGradient id="flow-final" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0"><stop stop-color="#5df0a8" stop-opacity="0"/><stop offset=".45" stop-color="#5df0a8" stop-opacity=".46"/><stop offset=".7" stop-color="#96ffcb"/><stop offset="1" stop-color="#5df0a8" stop-opacity=".03"/></linearGradient>
+</defs>
+<g data-flow-glow transform="translate(610.00 617.00)" stroke="none"><circle cx="25" r="350" fill="url(#flow-glow)"/><circle r="110" fill="url(#flow-glow)"/></g>
+<g data-flow-lanes fill="none" stroke="url(#flow-lines)" opacity="1"><path data-flow-line d="M-90.00 484.50C190.00 472.00 400.00 714.00 610.00 568.70M610.00 568.70C851.50 568.70 920.50 528.80 1300.00 528.80" stroke-width="1.45"/><path data-flow-line d="M-90.00 468.13C190.00 570.78 400.00 685.00 610.00 573.30M610.00 573.30C851.50 573.30 920.50 537.20 1300.00 537.20" stroke-width="0.78"/><path data-flow-line d="M-90.00 518.04C190.00 658.73 400.00 656.00 610.00 577.90M610.00 577.90C851.50 577.90 920.50 545.60 1300.00 545.60" stroke-width="0.78"/><path data-flow-line d="M-90.00 540.01C190.00 734.98 400.00 627.00 610.00 582.50M610.00 582.50C851.50 582.50 920.50 554.00 1300.00 554.00" stroke-width="0.78"/><path data-flow-line d="M-90.00 507.47C190.00 539.40 400.00 598.00 610.00 587.10M610.00 587.10C851.50 587.10 920.50 562.40 1300.00 562.40" stroke-width="1.45"/><path data-flow-line d="M-90.00 525.86C190.00 623.58 400.00 569.00 610.00 591.70M610.00 591.70C851.50 591.70 920.50 570.80 1300.00 570.80" stroke-width="0.78"/><path data-flow-line d="M-90.00 577.28C190.00 720.09 400.00 540.00 610.00 596.30M610.00 596.30C851.50 596.30 920.50 579.20 1300.00 579.20" stroke-width="0.78"/><path data-flow-line d="M-90.00 563.85C190.00 550.20 400.00 511.00 610.00 600.90M610.00 600.90C851.50 600.90 920.50 587.60 1300.00 587.60" stroke-width="0.78"/><path data-flow-line d="M-90.00 544.73C190.00 641.85 400.00 702.00 610.00 605.50M610.00 605.50C851.50 605.50 920.50 596.00 1300.00 596.00" stroke-width="1.45"/><path data-flow-line d="M-90.00 592.86C190.00 720.77 400.00 673.00 610.00 610.10M610.00 610.10C851.50 610.10 920.50 604.40 1300.00 604.40" stroke-width="0.78"/><path data-flow-line d="M-90.00 618.33C190.00 524.38 400.00 644.00 610.00 614.70M610.00 614.70C851.50 614.70 920.50 612.80 1300.00 612.80" stroke-width="0.78"/><path data-flow-line d="M-90.00 586.10C190.00 605.00 400.00 615.00 610.00 619.30M610.00 619.30C851.50 619.30 920.50 621.20 1300.00 621.20" stroke-width="0.78"/><path data-flow-line d="M-90.00 600.85C190.00 698.49 400.00 586.00 610.00 623.90M610.00 623.90C851.50 623.90 920.50 629.60 1300.00 629.60" stroke-width="1.45"/><path data-flow-line d="M-90.00 653.50C190.00 528.88 400.00 557.00 610.00 628.50M610.00 628.50C851.50 628.50 920.50 638.00 1300.00 638.00" stroke-width="0.78"/><path data-flow-line d="M-90.00 643.19C190.00 623.87 400.00 528.00 610.00 633.10M610.00 633.10C851.50 633.10 920.50 646.40 1300.00 646.40" stroke-width="0.78"/><path data-flow-line d="M-90.00 621.53C190.00 706.10 400.00 499.00 610.00 637.70M610.00 637.70C851.50 637.70 920.50 654.80 1300.00 654.80" stroke-width="0.78"/><path data-flow-line d="M-90.00 667.61C190.00 509.97 400.00 690.00 610.00 642.30M610.00 642.30C851.50 642.30 920.50 663.20 1300.00 663.20" stroke-width="1.45"/><path data-flow-line d="M-90.00 696.48C190.00 587.54 400.00 661.00 610.00 646.90M610.00 646.90C851.50 646.90 920.50 671.60 1300.00 671.60" stroke-width="0.78"/><path data-flow-line d="M-90.00 664.86C190.00 677.49 400.00 632.00 610.00 651.50M610.00 651.50C851.50 651.50 920.50 680.00 1300.00 680.00" stroke-width="0.78"/><path data-flow-line d="M-90.00 675.96C190.00 507.10 400.00 603.00 610.00 656.10M610.00 656.10C851.50 656.10 920.50 688.40 1300.00 688.40" stroke-width="0.78"/><path data-flow-line d="M-90.00 729.53C190.00 604.78 400.00 574.00 610.00 660.70M610.00 660.70C851.50 660.70 920.50 696.80 1300.00 696.80" stroke-width="1.45"/><path data-flow-line d="M-90.00 722.49C190.00 690.71 400.00 545.00 610.00 665.30M610.00 665.30C851.50 665.30 920.50 705.20 1300.00 705.20" stroke-width="0.78"/></g>
+<g data-flow-packets opacity="1"><g data-flow-packet transform="translate(1043.20 536.46)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(779.49 561.36)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(4.70 503.94)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(941.17 551.76)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(320.08 631.35)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(489.03 613.96)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(863.96 571.25)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1196.15 554.78)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1083.04 565.67)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(505.25 587.23)" fill="#9eb6d5" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(815.39 586.10)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(943.33 579.12)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(530.75 585.17)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(129.92 633.56)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(711.73 600.04)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(195.18 546.06)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1211.59 596.19)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(786.26 603.61)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(903.40 607.25)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(912.72 607.11)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(191.83 583.18)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(946.11 613.54)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(67.15 596.21)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(172.27 602.32)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1150.25 629.26)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(741.02 624.52)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(1205.11 637.78)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(541.93 607.01)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(21.61 631.61)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(884.36 639.08)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(122.77 638.80)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1282.33 654.79)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(409.48 637.28)" fill="#9eb6d5" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(416.56 638.56)" fill="#9eb6d5" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(529.91 648.59)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1043.08 666.85)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(543.72 647.36)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(183.91 661.90)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(1168.80 686.95)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(227.33 580.54)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(670.67 661.51)" fill="#90ffca" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(149.83 641.96)" fill="#9eb6d5" stroke="none"><circle r="8" opacity=".1"/><rect x="-2" y="-2" width="4" height="4" rx="1"/></g><g data-flow-packet transform="translate(551.79 638.49)" fill="#9eb6d5" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g><g data-flow-packet transform="translate(897.80 684.68)" fill="#90ffca" stroke="none"><circle r="4.4" opacity=".1"/><rect x="-1.1" y="-1.1" width="2.2" height="2.2" rx="1"/></g></g>
+<g data-flow-bundles opacity="0"><g data-flow-bundle transform="translate(1029.24 537.42)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#0c2027" stroke="#8cf3be" stroke-width="1"/></g><g data-flow-bundle transform="translate(1029.24 567.74)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#0c2027" stroke="#8cf3be" stroke-width="1"/></g><g data-flow-bundle transform="translate(1029.24 598.05)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#0c2027" stroke="#8cf3be" stroke-width="1"/></g><g data-flow-bundle transform="translate(1029.24 628.37)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#0c2027" stroke="#8cf3be" stroke-width="1"/></g><g data-flow-bundle transform="translate(1029.24 658.69)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#0c2027" stroke="#8cf3be" stroke-width="1"/></g><g data-flow-bundle transform="translate(1029.24 689.00)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#0c2027" stroke="#8cf3be" stroke-width="1"/></g></g>
+<g data-flow-final opacity="0"><path d="M-80.00 662.00C350.00 662.00 430.00 617.00 620.00 617.00M620.00 617.00C820.00 617.00 960.00 572.00 1300.00 572.00" fill="none" stroke="url(#flow-final)" stroke-width="2"/><g  transform="translate(-80.00 662.00)" fill="#aaffd8" stroke="none"><circle r="10" opacity=".1"/><rect x="-2.5" y="-2.5" width="5" height="5" rx="1"/></g></g>
+<g data-flow-gate transform="translate(610.00 617.00)"><rect x="-40" y="-72" width="80" height="144" rx="15" fill="url(#flow-pane)" stroke="#9cffd8" stroke-opacity=".4" stroke-width="1"/><rect x="-42" y="-74" width="84" height="148" rx="17" fill="none" stroke="#5df0a8" stroke-opacity=".08" stroke-width="7"/><path d="M-29 -59H28" stroke="#d7fff0" stroke-opacity=".31" stroke-width="1"/><path d="M40 -56L50 -46V63L40 72" fill="none" stroke="#385764" stroke-width="1"/><path d="M14 -15H-14V15H14M-14 0H9" fill="none" stroke="#88ffd0" stroke-width="2.7"/></g>
+<g data-flow-labels fill="#91adc0" stroke="none" font-family="Inter,sans-serif" font-size="9" font-weight="500" text-anchor="middle"><text x="190" y="748">FRAGMENTED WORK</text><text x="995" y="748">A CONNECTED WORKFLOW</text></g>
+</svg></div><!-- workflow-vector:end -->
   <a class="skip-link" href="#features">Skip to content</a>
   <svg class="sr-only" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke-width="2"/></symbol>
@@ -287,202 +306,100 @@ html{scroll-behavior:auto}
     let motionPaused=reduced.matches;const toggle=document.querySelector('.motion-toggle');
     function syncMotion(){toggle.setAttribute('aria-pressed',String(motionPaused));toggle.setAttribute('aria-label',motionPaused?'Resume background animation':'Pause background animation');toggle.title=toggle.getAttribute('aria-label');toggle.querySelector('path').setAttribute('d',motionPaused?'m8 5 11 7-11 7Z':'M8 5v14M16 5v14');window.dispatchEvent(new CustomEvent('ergofect-motion',{detail:motionPaused}));window.ergofectMotionPaused=motionPaused}
     toggle.addEventListener('click',()=>{motionPaused=!motionPaused;syncMotion()});reduced.addEventListener('change',()=>{motionPaused=reduced.matches;syncMotion();if(reduced.matches)reveal()});syncMotion();
-    window.addEventListener('error',e=>{if(e.target?.tagName==='SCRIPT'){document.body.classList.add('scene-unavailable');toggle.hidden=true}},true);
+
   })();
   </script>
-  <script>
-(() => {
-  'use strict';
-  if (document.body.classList.contains('inner-page')) return;
-  const canvas = document.querySelector('.flow-canvas');
-  const ctx = canvas.getContext('2d', { alpha: false });
-  if (!ctx) {
-    document.body.classList.add('scene-unavailable');
-    document.querySelector('.motion-toggle').hidden = true;
-    return;
-  }
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const params = new URLSearchParams(location.search);
-  const CONFIG = Object.freeze({ channels: 22, packetsPerChannel: 2, maxDpr: 2, seed: 8147, background: '#040914', accent: '#5df0a8' });
+  <script data-workflow-vector>
+function computeErgofectFlow(progress, time) {
   const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
   const lerp = (a, b, t) => a + (b - a) * t;
   const ease = t => t * t * (3 - 2 * t);
-  const seeded = n => { const v = Math.sin(n * 127.1 + CONFIG.seed) * 43758.5453; return v - Math.floor(v); };
-  const sample = (stops, p) => { for (let i = 1; i < stops.length; i++) if (p <= stops[i][0]) { const a = stops[i - 1], b = stops[i]; return lerp(a[1], b[1], ease(clamp((p - a[0]) / (b[0] - a[0])))); } return stops.at(-1)[1]; };
-  let width = innerWidth, height = innerHeight, dpr = 1, maxScroll = 1;
-  let time = 0, progress = 0, forcedProgress = null, fixedTime = params.has('time') ? Number(params.get('time')) || 0 : null;
-  let paused = window.ergofectMotionPaused || reduced.matches, lastTime = performance.now(), lastSignature = '', ready = false;
-  let lenis = null, loadingLenis = false;
-  const cpuSamples = [], intervals = [];
-
-  async function startLenis() {
-    if (reduced.matches || lenis || loadingLenis) return;
-    loadingLenis = true;
-    try {
-      const { default: Lenis } = await import('https://unpkg.com/lenis@1.3.23/dist/lenis.mjs');
-      if (!reduced.matches && !lenis) lenis = new Lenis({ duration: 1.15, smoothWheel: true, touchMultiplier: 1.5 });
-    } catch { /* Native scrolling and the embedded artwork remain available. */ }
-    finally { loadingLenis = false; }
-  }
-  startLenis();
-  reduced.addEventListener('change', () => {
-    if (reduced.matches) { lenis?.destroy(); lenis = null; }
-    else startLenis();
-    lastSignature = '';
-  });
-  document.addEventListener('click', e => {
-    const a = e.target.closest('a[href^="#"]');
-    if (!a || !lenis) return;
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      lenis.scrollTo(target, { onComplete: () => {
-        history.replaceState(null, '', a.getAttribute('href'));
-        if (target.id !== 'top') { target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); }
-      } });
+  const seeded = n => { const v = Math.sin(n * 127.1 + 8147) * 43758.5453; return v - Math.floor(v); };
+  const sample = stops => { for (let i = 1; i < stops.length; i++) if (progress <= stops[i][0]) { const a = stops[i - 1], b = stops[i]; return lerp(a[1], b[1], ease(clamp((progress - a[0]) / (b[0] - a[0])))); } return stops[stops.length - 1][1]; };
+  const bezier = (a, b, c, d, t) => { const s = 1 - t; return [s*s*s*a[0]+3*s*s*t*b[0]+3*s*t*t*c[0]+t*t*t*d[0], s*s*s*a[1]+3*s*s*t*b[1]+3*s*t*t*c[1]+t*t*t*d[1]]; };
+  const point = p => p.map(v => v.toFixed(2)).join(' ');
+  const curve = (a, b, c, d) => `M${point(a)}C${point(b)} ${point(c)} ${point(d)}`;
+  const x = sample([[0,610],[.32,180],[.66,1040],[1,600]]);
+  const y = sample([[0,617],[.32,430],[.66,440],[1,620]]);
+  const ordered = ease(clamp(progress/.5)), separated = ease(clamp((progress-.12)/.2)), merge = ease(clamp((progress-.72)/.28));
+  const opacity = (1-.33*Math.sin(progress*Math.PI))*(1-merge*.985);
+  const lines = [], packets = [], bundles = [];
+  for (let i = 0; i < 22; i++) {
+    const normal = i-10.5, bucket = Math.floor(i*6/22)-2.5;
+    const offset = lerp(normal*8.4,bucket*54+((i%4)-1.5)*2,separated)*(1-merge);
+    const input = normal*11+Math.sin(i*4.5)*28*(1-ordered);
+    const a = [-90,y-17+input*(1-merge)], d = [x,y+normal*4.6*(1-merge)];
+    const b = [lerp(-90,x,.4),y+lerp(-145+((i*87)%270)+Math.sin(time*.25+i)*14,input,ordered)*(1-merge)];
+    const c = [lerp(-90,x,.7),y+lerp(97-((i*29)%220),normal*5.2,ordered)*(1-merge)];
+    const end = [1300,y+offset], outB = [lerp(x,1300,.35),d[1]], outC = [lerp(x,1300,.45),end[1]];
+    lines.push({d:curve(a,b,c,d)+curve(d,outB,outC,end),width:i%4===0?1.45:.78});
+    for (let j = 0; j < 2; j++) {
+      const ph = (time*.034+seeded(i*3+j))%1;
+      const q = ph<.52?bezier(a,b,c,d,ph/.52):bezier(d,outB,outC,end,(ph-.52)/.48);
+      packets.push({x:q[0],y:q[1],color:ph<.52?'#9eb6d5':'#90ffca',size:i%4===0?4:2.2});
     }
-  });
-  window.addEventListener('ergofect-motion', e => { paused = e.detail; lastSignature = ''; });
+    if(i%4===0){const q=bezier(d,outB,outC,end,.7);bundles.push({x:q[0],y:q[1]});}
+  }
+  const a=[-80,y+45],b=[350,y+45],c=[430,y],d=[620,y],e=[820,y],f=[960,y-45],g=[1300,y-45];
+  const ph=(time*.08)%1,q=ph<.5?bezier(a,b,c,d,ph*2):bezier(d,e,f,g,(ph-.5)*2);
+  return {x,y,lines,packets,bundles,opacity,merge,bundleOpacity:separated*(1-merge)*.38,
+    finalPath:curve(a,b,c,d)+curve(d,e,f,g),finalPacket:{x:q[0],y:q[1]},labelOpacity:1-ease(clamp(progress/.13)),
+    beforeStop:clamp(x/1300-.09,.02,.87),afterStop:clamp(x/1300+.05,.03,.95)};
+}
 
-  function path(points, color, lineWidth = 1) {
-    ctx.beginPath(); ctx.moveTo(...points[0]); points.slice(1).forEach(p => ctx.lineTo(...p));
-    ctx.strokeStyle = color; ctx.lineWidth = lineWidth; ctx.stroke();
-  }
-  function curve(a, b, c, d, color, lineWidth = 1) {
-    ctx.beginPath(); ctx.moveTo(...a); ctx.bezierCurveTo(...b, ...c, ...d);
-    ctx.strokeStyle = color; ctx.lineWidth = lineWidth; ctx.stroke();
-  }
-  function bezier(a, b, c, d, t) {
-    const s = 1 - t;
-    return [s * s * s * a[0] + 3 * s * s * t * b[0] + 3 * s * t * t * c[0] + t * t * t * d[0], s * s * s * a[1] + 3 * s * s * t * b[1] + 3 * s * t * t * c[1] + t * t * t * d[1]];
-  }
-  function roundRect(x, y, w, h, r, fill, stroke) {
-    ctx.beginPath(); ctx.roundRect(x, y, w, h, r);
-    if (fill) { ctx.fillStyle = fill; ctx.fill(); }
-    if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = 1; ctx.stroke(); }
-  }
-  function glow(x, y, r, rgb, alpha) {
-    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-    g.addColorStop(0, `rgba(${rgb},${alpha})`); g.addColorStop(1, `rgba(${rgb},0)`);
-    ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2);
-  }
-  function packet(x, y, color, size, opacity = 1) {
-    ctx.save(); ctx.globalAlpha = opacity; ctx.shadowColor = color; ctx.shadowBlur = 12;
-    roundRect(x - size / 2, y - size / 2, size, size, 1, color); ctx.restore();
-  }
-  function label(text, x, y, color, alpha = 1) {
-    if (width < 720 || alpha <= 0) return;
-    ctx.save(); ctx.globalAlpha = alpha; ctx.font = '500 9px Inter, sans-serif'; ctx.textAlign = 'center'; ctx.fillStyle = color; ctx.fillText(text, x, y); ctx.restore();
-  }
+(() => {
+  'use strict';
+  const backdrop = document.querySelector('.workflow-backdrop');
+  if (!backdrop || document.body.classList.contains('inner-page')) return;
+  const svg = backdrop.querySelector('svg');
+  const lines = Array.from(svg.querySelectorAll('[data-flow-line]'));
+  const packets = Array.from(svg.querySelectorAll('[data-flow-packet]'));
+  const bundles = Array.from(svg.querySelectorAll('[data-flow-bundle]'));
+  const gate = svg.querySelector('[data-flow-gate]'), glow = svg.querySelector('[data-flow-glow]');
+  const laneGroup = svg.querySelector('[data-flow-lanes]'), packetGroup = svg.querySelector('[data-flow-packets]');
+  const bundleGroup = svg.querySelector('[data-flow-bundles]'), finalGroup = svg.querySelector('[data-flow-final]');
+  const finalPath = finalGroup.querySelector('path'), finalPacket = finalGroup.querySelector('g');
+  const labels = svg.querySelector('[data-flow-labels]');
+  const beforeStop = svg.querySelector('[data-flow-before]'), afterStop = svg.querySelector('[data-flow-after]');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = Boolean(window.ergofectMotionPaused || reduced.matches);
+  let time = 0, progress = 0, lastTime = performance.now(), frameId = 0, signature = '';
+  let maxScroll = Math.max(1, document.documentElement.scrollHeight-innerHeight);
+  const translate = p => `translate(${p.x.toFixed(2)} ${p.y.toFixed(2)})`;
   function draw() {
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.fillStyle = CONFIG.background; ctx.fillRect(0, 0, width, height);
-    const scaleX = Math.max(width / 1200, .6), scaleY = height / 800;
-    ctx.save(); ctx.translate((width - 1200 * scaleX) / 2, 0); ctx.scale(scaleX, scaleY);
-    const p = progress;
-    const centerX = sample([[0, 610], [.32, 180], [.66, 1040], [1, 600]], p);
-    const centerY = sample([[0, 617], [.32, 430], [.66, 440], [1, 620]], p);
-    const ordered = ease(clamp(p / .5));
-    const separated = ease(clamp((p - .12) / .2));
-    const merge = ease(clamp((p - .72) / .28));
-    const transitionOpacity = lerp(1, .67, Math.sin(p * Math.PI));
-    glow(centerX + 25, centerY, 350, '37,149,118', .12);
-    glow(190, centerY + 15, 360, '58,96,152', .045 * (1 - merge));
-
-    // The ground plane anchors the workflow without adding ambient space imagery.
-    ctx.save(); ctx.globalAlpha = .8 * (1 - merge);
-    for (let i = -10; i <= 10; i++) path([[600 + i * 13, 480], [600 + i * 110, 830]], 'rgba(78,119,144,.04)');
-    for (let i = 0; i < 8; i++) { const y = 487 + Math.pow(i / 7, 1.65) * 320; path([[-50, y], [1250, y]], 'rgba(78,119,144,.035)'); }
-    ctx.restore();
-    const lines = CONFIG.channels;
-    for (let i = 0; i < lines; i++) {
-      const normal = (i - (lines - 1) / 2);
-      const bucket = Math.floor(i * 6 / lines) - 2.5;
-      const laneOffset = lerp(normal * 8.4, bucket * 54 + ((i % 4) - 1.5) * 2, separated) * (1 - merge);
-      const inputOffset = normal * 11 + (Math.sin(i * 4.5) * 28) * (1 - ordered);
-      const a = [-90, centerY - 17 + inputOffset * (1 - merge)];
-      const d = [centerX, centerY + normal * 4.6 * (1 - merge)];
-      const b = [lerp(-90, centerX, .4), centerY + lerp(-145 + ((i * 87) % 270) + Math.sin(time * .25 + i) * 14, inputOffset, ordered) * (1 - merge)];
-      const c = [lerp(-90, centerX, .7), centerY + lerp(97 - ((i * 29) % 220), normal * 5.2, ordered) * (1 - merge)];
-      const end = [1300, centerY + laneOffset];
-      const outB = [lerp(centerX, 1300, .35), d[1]], outC = [lerp(centerX, 1300, .45), end[1]];
-      const g = ctx.createLinearGradient(-50, 0, 1250, 0);
-      g.addColorStop(0, '#8196c91b'); g.addColorStop(clamp(centerX / 1300 - .09, .02, .87), '#83abd752');
-      g.addColorStop(clamp(centerX / 1300 + .05, .03, .95), '#5df0a893'); g.addColorStop(1, '#5df0a822');
-      const alpha = transitionOpacity * (1 - merge * .985);
-      ctx.globalAlpha = alpha;
-      curve(a, b, c, d, g, i % 4 === 0 ? 1.45 : .78); curve(d, outB, outC, end, g, i % 4 === 0 ? 1.45 : .78);
-      ctx.globalAlpha = 1;
-      for (let j = 0; j < CONFIG.packetsPerChannel; j++) {
-        const ph = (time * .034 + seeded(i * 3 + j)) % 1;
-        const q = ph < .52 ? bezier(a, b, c, d, ph / .52) : bezier(d, outB, outC, end, (ph - .52) / .48);
-        packet(q[0], q[1], ph < .52 ? '#9eb6d5' : '#90ffca', i % 4 === 0 ? 4 : 2.2, alpha);
-      }
-      // Six visible bundles identify the service lanes as the viewer scrolls into expertise.
-      if (i % 4 === 0 && separated > 0) {
-        const q = bezier(d, outB, outC, end, .7);
-        ctx.save(); ctx.globalAlpha = separated * (1 - merge) * .38;
-        roundRect(q[0] - 6, q[1] - 6, 12, 12, 3, '#0c2027', '#8cf3be'); ctx.restore();
-      }
-    }
-    if (merge > 0) {
-      ctx.save(); ctx.globalAlpha = merge;
-      const g = ctx.createLinearGradient(0, 0, 1200, 0); g.addColorStop(0, '#5df0a800'); g.addColorStop(.45, '#5df0a875'); g.addColorStop(.7, '#96ffcb'); g.addColorStop(1, '#5df0a808');
-      curve([-80, centerY + 45], [350, centerY + 45], [430, centerY], [620, centerY], g, 2);
-      curve([620, centerY], [820, centerY], [960, centerY - 45], [1300, centerY - 45], g, 2);
-      const ph = (time * .08) % 1;
-      const q = ph < .5 ? bezier([-80, centerY + 45], [350, centerY + 45], [430, centerY], [620, centerY], ph * 2) : bezier([620, centerY], [820, centerY], [960, centerY - 45], [1300, centerY - 45], (ph - .5) * 2);
-      packet(...q, '#aaffd8', 5, merge); ctx.restore();
-    }
-
-    ctx.save(); ctx.translate(centerX, centerY); ctx.globalAlpha = 1 - merge * .4;
-    const pane = ctx.createLinearGradient(-42, -75, 46, 75); pane.addColorStop(0, '#23464d9c'); pane.addColorStop(1, '#081c2877');
-    ctx.shadowColor = '#5df0a8'; ctx.shadowBlur = 18;
-    roundRect(-40, -72, 80, 144, 15, pane, '#9cffd84f'); ctx.shadowBlur = 0;
-    path([[-29, -59], [28, -59]], '#d7fff04f'); path([[40, -56], [50, -46], [50, 63], [40, 72]], '#385764aa');
-    const mark = '#88ffd0'; path([[-14, -15], [-14, 15], [14, 15]], mark, 2.7); path([[-14, -15], [14, -15]], mark, 2.7); path([[-14, 0], [9, 0]], mark, 2.7);
-    ctx.restore();
-    const heroLabels = 1 - ease(clamp(p / .13));
-    label('FRAGMENTED WORK', 190, 748, '#8295b4', heroLabels);
-    label('A CONNECTED WORKFLOW', 995, 748, '#85bba8', heroLabels);
-    ctx.restore();
+    const s = computeErgofectFlow(progress,time);
+    lines.forEach((e,i)=>e.setAttribute('d',s.lines[i].d));
+    packets.forEach((e,i)=>{e.setAttribute('transform',translate(s.packets[i]));e.setAttribute('fill',s.packets[i].color);});
+    bundles.forEach((e,i)=>e.setAttribute('transform',translate(s.bundles[i])));
+    laneGroup.setAttribute('opacity',s.opacity);packetGroup.setAttribute('opacity',s.opacity);
+    bundleGroup.setAttribute('opacity',s.bundleOpacity);finalGroup.setAttribute('opacity',s.merge);
+    finalPath.setAttribute('d',s.finalPath);finalPacket.setAttribute('transform',translate(s.finalPacket));
+    gate.setAttribute('transform',translate(s));gate.setAttribute('opacity',1-s.merge*.4);
+    glow.setAttribute('transform',translate(s));labels.setAttribute('opacity',s.labelOpacity);
+    beforeStop.setAttribute('offset',s.beforeStop);afterStop.setAttribute('offset',s.afterStop);
   }
-
-  function resize() {
-    width = innerWidth; height = innerHeight; dpr = Math.min(devicePixelRatio || 1, CONFIG.maxDpr);
-    canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
-    maxScroll = Math.max(1, document.documentElement.scrollHeight - height); lastSignature = '';
-  }
+  function schedule() { if (!frameId && !document.hidden) frameId=requestAnimationFrame(frame); }
   function frame(now) {
-    requestAnimationFrame(frame);
-    const rawDt = (now - lastTime) / 1000, dt = Math.min(rawDt, .05); lastTime = now;
+    frameId=0;
     if (document.hidden) return;
-    lenis?.raf(now);
-    if (fixedTime !== null) time = fixedTime;
-    else if (!paused) time += dt;
-    const target = forcedProgress === null ? clamp(scrollY / maxScroll) : forcedProgress;
-    progress = lerp(progress, target, reduced.matches || fixedTime !== null ? 1 : 1 - Math.exp(-dt * 5.5));
-    const signature = [time.toFixed(5), progress.toFixed(5), width, height, dpr].join('|');
-    if (signature !== lastSignature) {
-      const start = performance.now(); draw(); lastSignature = signature;
-      cpuSamples.push(performance.now() - start); intervals.push(rawDt * 1000);
-      if (cpuSamples.length > 180) { cpuSamples.shift(); intervals.shift(); }
-      if (!ready) { ready = true; canvas.dataset.scene = 'ready'; document.body.classList.add('scene-ready'); }
-    }
+    const dt=Math.min((now-lastTime)/1000,.05);lastTime=now;
+    if (!paused) time+=dt;
+    const target=Math.max(0,Math.min(1,scrollY/maxScroll));
+    progress=reduced.matches?target:progress+(target-progress)*(1-Math.exp(-dt*5.5));
+    const next=time.toFixed(5)+'|'+progress.toFixed(5);
+    if(next!==signature){draw();signature=next;backdrop.dataset.scene='ready';}
+    if(!paused||Math.abs(target-progress)>.0001)schedule();
   }
-  addEventListener('resize', resize);
-  new ResizeObserver(() => { maxScroll = Math.max(1, document.documentElement.scrollHeight - height); lastSignature = ''; }).observe(document.querySelector('.page'));
-  document.fonts.ready.then(() => { maxScroll = Math.max(1, document.documentElement.scrollHeight - height); lastSignature = ''; });
-  document.addEventListener('visibilitychange', () => { lastTime = performance.now(); lastSignature = ''; });
-  resize(); requestAnimationFrame(frame);
-  const percentile = (arr, p) => { const sorted = [...arr].sort((a, b) => a - b); return sorted.length ? Math.round(sorted[Math.floor((sorted.length - 1) * p)] * 100) / 100 : null; };
-  window.ergofectFlow = {
-    config: CONFIG,
-    get state() { return { ready, time, progress, paused, width, height, dpr, phase: progress < .18 ? 'friction-to-flow' : progress < .72 ? 'connected-workflows' : 'one-focused-pilot' }; },
-    freeze(t = 4) { fixedTime = t; lastSignature = ''; },
-    seek(p = null) { forcedProgress = p === null ? null : clamp(p); lastSignature = ''; },
-    resume() { fixedTime = null; forcedProgress = null; paused = window.ergofectMotionPaused || reduced.matches; lastSignature = ''; },
-    metrics() { return { renderer: 'Canvas 2D', seed: CONFIG.seed, dpr, canvas: [canvas.width, canvas.height], cpuDrawP50: percentile(cpuSamples, .5), cpuDrawP95: percentile(cpuSamples, .95), frameIntervalP50: percentile(intervals, .5), gpuTime: null, externalSceneAssets: 0 }; }
-  };
+  function resize(){maxScroll=Math.max(1,document.documentElement.scrollHeight-innerHeight);signature='';schedule();}
+  function motion(value){paused=Boolean(value);backdrop.dataset.motion=paused?'paused':'running';lastTime=performance.now();schedule();}
+  window.addEventListener('ergofect-motion',e=>motion(e.detail));
+  reduced.addEventListener('change',()=>motion(reduced.matches));
+  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',resize);
+  document.addEventListener('visibilitychange',()=>{lastTime=performance.now();if(document.hidden){cancelAnimationFrame(frameId);frameId=0;}else schedule();});
+  if('ResizeObserver' in window)new ResizeObserver(resize).observe(document.querySelector('.page'));
+  if(document.fonts)document.fonts.ready.then(resize);
+  // The complete SVG is already painted in HTML. Initialisation never hides it.
+  progress=Math.max(0,Math.min(1,scrollY/maxScroll));draw();motion(paused);resize();
 })();
 
 </script>
