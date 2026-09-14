@@ -55,6 +55,8 @@
   submit.type = 'button'; submit.className = 'btn btn-primary send-audit-request'; submit.textContent = 'Send audit request';
   const status = document.createElement('p'); status.className = 'delivery-status'; status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
   actions.appendChild(submit); review.appendChild(status);
+  const emailDraft = review.querySelector('#email-request');
+  emailDraft.classList.remove('btn-primary'); emailDraft.classList.add('btn-outline');
   form.addEventListener('submit', () => {
     if (review.hidden) return;
     review.querySelector('.review-note').textContent = 'Nothing has been sent. Check the details below, then send your request. Email and copy options are also available.';

@@ -16,17 +16,6 @@ const opportunities = [
   "Business-critical workflows that depend on large or heavily customized spreadsheets.",
 ];
 
-const audience = [
-  "Founders",
-  "Business owners",
-  "COOs",
-  "Operations leaders",
-  "SaaS teams",
-  "Startup teams",
-  "Professional services",
-  "Teams exploring practical AI use cases",
-];
-
 export default function AiAssessmentPage() {
   const [utm, setUtm] = useState({
     utm_source: "",
@@ -36,6 +25,7 @@ export default function AiAssessmentPage() {
   });
   const [status, setStatus] = useState({ type: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -80,9 +70,12 @@ export default function AiAssessmentPage() {
   async function handleSubmit(event) {
     event.preventDefault();
     setStatus({ type: "", message: "" });
-    setSubmitting(true);
-
     const form = event.currentTarget;
+    const missing = {name:'Enter your name.',email:'Enter your work email.',company:'Enter your company name.',workflow:'Describe the workflow you would like to improve.'};
+    const invalid = [...form.elements].filter(field => field.willValidate && !field.checkValidity());
+    setErrors(Object.fromEntries(invalid.map(field => [field.name,field.validity.typeMismatch?'Enter a valid work email address.':missing[field.name] || 'Check this field.'])));
+    if(invalid.length){invalid[0].focus();return;}
+    setSubmitting(true);
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
@@ -137,7 +130,7 @@ export default function AiAssessmentPage() {
         />
       </Head>
 
-      <main className="bg-paper text-ink">
+      <main id="main-content" className="assessment-page bg-paper text-ink">
         <section className="border-b border-ink/10 pt-20 md:pt-28 pb-14 md:pb-20">
           <div className="container grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-center">
             <div>
@@ -194,23 +187,7 @@ export default function AiAssessmentPage() {
           </div>
         </section>
 
-        <section className="py-8 md:py-12 border-b border-ink/10">
-          <div className="container grid grid-cols-2 lg:grid-cols-4 border border-ink/10 bg-white">
-            {[
-              ["20 min", "Focused business assessment"],
-              ["Up to 3", "Automation opportunities"],
-              ["Practical", "Recommendations based on your workflow"],
-              ["Free", "No obligation"],
-            ].map(([value, label]) => (
-              <div key={value} className="p-5 md:p-7 border-r border-b lg:border-b-0 border-ink/10 last:border-r-0">
-                <div className="text-2xl md:text-3xl font-bold tracking-tight">{value}</div>
-                <div className="mt-1 text-xs md:text-sm text-graphite">{label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="how-it-works" className="py-20 md:py-28 bg-bone">
+<section id="how-it-works" className="py-20 md:py-28 bg-bone">
           <div className="container">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-cobalt mb-3">How it works</p>
             <h2 className="text-4xl md:text-6xl tracking-[-0.045em] leading-[1.02] font-bold max-w-4xl">
@@ -253,28 +230,10 @@ export default function AiAssessmentPage() {
               ))}
             </div>
 
-            <div className="mt-12 bg-ink text-bone p-8 md:p-12 rounded-[28px]">
-              <p className="text-3xl md:text-5xl font-bold tracking-[-0.04em] leading-tight">“Why are we still doing this manually?”</p>
-              <p className="mt-5 text-white/65">If that question comes up often, the process is probably worth assessing.</p>
-            </div>
-          </div>
+</div>
         </section>
 
-        <section className="py-20 md:py-24 bg-bone border-y border-ink/10">
-          <div className="container">
-            <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-cobalt mb-3">Who this is for</p>
-            <h2 className="text-4xl md:text-6xl tracking-[-0.045em] leading-[1.02] font-bold max-w-5xl">
-              A practical session for people responsible for how the business runs.
-            </h2>
-            <div className="flex flex-wrap gap-2.5 mt-9">
-              {audience.map((item) => (
-                <span key={item} className="bg-white border border-ink/15 rounded-full px-4 py-2.5 text-sm font-bold">{item}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="assessment-form" className="py-20 md:py-28 bg-ink text-bone">
+<section id="assessment-form" className="py-20 md:py-28 bg-ink text-bone">
           <div className="container grid lg:grid-cols-[0.82fr_1.18fr] gap-10 lg:gap-16 items-start">
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-cobalt-light mb-3">Free AI Automation Assessment</p>
@@ -290,24 +249,29 @@ export default function AiAssessmentPage() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-paper text-ink p-6 md:p-8 rounded-[28px]" noValidate>
+            <form onSubmit={handleSubmit} aria-busy={submitting} onInput={event=>{const field=event.target;if(errors[field.name]&&field.checkValidity())setErrors(previous=>({...previous,[field.name]:''}));}} className="bg-paper text-ink p-6 md:p-8 rounded-[28px]" noValidate>
+              <p className="form-required">Fields marked * are required.</p>
               <div className="grid md:grid-cols-2 gap-4">
-                <Field label="Name" name="name" autoComplete="name" required />
-                <Field label="Work email" name="email" type="email" autoComplete="email" required />
-                <Field label="Company" name="company" autoComplete="organization" required />
+                <Field label="Name" name="name" autoComplete="name" error={errors.name} required />
+                <Field label="Work email" name="email" type="email" autoComplete="email" error={errors.email} required />
+                <Field label="Company" name="company" autoComplete="organization" error={errors.company} required />
                 <Field label="Your role" name="role" autoComplete="organization-title" />
               </div>
 
-              <label className="block mt-4">
-                <span className="block text-sm font-bold mb-2">What process would you like to improve?</span>
+              <div className="block mt-4">
+                <label htmlFor="assessment-workflow" className="block text-sm font-bold mb-2">What process would you like to improve? *</label>
                 <textarea
+                  id="assessment-workflow"
                   name="workflow"
+                  aria-invalid={Boolean(errors.workflow)}
+                  aria-describedby="assessment-workflow-error"
                   required
                   rows={6}
                   placeholder="Example: Every Monday we export data from our ERP, clean it in Excel, combine it with inventory data, and manually prepare a purchasing forecast."
                   className="w-full border border-ink/20 bg-white px-4 py-3 outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/10 resize-y"
                 />
-              </label>
+                <span className="field-error" id="assessment-workflow-error" aria-live="polite">{errors.workflow}</span>
+              </div>
 
               <div className="absolute -left-[9999px]" aria-hidden="true">
                 <label>
@@ -343,17 +307,23 @@ export default function AiAssessmentPage() {
   );
 }
 
-function Field({ label, name, type = "text", autoComplete, required = false }) {
+AiAssessmentPage.siteV2 = true;
+
+function Field({ label, name, type = "text", autoComplete, required = false, error }) {
   return (
-    <label className="block">
-      <span className="block text-sm font-bold mb-2">{label}</span>
+    <div className="block">
+      <label htmlFor={`assessment-${name}`} className="block text-sm font-bold mb-2">{label}{required?' *':''}</label>
       <input
+        id={`assessment-${name}`}
         name={name}
         type={type}
         autoComplete={autoComplete}
         required={required}
+        aria-invalid={Boolean(error)}
+        aria-describedby={`assessment-${name}-error`}
         className="w-full border border-ink/20 bg-white px-4 py-3 outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/10"
       />
-    </label>
+      <span className="field-error" id={`assessment-${name}-error`} aria-live="polite">{error}</span>
+    </div>
   );
 }

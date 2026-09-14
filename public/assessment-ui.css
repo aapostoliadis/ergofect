@@ -1,0 +1,26 @@
+body:has(.site-v2-shell){background:#040914;color:#f3f6ff;font-family:Inter,system-ui,sans-serif}
+.site-v2-shell .assessment-page{background:#040914;color:#f3f6ff}
+.assessment-page .container{max-width:1180px;margin:auto;padding-left:24px;padding-right:24px}
+.assessment-page :is(.bg-paper,.bg-bone){background:#040914;color:#f3f6ff}
+.assessment-page .bg-white{background:#0b1525;color:#f3f6ff}
+.assessment-page .bg-ink{background:#0b1525;color:#f3f6ff}
+.assessment-page :is(.text-graphite,[class~="text-white/65"],[class~="text-white/75"]){color:#b8c7dd}
+.assessment-page :is(.text-cobalt,.text-cobalt-light){color:#5df0a8}
+.assessment-page [class*="border-ink/"]{border-color:#405169}
+.assessment-page h1{font-size:clamp(38px,4.6vw,62px);line-height:1.08;letter-spacing:-.045em;font-weight:700}
+.assessment-page h2{font-size:clamp(30px,3.4vw,44px);line-height:1.14;font-weight:600}
+.assessment-page h3{font-size:22px;font-weight:600}.assessment-page p{line-height:1.7}
+.assessment-page>section{padding-top:64px;padding-bottom:64px;border-color:#263951}
+.assessment-page [class~="rounded-[28px]"]{border-radius:8px}
+.assessment-page .rounded-full{border-radius:3px}
+.assessment-page :is(a,button).bg-cobalt{background:#5df0a8;color:#032018;border-radius:5px;min-height:46px;font-weight:600}
+.assessment-page :is(a,button).bg-cobalt:hover{background:#8af7c0;color:#032018}
+.assessment-page :is(input,textarea){background:#050c19;color:#f3f6ff;border-color:#526680;border-radius:4px;font-size:16px}
+.assessment-page :is(input,textarea)::placeholder{color:#9bacc6}
+.assessment-page :is(input,textarea):focus-visible{outline:2px solid #5df0a8;outline-offset:3px}
+.assessment-page form{background:#0b1525;color:#f3f6ff;border:1px solid #405169}
+.assessment-page .text-negative{color:#ffb6a8}.assessment-page .text-positive{color:#8af7c0}
+.assessment-page #how-it-works article{background:none;border:0;border-top:1px solid #526680;padding:25px 0}
+.assessment-page .text-xs{font-size:12px}
+.assessment-page .bg-cobalt{background:#5df0a8;color:#032018}
+@media(max-width:600px){.assessment-page .container{padding-left:20px;padding-right:20px}.assessment-page>section{padding:40px 0}.assessment-page h1{font-size:40px}.assessment-page p{font-size:16px}.assessment-page h2{font-size:32px}.assessment-page form{padding:24px 18px}.assessment-page aside p{font-size:15px}}

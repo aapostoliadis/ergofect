@@ -15,7 +15,7 @@ for (const page of manifest) {
   if (!html.includes('rel="canonical"')) html = html.replace('</head>', '<link rel="canonical" href="https://www.ergofect.com/">\n</head>');
   html = html.replace('</head>', '<link rel="stylesheet" href="/site-runtime.css">\n</head>');
   html = html.replace('</body>', '<script src="/site-runtime.js" defer></script>\n</body>');
-  html = html.replace(/\r\n/g, '\n').replace(/[ \t]+$/gm, '');
+  html = html.replace(/\r\n/g, '\n').replace(/[ \t]+$/gm, '').trimEnd()+'\n';
   const destination = path.join(root, 'public/site-v2', route === '/' ? '' : route, 'index.html');
   fs.mkdirSync(path.dirname(destination), { recursive: true });
   fs.writeFileSync(destination, html);
@@ -31,4 +31,7 @@ for (const file of fs.readdirSync(path.join(source, 'assets'))) {
 fs.mkdirSync(path.join(root, 'site'), { recursive: true });
 fs.writeFileSync(path.join(root, 'site/routes.json'), JSON.stringify(routes, null, 2) + '\n');
 fs.writeFileSync(path.join(root, 'site/release-manifest.json'), JSON.stringify({ design: 'From friction to flow', pages: records }, null, 2) + '\n');
+const home = fs.readFileSync(path.join(root, 'public/site-v2/index.html'), 'utf8');
+fs.writeFileSync(path.join(root, 'public/site-shell.css'), home.match(/<style>([\s\S]*?)<\/style>/)[1]);
+fs.writeFileSync(path.join(root, 'site/shell.json'), JSON.stringify({footer:home.match(/<footer class="footer">[\s\S]*?<\/footer>/)[0]},null,2)+'\n');
 console.log(`Imported ${routes.length} approved pages and their original images.`);

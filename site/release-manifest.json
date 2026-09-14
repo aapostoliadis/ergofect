@@ -4,92 +4,92 @@
     {
       "route": "/",
       "source": "index.html",
-      "sha256": "494785ea3e2642960fc565d7fff11ba19702ebec007566691afb4c14c18254f1"
+      "sha256": "482fae5d923a70ec0932fcc1c5ca10b5fe84e4fbcd946210cacc92c5be178204"
     },
     {
       "route": "/about",
       "source": "about/index.html",
-      "sha256": "51e0325363fc497bb95e4c6e562f5462cf1472308ccda9fd726446c840780a85"
+      "sha256": "f39a85902075af39b188f1eb067b9b5babbd72b1c65f0936ec0ad8f8908fdd81"
     },
     {
       "route": "/services",
       "source": "services/index.html",
-      "sha256": "ac21f21ec9db1888cab73c9e97f246168c55a1507400b6f28d32a5b33b4f85d1"
+      "sha256": "1bd0999326392981a4d3f9baa22b6b0e97e84a1c3a727dbd3a56c61c045a723c"
     },
     {
       "route": "/services/customer-support",
       "source": "services/customer-support/index.html",
-      "sha256": "3191486ed4f344036b6eff39d2071175fff4073a7484679c010b484fcff41dee"
+      "sha256": "bf2604fc3298a0b1b27381f4b9b2eadd3df0df1ce585b242ddf99d6bd32035c2"
     },
     {
       "route": "/services/data-processing",
       "source": "services/data-processing/index.html",
-      "sha256": "40ae8916908feef15d6df9f5a8c76541bbac15d8b0e76610ae6b711368b7f116"
+      "sha256": "62799c6cb1602a4e0434f94d7b8b1f90b45e790363a0f03dd934dfcf86e67fd1"
     },
     {
       "route": "/services/workflow-automation",
       "source": "services/workflow-automation/index.html",
-      "sha256": "5638c19bcf5cf69cda8bc04d875e39df526081fd00d8d89a80b80daaf5120814"
+      "sha256": "1df795dc276926e20d2c39202cd62c7d75dae4c1c2268a4e2ab38e69790de70f"
     },
     {
       "route": "/services/document-intelligence",
       "source": "services/document-intelligence/index.html",
-      "sha256": "0c8775881e4cf8fce70987c45dbb476c11eb6ed3fff091864d9dc32542bb91a7"
+      "sha256": "8ddc9ea4a7df1b49f9689b1df4b6bb2028b3c11c9f7f06788fbb207046779046"
     },
     {
       "route": "/services/sales-marketing",
       "source": "services/sales-marketing/index.html",
-      "sha256": "4bf1421bbe1b53cb737ecf863368e3296d4149cc5b8557bbd387938b78d8354f"
+      "sha256": "b4fb3359c3d9ef731c09e0e7c927cd45f60601057d5ca29de0b14e05cd03d9d0"
     },
     {
       "route": "/services/custom-ai",
       "source": "services/custom-ai/index.html",
-      "sha256": "fe4055e62064c5695c2d52c8665ca5766ba84a47c6d410a54f980d7d3f4b2095"
+      "sha256": "0d0ecce0f08ba00dc3c37794e34715e3d3468f8c8e32c1cc3347b0f85d8ccd56"
     },
     {
       "route": "/pilot",
       "source": "pilot/index.html",
-      "sha256": "81aab319f520bf796163058014ddca468e79e0fae0d1d42cac90aa3a8444a974"
+      "sha256": "4ea35cc75d5c6d96424da881f046fbe4c813cf9f01071e55f046fe1d133871ae"
     },
     {
       "route": "/process",
       "source": "process/index.html",
-      "sha256": "4c8aadf5e1ecdaaac146ebb4899da7d67b3d934b359670b21e13af0c9ad640f1"
+      "sha256": "9f44ad4b0d689ab95f603f4dc1f153a466154b0d56b263bd47ec46c9ccc5e26f"
     },
     {
       "route": "/case-studies",
       "source": "case-studies/index.html",
-      "sha256": "8959b9430b8eb3f38cb5b393712e56626a54454064f55f717b31de57923315ab"
+      "sha256": "e8b0dccee9f00970d235b959ea64ddbe06db3d708d727fa4d1411967cdbbdb10"
     },
     {
       "route": "/case-studies/crystal-clear-water",
       "source": "case-studies/crystal-clear-water/index.html",
-      "sha256": "2cd540f5a08ec9109bf12bb53a809d35d713c1513f8b6972e104d2bb8d13df77"
+      "sha256": "0d45112dd471201beaeaebd5051f0c02558f9a0d28672f0669ccc418482a8925"
     },
     {
       "route": "/contact",
       "source": "contact/index.html",
-      "sha256": "c59b26b68a712b5e80029a92444b6df94b7911ce2e69771df90ae78a7dc534ef"
+      "sha256": "79f85446a5084153f52068b8c9ffd924777a6a968359e4528bd09d1b6ca91948"
     },
     {
       "route": "/book-audit",
       "source": "book-audit/index.html",
-      "sha256": "4f2c6ab2fffd0a8795b2c345118e2c024a5a025b0bf8a3e5562f2fefbbf666cc"
+      "sha256": "62426ef9dd0ca56f24ea535f42ff345682f086706b437f2cbabab220aba7e2e8"
     },
     {
       "route": "/roi-calculator",
       "source": "roi-calculator/index.html",
-      "sha256": "58d5644ea36b68ec8ce9202e2d1e3ea69548cac0e5e4ea6b96d92fb574fc2bb2"
+      "sha256": "af5413637e1b4937c5c1df5b548b035b2c416758ff6d4f69d539620d77bbefb2"
     },
     {
       "route": "/privacy",
       "source": "privacy/index.html",
-      "sha256": "9b751a8acfea201f55acdd28bf5fea403e6842c3ffa49550752b30667ad7f17b"
+      "sha256": "6189ddc6796ec39103a16e715795249b31bdcab5779e6fca9fd486c58ffea42b"
     },
     {
       "route": "/terms",
       "source": "terms/index.html",
-      "sha256": "050a2b007cb85acebc5c4bd1184c224189529e3ab533b0f03a8c0c848e07f9e0"
+      "sha256": "b515c47ec2dde65049df68ef425fa66fb3cdcab8f50f617e4deca84879d8d92e"
     }
   ]
 }
