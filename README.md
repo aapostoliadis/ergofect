@@ -45,7 +45,7 @@ Open the local address shown in the terminal.
 Available scripts
 npm run dev      # Start the local development server
 npm run build    # Create a production build
-npm run preview  # Preview the production build locally
+npm start        # Serve the production build locally
 Script names may vary by framework. Check package.json for the current commands.
 
 Deployment
@@ -71,4 +71,5 @@ The source code and brand assets in this repository may not be copied, distribut
 
 Contact
 For project enquiries, visit ergofect.com or connect with Ergofect on LinkedIn.
+
 
