@@ -213,6 +213,8 @@ html{scroll-behavior:auto}
 <link rel="stylesheet" href="/site-runtime.css">
 <script src="https://unpkg.com/@tavus/widget@latest"></script>
 <tavus-widget deployment-id="cd1d5260-7ffc-49e7-af2c-b6a8a86ca44d"></tavus-widget>
+<link rel="stylesheet" href="/homepage-quality.css">
+<script src="/homepage-quality.js" defer></script>
 </head>
 <body class="home-flow">
   <!-- workflow-vector:start --><div class="workflow-backdrop" aria-hidden="true"><svg class="flow-vector" viewBox="0 0 1200 800" preserveAspectRatio="none" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -244,13 +246,32 @@ html{scroll-behavior:auto}
   </defs></svg>
   <div class="page" id="top">
     <header class="hero">
-      <nav class="nav" aria-label="Main navigation"><a class="brand" href="/" aria-label="Ergofect home"><img class="brand-logo" src="/ergofect-assets/ergofect-avatar.png" width="64" height="64" alt="Ergofect"></a><div class="nav-links" id="nav-links"><a href="/services">Expertise</a><a href="/#solutions">In practice</a><a href="/process">Our process</a><a href="/case-studies">Evidence</a><a href="/about">About</a></div><div class="nav-actions"><a class="btn btn-ghost" href="/contact">Let’s talk <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24"><path d="M5 8h14M5 16h14"/></svg></button></div></nav>
+      <nav class="nav" aria-label="Main navigation"><a class="brand" href="/" aria-label="Ergofect home"><img class="brand-logo" src="/ergofect-assets/ergofect-avatar.png" width="64" height="64" alt="Ergofect"></a><div class="nav-links" id="nav-links"><a href="/services">Expertise</a><a href="/#solutions">In practice</a><a href="/process">Our process</a><a href="/case-studies">Evidence</a><a href="/about">About</a></div><div class="nav-actions"><a class="btn btn-ghost" href="/contact">Let’s talk <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><button class="motion-toggle" aria-label="Pause background animation" aria-pressed="false" title="Pause background animation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24"><path d="M5 8h14M5 16h14"/></svg></button></div></nav>
       <div class="hero-inner">
         <div class="hero-tag" data-reveal><span class="status-dot"></span> AI automation. Human control.</div>
         <h1 class="hero-title" data-reveal style="--rd:60ms">Stop copying.<br><em>Start connecting.</em></h1>
         <p class="hero-sub" data-reveal style="--rd:180ms">Ergofect connects the work between your CRM, inbox, documents, and spreadsheets. Routine handoffs run. Your team owns the exceptions.</p>
         <div class="hero-actions" data-reveal style="--rd:300ms"><a class="btn btn-primary" href="/book-audit">Scope your first workflow <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-outline" href="#solutions">See it in practice</a></div>
         <p class="hero-note" data-reveal style="--rd:420ms">One focused pilot. A measurable finish line.</p>
+        <aside class="handoff-guide" data-step="0" aria-label="Anatomy of a handoff">
+          <div class="guide-label"><span>Anatomy of a handoff</span><span class="guide-position">01 / 03</span></div>
+          <svg class="handoff-map" viewBox="0 0 340 128" aria-hidden="true">
+            <path class="map-route" d="M63 28H93Q108 28 108 43V57Q108 64 126 64H151M63 64H151M63 100H93Q108 100 108 85V71Q108 64 126 64M189 64H268"/>
+            <g class="map-input"><rect x="1" y="15" width="62" height="26" rx="3"/><rect x="1" y="51" width="62" height="26" rx="3"/><rect x="1" y="87" width="62" height="26" rx="3"/><text x="32" y="32">INBOX</text><text x="32" y="68">CRM</text><text x="32" y="104">FILES</text></g>
+            <g class="map-automation"><rect x="151" y="45" width="38" height="38" rx="6"/><path d="M160 59H180M160 65H175M160 71H180"/><text x="170" y="108">PREPARE</text></g>
+            <g class="map-decision"><path d="m293 39 25 25-25 25-25-25Z"/><path d="m283 64 7 7 13-14"/><text x="293" y="108">REVIEW</text></g>
+            <circle class="map-signal" cx="228" cy="64" r="3"/>
+          </svg>
+          <div class="guide-tabs" role="tablist" aria-label="Explore the handoff">
+            <button class="guide-tab" role="tab" id="guide-input" aria-controls="guide-panel-input" aria-selected="true">01 Input</button>
+            <button class="guide-tab" role="tab" id="guide-automation" aria-controls="guide-panel-automation" aria-selected="false" tabindex="-1">02 Automation</button>
+            <button class="guide-tab" role="tab" id="guide-decision" aria-controls="guide-panel-decision" aria-selected="false" tabindex="-1">03 Your call</button>
+          </div>
+          <div class="guide-panel" role="tabpanel" id="guide-panel-input" aria-labelledby="guide-input"><h2>Work arrives everywhere.</h2><p>An email. A document. A CRM update. Start with the tools your team already uses.</p></div>
+          <div class="guide-panel" role="tabpanel" id="guide-panel-automation" aria-labelledby="guide-automation" hidden><h2>The routine finds its route.</h2><p>Extract, check, and prepare the next step. Keep the source attached so the work can be traced.</p></div>
+          <div class="guide-panel" role="tabpanel" id="guide-panel-decision" aria-labelledby="guide-decision" hidden><h2>The decision stays human.</h2><p>A mismatch or sensitive request stops for review. Your team decides what happens next.</p></div>
+          <a class="guide-example" href="#solutions">Try a human checkpoint <span aria-hidden="true">↘</span></a>
+        </aside>
       </div>
       <div class="hero-bottom" data-reveal style="--rd:420ms"><span class="hero-coordinate">DESIGNED AROUND YOUR WORK</span><a class="scroll-cue" href="#features"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-5-5 5 5 5-5"/></svg>Explore what’s possible</a><span class="hero-coordinate">YOUR TOOLS · YOUR PEOPLE · YOUR WORKFLOW</span></div>
     </header>
@@ -290,7 +311,7 @@ html{scroll-behavior:auto}
       </section>
     </main>
   </div>
-  <button class="motion-toggle" aria-label="Pause background animation" aria-pressed="false" title="Pause background animation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button>
+
   <script>
   (()=>{
     const reduced=matchMedia('(prefers-reduced-motion: reduce)');
