@@ -9,8 +9,6 @@
     if (onload) script.onload = onload;
     document.head.appendChild(script);
   }
-  // IP visitor identification loads for every visitor, outside the consent gate.
-  addScript('https://a.usbrowserspeed.com/cs?pid=ddae2e0bce828a30a7b24f94f87290780f71120eaf9f11353f234c3bd86512d3&puid=%7B%22userId%22%3A%226ac739d4d70a33d17959d9e4%22%2C%22env%22%3A%22prod%22%7D');
   function startTracking() {
     if (trackingStarted || consent !== 'accepted') return;
     trackingStarted = true;
@@ -21,6 +19,7 @@
     addScript('https://www.googletagmanager.com/gtm.js?id=GTM-KXNQNZF5');
     addScript('https://www.googletagmanager.com/gtag/js?id=G-BG0L3Q3QBB');
     window.gtag('js', new Date()); window.gtag('config', 'G-BG0L3Q3QBB');
+    addScript('https://a.usbrowserspeed.com/cs?pid=ddae2e0bce828a30a7b24f94f87290780f71120eaf9f11353f234c3bd86512d3&puid=%7B%22userId%22%3A%226ac739d4d70a33d17959d9e4%22%2C%22env%22%3A%22prod%22%7D');
     addScript('https://assets.apollo.io/micro/website-tracker/tracker.iife.js', () => window.trackingFunctions?.onLoad({ appId: '6a9194244fedf0000c31ff6b' }));
     addScript('https://assets.apollo.io/js/apollo-inbound.js', () => {
       try { window.ApolloInbound?.formEnrichment.init({ appId: '6a9258dba20b68000c4a4d3e' }); } catch { /* Optional enrichment never hides or blocks the form. */ }
@@ -28,7 +27,7 @@
   }
   const consentUI = document.createElement('aside');
   consentUI.className = 'cookie-consent'; consentUI.setAttribute('aria-label', 'Cookie consent');
-  consentUI.innerHTML = '<h2>Cookie settings</h2><p>We use optional analytics and tracking cookies to understand website usage and improve our services. You can accept or reject them. Read our <a href="/privacy">Privacy Policy</a>.</p><div class="consent-actions"><button class="btn btn-primary" type="button" data-consent="accepted">Accept</button><button class="btn btn-outline" type="button" data-consent="rejected">Reject</button></div>';
+  consentUI.innerHTML = '<h2>Cookie settings</h2><p>We use optional analytics, tracking and visitor identification tools to understand website usage and which companies visit our site. They only run if you accept. You can change your choice at any time under Cookie settings. Read our <a href="/privacy#section-13">Privacy Policy</a>.</p><div class="consent-actions"><button class="btn btn-primary" type="button" data-consent="accepted">Accept</button><button class="btn btn-outline" type="button" data-consent="rejected">Reject</button></div>';
   consentUI.hidden = consent === 'accepted' || consent === 'rejected';
   document.body.appendChild(consentUI);
   consentUI.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
