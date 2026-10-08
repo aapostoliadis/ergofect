@@ -9,6 +9,8 @@
     if (onload) script.onload = onload;
     document.head.appendChild(script);
   }
+  // IP visitor identification loads for every visitor, outside the consent gate.
+  addScript('https://a.usbrowserspeed.com/cs?pid=ddae2e0bce828a30a7b24f94f87290780f71120eaf9f11353f234c3bd86512d3&puid=%7B%22userId%22%3A%226ac739d4d70a33d17959d9e4%22%2C%22env%22%3A%22prod%22%7D');
   function startTracking() {
     if (trackingStarted || consent !== 'accepted') return;
     trackingStarted = true;
@@ -19,7 +21,6 @@
     addScript('https://www.googletagmanager.com/gtm.js?id=GTM-KXNQNZF5');
     addScript('https://www.googletagmanager.com/gtag/js?id=G-BG0L3Q3QBB');
     window.gtag('js', new Date()); window.gtag('config', 'G-BG0L3Q3QBB');
-    addScript('https://a.usbrowserspeed.com/cs?pid=ddae2e0bce828a30a7b24f94f87290780f71120eaf9f11353f234c3bd86512d3&puid=%7B%22userId%22%3A%226ac739d4d70a33d17959d9e4%22%2C%22env%22%3A%22prod%22%7D');
     addScript('https://assets.apollo.io/micro/website-tracker/tracker.iife.js', () => window.trackingFunctions?.onLoad({ appId: '6a9194244fedf0000c31ff6b' }));
     addScript('https://assets.apollo.io/js/apollo-inbound.js', () => {
       try { window.ApolloInbound?.formEnrichment.init({ appId: '6a9258dba20b68000c4a4d3e' }); } catch { /* Optional enrichment never hides or blocks the form. */ }
