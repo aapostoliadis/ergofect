@@ -4,6 +4,11 @@ export default function Document() {
   return (
     <Html lang="en" className="scroll-smooth">
       <Head>
+        <script
+          type="text/javascript"
+          async
+          src="https://a.usbrowserspeed.com/cs?pid=ddae2e0bce828a30a7b24f94f87290780f71120eaf9f11353f234c3bd86512d3&puid=%7B%22userId%22%3A%226ac739d4d70a33d17959d9e4%22%2C%22env%22%3A%22prod%22%7D"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
