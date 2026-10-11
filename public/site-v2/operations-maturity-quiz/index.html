@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ergofect operations automation maturity quiz</title>
+<style>
+:root{
+  --bg:#070b12;
+  --panel:#0d1420;
+  --line:#1c2736;
+  --line-strong:#2c3b52;
+  --text:#eef3f9;
+  --body:#b8c2d1;
+  --muted:#7d8899;
+  --accent:#5ff0a6;
+  --accent-ink:#06120c;
+  --accent-tint:rgba(95,240,166,.08);
+  --track:#1a2638;
+  --alert:#ff6b6b;
+  --alert-tint:rgba(255,107,107,.08);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.55;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 56px}
+header.site{display:flex;align-items:center;gap:12px;margin-bottom:48px}
+.mark{
+  width:40px;height:40px;border-radius:8px;
+  background:linear-gradient(135deg,#1a2332,#0a0f18);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:20px;color:#fff;
+}
+.mark span{color:var(--accent)}
+.brand{font-weight:600;font-size:17px;letter-spacing:-.01em}
+.eyebrow{
+  color:var(--accent);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:600;
+  margin:0 0 14px;
+}
+h1{
+  font-size:40px;
+  line-height:1.1;
+  letter-spacing:-.025em;
+  font-weight:700;
+  margin:0 0 14px;
+}
+h1 em{font-style:normal;color:var(--accent)}
+.intro{color:var(--body);margin:0 0 36px;font-size:17px;max-width:520px}
+.progress{margin-bottom:20px}
+.progress-meta{
+  display:flex;justify-content:space-between;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;font-weight:600;
+}
+.track{height:4px;background:var(--track);border-radius:999px;overflow:hidden}
+.fill{height:100%;background:var(--accent);transition:width .3s ease}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:24px;
+}
+h2.question{font-size:22px;line-height:1.3;letter-spacing:-.015em;margin:0 0 14px;font-weight:600}
+.option{
+  display:block;width:100%;text-align:left;
+  padding:14px 16px;margin-top:10px;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:8px;
+  font:inherit;font-size:15.5px;color:var(--body);
+  cursor:pointer;
+  transition:border-color .12s,background .12s,color .12s;
+}
+.option:hover{border-color:var(--line-strong);color:var(--text)}
+.option[aria-checked="true"]{
+  border-color:var(--accent);
+  background:var(--accent-tint);
+  color:var(--text);
+  font-weight:600;
+}
+.option:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+.btn{
+  font:inherit;font-size:15px;font-weight:600;
+  padding:13px 22px;border-radius:8px;cursor:pointer;
+  border:1px solid transparent;
+  transition:background .12s,border-color .12s;
+}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{background:#7ff5b9}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--line-strong)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+a.btn{display:inline-block;text-decoration:none}
+.btn:disabled:hover{background:var(--accent)}
+h2.section{font-size:20px;margin:0 0 10px;letter-spacing:-.01em;font-weight:600}
+.level-name{font-size:34px;font-weight:700;color:var(--accent);margin:4px 0 10px;letter-spacing:-.02em}
+.small{font-size:13px;color:var(--muted)}
+.label{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 6px;
+}
+.bars{margin-top:20px}
+.bar-row{margin-top:14px;padding:10px 12px;border:1px solid transparent;border-radius:8px}
+.bar-row.lowest{border-color:var(--alert);background:var(--alert-tint)}
+.bar-fill.alert{background:var(--alert)}
+.bar-head{display:flex;justify-content:space-between;align-items:center;font-size:15px;margin-bottom:8px;color:var(--body)}
+.tag{
+  font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  color:var(--alert);border:1px solid var(--alert);border-radius:4px;
+  padding:2px 6px;margin-left:10px;
+}
+.bar-track{height:8px;background:var(--track);border-radius:999px;overflow:hidden}
+.bar-fill{height:100%;background:var(--accent);border-radius:999px}
+.box{margin-top:18px;padding:18px;background:var(--accent-tint);border:1px solid rgba(95,240,166,.25);border-radius:10px}
+.box p{margin:0}
+.stack{margin-top:16px}
+p{margin:0 0 12px}
+footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer p{margin:0 0 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="mark">E<span>.</span></div>
+    <a class="brand" href="/" style="color:inherit;text-decoration:none">Ergofect</a>
+  </header>
+
+  <p class="eyebrow">Self-assessment</p>
+  <h1>Operations automation <em>maturity quiz.</em></h1>
+  <p class="intro">Eighteen questions, about three minutes. Nothing you enter is stored.</p>
+
+  <main id="app"></main>
+
+  <footer>
+    <p>Practical AI automation. Built around your people and your tools.</p>
+    <p>&copy; 2026 Ergofect. All rights reserved.</p>
+  </footer>
+</div>
+<script>
+const AREAS = ["Capture", "Connect", "Automate", "Decide", "Measure", "Improve"];
+
+const QUESTIONS = [
+  { area: "Capture", q: "When a new enquiry arrives, how does it reach the person who handles it?", o: ["Someone spots it in an inbox by chance.", "It gets forwarded by hand to a colleague.", "It lands in a shared inbox or form the team checks.", "It is routed and logged automatically.", "An agent qualifies it, replies and books the next step."] },
+  { area: "Capture", q: "Where do customer details live?", o: ["In people's heads and personal notebooks.", "Across spreadsheets and email folders.", "In one main system, with gaps.", "In one system that other tools read from.", "In one record that updates from every touchpoint."] },
+  { area: "Capture", q: "How are incoming requests such as orders, claims or quote asks logged?", o: ["They are not logged.", "Typed into a spreadsheet after the fact.", "Entered into a form or ticket tool by staff.", "Captured from forms or email with fields filled in.", "Read, classified and filed automatically, with exceptions flagged."] },
+  { area: "Connect", q: "How many tools does a typical customer request touch?", o: ["Five or more, with copying between them.", "Four or more.", "Three.", "Two, with an automatic link between them.", "One system, or none a person has to touch."] },
+  { area: "Connect", q: "How much of the team's day goes to copying data between systems?", o: ["Most of it.", "A large share.", "Some, mainly at month end.", "Little, and only for exceptions.", "Almost none."] },
+  { area: "Connect", q: "What happens when a tool changes or a new one is added?", o: ["Nothing connects, so people adapt by hand.", "Someone builds a one-off export.", "An IT contractor rebuilds the link over several weeks.", "Integrations are maintained and tested.", "Connections are rebuilt in days and monitored."] },
+  { area: "Automate", q: "Which repeatable tasks are automated today?", o: ["None.", "A few macros or saved templates.", "Some scheduled reports or simple rules.", "Several multi-step workflows that run without staff.", "Most repeatable workflows, with human checkpoints."] },
+  { area: "Automate", q: "How are invoices, contracts and forms handled?", o: ["Read and typed in by a person.", "Scanned and filed, then read by a person.", "Some fields extracted automatically and checked by a person.", "Extracted and validated, with exceptions routed to someone.", "Extracted, validated and acted on end to end, with an audit trail."] },
+  { area: "Automate", q: "Who has tested an automation in your business?", o: ["Nobody has tried.", "Someone tried a tool and gave up.", "A pilot ran for a few weeks.", "Automations are in use and reviewed regularly.", "Automations are tested, versioned and retired when they stop working."] },
+  { area: "Decide", q: "Who approves routine decisions such as refunds, discounts or purchase orders?", o: ["The owner, for everything.", "Whoever is available, by message.", "A written rule that people sometimes skip.", "Thresholds set in the system.", "Rules enforced automatically, with people only for exceptions."] },
+  { area: "Decide", q: "How quickly does the team get the information it needs to decide?", o: ["Days, after someone compiles it.", "Hours, from a manual pull.", "Same day, from a report.", "Near real time, on a dashboard.", "Live, with recommended actions attached."] },
+  { area: "Decide", q: "How are decisions and their reasons recorded?", o: ["Nobody writes them down.", "They sit in someone's inbox.", "They appear in meeting notes.", "They are logged with a reason.", "They are logged with the data and rule behind them."] },
+  { area: "Measure", q: "How do you know this week's cash position without asking someone?", o: ["You don't, you ask.", "You check the bank app and estimate.", "A spreadsheet someone updates on Fridays.", "A dashboard updated daily.", "A live view with forecast and alerts."] },
+  { area: "Measure", q: "How is operational reporting produced?", o: ["Built by hand each time.", "Copied from several sources into one file.", "A template refreshed by hand.", "Generated from connected systems on a schedule.", "Generated, checked and sent automatically, with anomalies flagged."] },
+  { area: "Measure", q: "How do you find out where work gets stuck?", o: ["A customer complains.", "Someone notices by chance.", "A weekly review catches most of it.", "Queues and ageing are visible at a glance.", "Bottlenecks are flagged and routed without anyone looking."] },
+  { area: "Improve", q: "How are errors caught?", o: ["By the customer.", "By a person, days later.", "By a person, during periodic checks.", "By validation rules before anything goes out.", "By validation and monitoring, with root causes logged."] },
+  { area: "Improve", q: "How are process changes decided?", o: ["Whoever speaks loudest.", "The owner's gut feel.", "Occasional reviews after something goes wrong.", "Regular reviews against agreed measures.", "Changes are tested against measured outcomes continuously."] },
+  { area: "Improve", q: "How much time does the team get back from improvements each month?", o: ["Nothing we can measure.", "A few hours, anecdotally.", "Some hours, tracked loosely.", "A clear number, tracked.", "A clear number, reinvested in higher-value work."] }
+];
+
+const LEVELS = [
+  { name: "Manual", color: "#ff4d4d", text: "Work moves through inboxes, spreadsheets and memory. Most hours go to finding information and copying it from one place to another. Fixes tend to be one-off, so the same problems return." },
+  { name: "Digitised", color: "#ff6b35", text: "Most information is stored digitally, but people carry it between tools by hand. Automation is limited to templates, reminders and the occasional saved rule. Reporting still takes real effort each time." },
+  { name: "Connected", color: "#ffa500", text: "Some systems talk to each other, and reporting is partly automated. The team can see its work most of the time. Exceptions, approvals and follow-ups still depend on someone remembering to chase them." },
+  { name: "Automated", color: "#7ee787", text: "Several workflows run without staff involvement. Documents are read and routed automatically. People mostly handle exceptions and decisions, and the team knows which automations are running." },
+  { name: "Agentic", color: "#16a34a", text: "Repeatable work runs through agents with clear human checkpoints, and results are measured and improved over time. People spend their time on judgement, customers and new work." }
+];
+
+const START = {
+  Capture: "Pick the one inbound channel that causes the most delay, such as enquiries or order emails. Write down every step a request takes from arrival to first reply, and that map becomes your first build.",
+  Connect: "Map the three tools your most common customer request touches before buying or changing anything. Count the copy-and-paste steps, because those are the first connections to remove.",
+  Automate: "Choose one task that happens every week and takes more than an hour. Automate that single task with a human checkpoint, and measure the time it saves before adding another.",
+  Decide: "Write down the approval rules you already follow, including the thresholds, and put them where the team can see them. Rules nobody can find get skipped.",
+  Measure: "Pick three numbers the business needs every week, such as cash, open jobs and response time. Build one view that shows them without anyone compiling a report.",
+  Improve: "Start a short monthly log of the errors and rework your team hits. After a month of data, the most common cause usually points to the first fix."
+};
+
+const CLOSING = "At this level the usual problem is not effort. It is good people working around tools that do not share information. Ergofect builds an automation layer over the tools you already run. Most implementations take six weeks, the terms are month to month, and nothing needs migrating first. Humans do human work, AI does everything else.";
+
+const CTA = "Book a 30-minute operations review with Ergofect. Bring these answers, and we will pick one first move together.";
+
+let answers = Array(18).fill(null);
+let idx = 0;
+let view = "quiz";
+const app = document.getElementById("app");
+
+function avg(list) {
+  return list.reduce((s, x) => s + x, 0) / list.length;
+}
+
+function render() {
+  if (view === "quiz") renderQuiz();
+  else renderResult();
+}
+
+function renderQuiz() {
+  const q = QUESTIONS[idx];
+  const pct = ((idx + 1) / 18) * 100;
+  const opts = q.o.map((t, i) => {
+    const sel = answers[idx] === i + 1;
+    return `<button class="option" role="radio" aria-checked="${sel}" data-score="${i + 1}">${t}</button>`;
+  }).join("");
+
+  app.innerHTML = `
+    <div class="progress">
+      <div class="progress-meta"><span>Question ${idx + 1} of 18</span><span>${q.area}</span></div>
+      <div class="track"><div class="fill" style="width:${pct}%"></div></div>
+    </div>
+    <section class="card">
+      <h2 class="question">${q.q}</h2>
+      <div role="radiogroup" aria-label="Answer options">${opts}</div>
+    </section>
+    <div class="nav">
+      <button class="btn ghost" id="back" ${idx === 0 ? "disabled" : ""}>Back</button>
+      <button class="btn primary" id="next" ${answers[idx] === null ? "disabled" : ""}>${idx === 17 ? "See results" : "Next"}</button>
+    </div>`;
+
+  app.querySelectorAll(".option").forEach(b => {
+    b.addEventListener("click", () => {
+      answers[idx] = Number(b.dataset.score);
+      renderQuiz();
+      const again = app.querySelector(`[data-score="${answers[idx]}"]`);
+      if (again) again.focus();
+    });
+  });
+
+  document.getElementById("back").onclick = () => {
+    if (idx > 0) { idx--; renderQuiz(); }
+  };
+
+  document.getElementById("next").onclick = () => {
+    if (answers[idx] === null) return;
+    if (idx < 17) { idx++; renderQuiz(); }
+    else { view = "result"; renderResult(); }
+  };
+}
+
+function scoreColor(s) {
+  if (s < 1.5) return "#ff4d4d";
+  if (s < 2.5) return "#ff6b35";
+  if (s < 3.5) return "#ffa500";
+  if (s < 4.5) return "#7ee787";
+  return "#16a34a";
+}
+
+function renderResult() {
+  const areaScores = AREAS.map((_, a) => avg(answers.slice(a * 3, a * 3 + 3)));
+  const overall = avg(answers);
+  const lvl = overall < 1.5 ? 0 : overall < 2.5 ? 1 : overall < 3.5 ? 2 : overall < 4.5 ? 3 : 4;
+
+  let low = 0;
+  areaScores.forEach((s, i) => { if (s < areaScores[low]) low = i; });
+
+  const bars = AREAS.map((name, i) => {
+    const s = areaScores[i];
+    const isLow = i === low;
+    return `
+      <div class="bar-row ${isLow ? "lowest" : ""}">
+        <div class="bar-head">
+          <span>${name}${isLow ? '<span class="tag">Lowest</span>' : ""}</span>
+          <span>${s.toFixed(1)} of 5</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:${(s / 5) * 100}%;background:${scoreColor(s)}"></div></div>
+      </div>`;
+  }).join("");
+
+  app.innerHTML = `
+    <section class="card">
+      <p class="label">Your overall level</p>
+      <p class="level-name" style="color:${LEVELS[lvl].color}">${LEVELS[lvl].name}</p>
+      <p style="color:var(--body)">${LEVELS[lvl].text}</p>
+      <div class="bars">${bars}</div>
+    </section>
+
+    <section class="card stack">
+      <h2 class="section">Where to start</h2>
+      <p style="color:var(--body)">${START[AREAS[low]]}</p>
+    </section>
+
+    <section class="card stack">
+      <p style="color:var(--body)">${CLOSING}</p>
+      <div class="box"><p><strong>Next step:</strong> ${CTA}</p><p style="margin:16px 0 0"><a class="btn primary" href="https://www.calendly.com/ergofect" target="_blank" rel="noopener">Book a call</a></p></div>
+    </section>
+
+    <div class="nav">
+      <button class="btn ghost" id="review">Review answers</button>
+      <button class="btn primary" id="retake">Retake</button>
+    </div>
+    <p class="small stack">Your answers exist only on this page and are not saved.</p>`;
+
+  document.getElementById("review").onclick = () => {
+    idx = 17; view = "quiz"; renderQuiz();
+  };
+
+  document.getElementById("retake").onclick = () => {
+    answers = Array(18).fill(null);
+    idx = 0; view = "quiz"; renderQuiz();
+  };
+}
+
+render();
+</script>
+</body>
+</html>
