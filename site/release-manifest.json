@@ -79,7 +79,7 @@
     {
       "route": "/roi-calculator",
       "source": "roi-calculator/index.html",
-      "sha256": "a5c7e1cda959a924afd89b51ecfcd3e126605771440db275dcf87041f8925982"
+      "sha256": "4124edbf72f4428744366651d8bb74f5b3f8d5231be38f73422dc8989cd6a159"
     },
     {
       "route": "/privacy",
