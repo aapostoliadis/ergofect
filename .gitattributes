@@ -2,6 +2,3 @@
 # so a local sha256 matches what Git stores (core.autocrlf would add CRLF).
 *.html text eol=lf
 *.json text eol=lf
-
-# AppleDouble metadata, not text
-__MACOSX/** -text
