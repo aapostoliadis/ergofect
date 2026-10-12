@@ -1006,6 +1006,9 @@ const low = svg.querySelector('[data-part="probe-low"]');
 const high = svg.querySelector('[data-part="probe-high"]');
 const needle = svg.querySelector('[data-part="needle"]');
 const readout = root.querySelector("[data-readout]");
+// touch skips pointermove so the page still scrolls: a finger sets the hours with a tap, not a hover
+const hint = root.querySelector('[data-corner="hint"]');
+if (hint && matchMedia("(hover: none)").matches) hint.textContent = "Tap to set hours removed per week";
 const still = matchMedia("(prefers-reduced-motion: reduce)");
 const clamp = (value, lo, hi) => Math.min(hi, Math.max(lo, value));
 const money = (v) => (v < 0 ? "−" : "") + "$" + Math.round(Math.abs(v)).toLocaleString("en-US");
