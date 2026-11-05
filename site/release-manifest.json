@@ -4,7 +4,7 @@
     {
       "route": "/",
       "source": "index.html",
-      "sha256": "765e8b2509d8f26a17dd8ee4350d7faefd16a073d72fb371b488383aa2f41609"
+      "sha256": "68a4fb29b91936cc99ed8c3207ae799125e82e0e42f92e209baa45889269fbeb"
     },
     {
       "route": "/about",
@@ -95,6 +95,11 @@
       "route": "/operations-maturity-quiz",
       "source": "operations-maturity-quiz/index.html",
       "sha256": "e0a9f9b4aa5208f363c6b576713da8eba2cdfc86801776640f820cd0c0053e9b"
+    },
+    {
+      "route": "/workspace-blueprint",
+      "source": "workspace-blueprint/index.html",
+      "sha256": "73db01190868adf1424e6318c336adb8ac18baae968c1a7a26f2b6bd5ea45a90"
     }
   ]
 }
