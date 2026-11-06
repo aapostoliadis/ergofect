@@ -4,7 +4,7 @@
     {
       "route": "/",
       "source": "index.html",
-      "sha256": "5fbb24762283b698098d877e5787628d3c187c85ee7f783370920a0d767e8cdb"
+      "sha256": "265e29748affe6452cc2cfcb7d6268c9e428454ecbeefa2b12a4493397fa4dc0"
     },
     {
       "route": "/about",
