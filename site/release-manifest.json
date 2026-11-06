@@ -4,7 +4,7 @@
     {
       "route": "/",
       "source": "index.html",
-      "sha256": "cbd7186be388cbbbd8487aadc1553085e49f6bc1dcf987629e91447b270dc9b7"
+      "sha256": "5fbb24762283b698098d877e5787628d3c187c85ee7f783370920a0d767e8cdb"
     },
     {
       "route": "/about",
@@ -99,7 +99,7 @@
     {
       "route": "/workspace-blueprint",
       "source": "workspace-blueprint/index.html",
-      "sha256": "00ec4e70ea051f5bbbc9b4909f5fe736a87fd1a6f1441217c08ee3a37b89390e"
+      "sha256": "091af9ff1f8af4c764dd85ff50827125e4783be076fe01b83e721cb308c9480c"
     }
   ]
 }
